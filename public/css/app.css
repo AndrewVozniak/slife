@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    width: 1200px;
+    width: 1280px;
     margin: 0 auto;
 }
 
@@ -286,7 +286,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    .mailing_list_wrapper {
+    .footer__mailing_list_wrapper {
         display: flex;
         align-items: center;
 
@@ -295,88 +295,237 @@ body {
         background-color: var(--blue);
         color: var(--white);
 
-        .mailing_list_box {
+        .item1 {grid-area: logo;}
+        .item2 {grid-area: mailing_list;}
+        .item3 {grid-area: input_box;}
+
+        .mailing_list_box_grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+            'logo mailing_list input_box input_box';
+
+            padding: 32px 0 32px 0;
+            gap: 20px;
+        }
+
+        .item1, .item2 {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
 
-            width: 100%;
-            padding: 32px 0;
-            gap: 130px;
+            width: 305px;
+        }
 
-            .mailing_list{
+        .mailing_list__title {
+            display: flex;
+
+            max-width: 260px;
+            height: 70px;
+
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 34px;
+            text-align: left;
+        }
+
+        .mailing_list__form {
+            width: 100%;
+
+            .footer__input_mailing_list_box {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: flex-start;
                 align-items: center;
 
                 width: 100%;
-                gap: 64px;
+                height: 70px;
 
-                .mailing_list__title {
+                .footer__mailing_list__input {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 24px;
+
+                    border-radius: 12px 0 0 12px;
+                    border: none;
+                    outline: none;
+
+                    background-color: var(--white);
+                    color: var(--black);
+
+                    &::placeholder {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 19px;
+                        text-align: start;
+                        color: var(--black);
+                    }
+                }
+
+                .footer__mailing_list__btn {
                     display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-                    width: fit-content;
-                    font-family: Roboto, sans-serif;
-                    font-size: 24px;
-                    font-weight: 500;
-                    line-height: 34px;
-                    text-align: left;
+                    width: 70px;
+                    height: 100%;
 
-                    .mailing_list__form{
-                        width: 100%;
-                        height: 70px;
-                        color: #e5e7eb;
+                    border-radius: 0 12px 12px 0;
+                    border: none;
+                    outline: 1px solid var(--red);
+                    background-color: var(--red);
 
-                        .footer__input_mailing_list_box {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: flex-start;
-                            align-items: center;
+                    cursor: pointer;
+                    transition: 0.3s ease;
 
-                            max-width: 630px;
-                            width: 100%;
-                            height: 70px;
-
-                            .footer__mailing_list__input {
-                                width: 100%;
-                                height: 70px;
-                                padding: 24px;
-
-                                border-radius: 12px 0 0 12px;
-                                border: none;
-                                outline: none;
-
-                                background-color: var(--white);
-
-                                &::placeholder {
-                                    font-family: Roboto, sans-serif;
-                                    font-size: 16px;
-                                    font-weight: 400;
-                                    line-height: 19px;
-                                    text-align: start;
-                                    color: var(--black);
-                                }
-                            }
-
-                            .footer__mailing_list__btn{
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-
-                                width: 70px;
-                                height: 70px;
-
-                                border-radius: 0 12px 12px 0;
-                                border: none;
-                                outline: none;
-                                background-color: var(--red);
-                            }
-                        }
+                    .footer__arrow_right_btn {
+                        width: 15px;
+                        height: 15px;
                     }
                 }
             }
         }
     }
 
+    .footer__main_info_wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        background-color: var(--dark-blue);
+        color: var(--white);
+
+        .item4 {grid-area: about_company;}
+        .item5 {grid-area: for_customers;}
+        .item6 {grid-area: category;}
+        .item7 {grid-area: contacts;}
+        .item8 {grid-area: join_in;
+            justify-content: end;
+
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 34px;
+            text-align: left;
+        }
+        .item9 {grid-area: join_in_networks;
+            justify-content: end;
+        }
+
+        .footer__grid_container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+            'logo mailing_list input_box input_box'
+            'about_company for_customers category contacts'
+            'join_in join_in_networks category contacts';
+
+            padding: 32px 0 32px 0;
+            gap: 20px;
+        }
+
+        .footer__grid_container > div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            width: 305px;
+        }
+
+        .footer__item_title {
+            display: flex;
+            margin-bottom: 32px;
+
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 23px;
+            text-align: left;
+        }
+
+        .footer_item_category_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            width: 100%;
+            gap: 24px;
+
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 23px;
+            text-align: left;
+
+            .footer_phone {
+                font-weight: 700;
+                line-height: 22px;
+            }
+
+            .footer_contacts {
+                font-weight: 500;
+                line-height: 22px;
+            }
+
+            .footer__work_time {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 0;
+            }
+
+            .footer_messenger_box {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                width: 100%;
+                gap: 12px;
+
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 23px;
+                text-align: left;
+
+                .footer_messenger_icon {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        .footer_img_messenger_box {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            width: 100%;
+            gap: 16px;
+
+            .footer_messenger_cart {
+                width: 55px;
+                height: 55px;
+            }
+        }
+    }
+
+    .footer_copyright_wrapper {
+        height: 52px;
+        background-color: var(--blue);
+        color: var(--white);
+
+        .footer__copy_box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 0 18px 0;
+
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16px;
+            text-align: left;
+        }
+    }
 }
