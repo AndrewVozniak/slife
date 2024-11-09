@@ -22,9 +22,11 @@ Route::get('/', function () {
 Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], function () {
     Route::get('/', function () {
         return view('welcome');
-    });
+    })->name('home');
 
     Route::get('/change-locale/{lang}', 'App\Http\Controllers\LocaleController@changeLang')->name('changeLocale');
     Route::get('/change-currency/{currency}', 'App\Http\Controllers\CurrencyController@changeCurrency')->name('changeCurrency');
     Route::get('/', [ProductController::class, 'index'])->name('home');
+
+    Route::get('/catalog/{category}/{subcategory?}/{last_category?}', [ProductController::class, 'catalog'])->name('catalog');
 });

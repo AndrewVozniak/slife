@@ -122,10 +122,10 @@
             <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down">
         </li>
         <li class="category_item">
-            <a href="#" class="category_link">{{ __('header.categories.popular') }}</a>
+            <a href="{{ route('catalog', ['category' => 'popular_items', 'locale' => App::currentLocale()]) }}" class="category_link">{{ __('header.categories.popular') }}</a>
         </li>
         <li class="category_item">
-            <a href="#" class="category_link">{{ __('header.categories.sale') }}</a>
+            <a href="{{ route('catalog', ['category' => 'sale', 'locale' => App::currentLocale()]) }}" class="category_link">{{ __('header.categories.sale') }}</a>
         </li>
     </ul>
 </header>
