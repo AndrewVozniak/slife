@@ -70,7 +70,7 @@
             startAutoSlide() {
                 setInterval(() => {
                     this.nextSlide();
-                }, 10000); // змінює слайд кожні 5 секунд
+                }, 10000);
             },
             init() {
                 this.startAutoSlide();
