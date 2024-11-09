@@ -2,7 +2,9 @@
 @section('title', 'Головна сторінка')
 @section('content')
     <div class="content_wrapper">
-        @include('components.popular_products')
+        @include('components.new_products', ['products' => $products])
+
+        @include('components.popular_products', ['products' => $products])
 
         @include('components.top_category')
 

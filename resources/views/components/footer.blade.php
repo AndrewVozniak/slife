@@ -3,7 +3,9 @@
         <div class="container">
             <div class="mailing_list_box_grid">
                 <div class="item1">
-                    <img src="{{asset('storage/images/logo_white.png')}}" alt="logo" class="logo">
+                   <a href="#">
+                       <img src="{{asset('storage/images/logo_white.png')}}" alt="logo" class="logo">
+                   </a>
                 </div>
                 <div class="item2">
                     <span class="mailing_list__title"> {{ __('footer.subscribe') }}</span>
@@ -34,27 +36,27 @@
         <div class="container">
             <div class="footer__grid_container">
                 <div class="item4">
-                    <span class="footer__item_title"> {{ __('footer.main.about') }}</span>
+                    <a href="#" class="footer__item_title"> {{ __('footer.main.about') }}</a>
                     <div class="footer_item_category_box">
-                        <span> {{ __('footer.main.blog') }}</span>
-                        <span> {{ __('footer.main.about_us') }}</span>
-                        <span> {{ __('footer.main.contacts') }}</span>
+                        <a href="#"> {{ __('footer.main.blog') }}</a>
+                        <a href="#"> {{ __('footer.main.about_us') }}</a>
+                        <a href="#"> {{ __('footer.main.contacts') }}</a>
                     </div>
                 </div>
                 <div class="item5">
                     <span class="footer__item_title"> {{ __('footer.main.info') }}</span>
                     <div class="footer_item_category_box">
-                        <span> {{ __('footer.main.payment') }}</span>
-                        <span> {{ __('footer.main.exchange') }}</span>
-                        <span> {{ __('footer.main.register') }}</span>
+                        <a href="#"> {{ __('footer.main.payment') }}</a>
+                        <a href="#"> {{ __('footer.main.exchange') }}</a>
+                        <a href="#"> {{ __('footer.main.register') }}</a>
                     </div>
                 </div>
                 <div class="item6">
                     <span class="footer__item_title"> {{ __('footer.main.categories') }}</span>
                     <div class="footer_item_category_box">
-                        <span> {{ __('footer.main.men') }}</span>
-                        <span> {{ __('footer.main.women') }}</span>
-                        <span> {{ __('footer.main.kids') }}</span>
+                        <a href="#"> {{ __('footer.main.men') }}</a>
+                        <a href="#"> {{ __('footer.main.women') }}</a>
+                        <a href="#"> {{ __('footer.main.kids') }}</a>
                     </div>
                 </div>
                 <div class="item7">
@@ -78,23 +80,23 @@
                             </span>
                         </div>
 
-                        <div class="footer_messenger_box">
+                        <a  href="#" class="footer_messenger_box">
                             <img src="{{asset('storage/images/social_media/telegram_color.svg')}}" alt="icon"
                                  class="footer_messenger_icon">
                             <span> {{ __('footer.main.write') }} Telegram</span>
-                        </div>
+                        </a>
 
-                        <div class="footer_messenger_box">
+                        <a href="#" class="footer_messenger_box">
                             <img src="{{asset('storage/images/social_media/basil_viber-solid.svg')}}" alt="icon"
                                  class="footer_messenger_icon">
                             <span> {{ __('footer.main.write') }} Viber</span>
-                        </div>
+                        </a>
 
-                        <div class="footer_messenger_box">
+                        <a href="#" class="footer_messenger_box">
                             <img src="{{asset('storage/images/social_media/logos_whatsapp-icon.svg')}}" alt="icon"
                                  class="footer_messenger_icon">
                             <span> {{ __('footer.main.write') }} Whatsapp</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item8">
@@ -102,14 +104,20 @@
                 </div>
                 <div class="item9">
                     <div class="footer_img_messenger_box">
-                        <img src="{{asset('storage/images/social_media/cart.svg')}}" alt="icon"
-                             class="footer_messenger_cart">
+                       <a href="#">
+                           <img src="{{asset('storage/images/social_media/cart.svg')}}" alt="icon"
+                                class="footer_messenger_cart">
+                       </a>
 
-                        <img src="{{asset('storage/images/social_media/cart_insta.svg')}}" alt="icon"
-                             class="footer_messenger_cart">
+                        <a href="#">
+                            <img src="{{asset('storage/images/social_media/cart_insta.svg')}}" alt="icon"
+                                 class="footer_messenger_cart">
+                        </a>
 
-                        <img src="{{asset('storage/images/social_media/cart _telegram.svg')}}" alt="icon"
-                             class="footer_messenger_cart">
+                        <a href="#">
+                            <img src="{{asset('storage/images/social_media/cart _telegram.svg')}}" alt="icon"
+                                 class="footer_messenger_cart">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -119,7 +127,7 @@
         <div class="container">
             <div class="footer__copy_box">
                 <span>&#169; 2024 Slife &#124; {{ __('footer.main.copy') }} </span>
-                <span>{{ __('footer.main.polite') }} </span>
+                <a href="#">{{ __('footer.main.polite') }} </a>
             </div>
         </div>
     </div>
