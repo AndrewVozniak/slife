@@ -48,7 +48,9 @@
     </nav>
 
     <main class="header__main container">
-        <img src="{{asset('storage/images/logo.svg')}}" alt="logo" class="logo">
+        <a href="{{ route('home', ['locale' => App::currentLocale()]) }}">
+            <img src="{{asset('storage/images/logo.svg')}}" alt="logo" class="logo">
+        </a>
 
         <form class="search_bar">
             <input type="text" class="search_bar__input" placeholder="{{ __('header.search_goods') }}">
