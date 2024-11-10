@@ -16,11 +16,13 @@
         </div>
 
         <div class="filter_and_sort_by_box">
-            <div class="param_box">
-                <img src="{{asset('storage/images/icons/filter.svg')}}" alt="filter" class="param_image">
-                <hr class="vertical_line">
-                <span class="param_text">{{ __('catalog.filter_by.filter_text') }}</span>
-            </div>
+{{--            <div class="param_box">--}}
+{{--                <img src="{{asset('storage/images/icons/filter.svg')}}" alt="filter" class="param_image">--}}
+{{--                <hr class="vertical_line">--}}
+{{--                <span class="param_text">{{ __('catalog.filter_by.filter_text') }}</span>--}}
+{{--            </div>--}}
+
+            @include('elements.sidepanel')
 
             <div class="sort_by_box">
                 <span class="sort_by_text">{{ __('catalog.sort_by.sort_text') }}</span>

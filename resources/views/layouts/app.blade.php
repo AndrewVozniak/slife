@@ -23,5 +23,6 @@
     @include('components.footer')
 
     <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
