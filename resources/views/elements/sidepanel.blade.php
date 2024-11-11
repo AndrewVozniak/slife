@@ -14,16 +14,16 @@
             <div class="side_panel_form_box">
                 <div class="side_panel_form_title_wrapper" onclick="openSideProductFilterCategory()">
                     <a href="#"  class="side_panel_form_title">{{__('catalog.side_panel.categories')}}</a>
-                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" alt="arrow_down" class="param_dropdown_arrow">
+                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" id="category_arrow" alt="arrow_down" class="param_dropdown_arrow">
                 </div>
                 <br>
-                <div class="side_panel_checkbox_box"  id="filterCategory" style="display: none;">
+                <div class="side_panel_checkbox_box" id="filterCategory" style="display: none;">
                     <label  class="checkbox-container">{{__('catalog.side_panel.t-shirts')}}
                         <input type="checkbox" name="category_of_product1" id="category_of_product1" value="t-shirts">
                         <span class="checkmark"></span>
                     </label>
 
-                    <label  class="checkbox-container">{{__('catalog.side_panel.jackets')}}
+                    <label class="checkbox-container">{{__('catalog.side_panel.jackets')}}
                         <input type="checkbox" name="category_of_product2" id="category_of_product2" value="jackets">
                         <span class="checkmark"></span>
                     </label>
@@ -44,7 +44,7 @@
             <div class="side_panel_form_box">
                 <div class="side_panel_form_title_wrapper" onclick="openSideProductFilterBrand()">
                     <a href="#"  class="side_panel_form_title">{{__('catalog.side_panel.brand')}}</a>
-                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" alt="arrow_down" class="param_dropdown_arrow">
+                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" id="brand_arrow" alt="arrow_down" class="param_dropdown_arrow">
                 </div>
                 <br>
                 <div class="side_panel_checkbox_box" id="filterBrand" style="display: none;">
@@ -78,38 +78,41 @@
 </div>
 
 
-<button class="param_box" onclick="openNav()">
+<div class="param_box" onclick="openNav()">
     <img src="{{asset('storage/images/icons/filter.svg')}}" alt="filter" class="param_image">
     <hr class="vertical_line">
     <span class="param_text">{{ __('catalog.filter_by.filter_text') }}</span>
-</button>
+</div>
 
 <script>
-
-    function openSideProductFilterCategory() {
-        var x = document.getElementById("filterCategory");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
+function openSideProductFilterCategory() {
+    let x = document.getElementById("filterCategory");
+    let j = document.getElementById("category_arrow");
+    if (x.style.display === "none") {
+        x.style.display = "flex";
+        j.classList.add("active");
+    } else {
+        x.style.display = "none";
+        j.classList.remove("active");
     }
+}
 
-    function openSideProductFilterBrand() {
-        var x = document.getElementById("filterBrand");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
+function openSideProductFilterBrand() {
+    let x = document.getElementById("filterBrand");
+    let j = document.getElementById("brand_arrow");
+    if (x.style.display === "none") {
+        x.style.display = "flex";
+        j.classList.add("active");
+    } else {
+        x.style.display = "none";
     }
+}
 
 function openNav() {
-        document.getElementById("sidePanel").style.width = "33%";
-    }
+    document.getElementById("sidePanel").style.width = "33%";
+}
 
-    function closeNav() {
-        document.getElementById("sidePanel").style.width = "0";
-    }
-
+function closeNav() {
+    document.getElementById("sidePanel").style.width = "0";
+}
 </script>

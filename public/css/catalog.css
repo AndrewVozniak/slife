@@ -257,9 +257,19 @@
                     width: 100%;
                     gap: 12px;
 
+                    cursor: pointer;
+
                     .side_panel_form_title {
                         font-weight: 700;
                         font-size: 16px;
+                    }
+
+                    .param_dropdown_arrow {
+                        transition: 0.3s;
+
+                        &.active {
+                            transform: rotate(180deg);
+                        }
                     }
                 }
 
