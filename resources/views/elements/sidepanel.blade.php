@@ -14,16 +14,16 @@
             <div class="side_panel_form_box">
                 <div class="side_panel_form_title_wrapper" onclick="openSideProductFilterCategory()">
                     <a href="#"  class="side_panel_form_title">{{__('catalog.side_panel.categories')}}</a>
-                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" id="category_arrow" alt="arrow_down" class="param_dropdown_arrow">
+                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" alt="arrow_down" class="param_dropdown_arrow">
                 </div>
                 <br>
-                <div class="side_panel_checkbox_box" id="filterCategory" style="display: none;">
+                <div class="side_panel_checkbox_box"  id="filterCategory" style="display: none;">
                     <label  class="checkbox-container">{{__('catalog.side_panel.t-shirts')}}
                         <input type="checkbox" name="category_of_product1" id="category_of_product1" value="t-shirts">
                         <span class="checkmark"></span>
                     </label>
 
-                    <label class="checkbox-container">{{__('catalog.side_panel.jackets')}}
+                    <label  class="checkbox-container">{{__('catalog.side_panel.jackets')}}
                         <input type="checkbox" name="category_of_product2" id="category_of_product2" value="jackets">
                         <span class="checkmark"></span>
                     </label>
@@ -44,7 +44,7 @@
             <div class="side_panel_form_box">
                 <div class="side_panel_form_title_wrapper" onclick="openSideProductFilterBrand()">
                     <a href="#"  class="side_panel_form_title">{{__('catalog.side_panel.brand')}}</a>
-                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" id="brand_arrow" alt="arrow_down" class="param_dropdown_arrow">
+                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" alt="arrow_down" class="param_dropdown_arrow">
                 </div>
                 <br>
                 <div class="side_panel_checkbox_box" id="filterBrand" style="display: none;">
@@ -70,49 +70,159 @@
                     <br>
                 </div>
             </div>
+
+            <div class="side_panel_form_box">
+                <div class="side_panel_form_title_wrapper">
+                    <a href="#"  class="side_panel_form_title">{{__('catalog.side_panel.price')}}</a>
+
+                    <div class="side_panel_range_wrapper">
+                        <span class="side_panel_range min-tooltip">
+                        {{__('catalog.side_panel.from')}} 129
+                    </span>
+                        <span class="side_panel_range max-tooltip">
+                        {{__('catalog.side_panel.to')}} 1400
+                    </span>
+                    </div>
+                </div>
+
+                <div class="range_slider">
+                    <span class="slider_track"></span>
+                    <input type="range"
+                           name="min_price"
+                           id="min_price"
+                           min="129"
+                           max="3000"
+                           value=" 129"
+                           oninput="sliderMin()"
+                           class="slider_price_min range_slider_input" >
+
+                    <input type="range"
+                           name="max_price"
+                           id="max_price"
+                           min="129"
+                           max="3000"
+                           value="1400"
+                           oninput="sliderMax()"
+                           class="slider_price_max range_slider_input" >
+                </div>
+
+                <div class="range_price_input_wrapper">
+                    <input type="text"
+                           name="min_price_input"
+                           id="min_price_input"
+                           class="range_price_input min_input"
+                           onchange="setMinInput()"
+                           value="129"
+                           placeholder="{{__('catalog.side_panel.from')}} 129"
+                    >
+
+                    <input type="text"
+                           name="max_price_input"
+                           id="max_price_input"
+                           class="range_price_input max_input"
+                           value="3000"
+                           onchange="setMaxInput()"
+                           placeholder="{{__('catalog.side_panel.to')}} 3000"
+                    >
+                </div>
+            </div>
         </form>
 
-        <a href="#">{{__('catalog.side_panel.price')}}</a>
         <a href="#">{{__('catalog.side_panel.size')}}</a>
     </div>
 </div>
 
 
-<div class="param_box" onclick="openNav()">
+<button class="param_box" onclick="openNav()">
     <img src="{{asset('storage/images/icons/filter.svg')}}" alt="filter" class="param_image">
     <hr class="vertical_line">
     <span class="param_text">{{ __('catalog.filter_by.filter_text') }}</span>
-</div>
+</button>
 
 <script>
-function openSideProductFilterCategory() {
-    let x = document.getElementById("filterCategory");
-    let j = document.getElementById("category_arrow");
-    if (x.style.display === "none") {
-        x.style.display = "flex";
-        j.classList.add("active");
-    } else {
-        x.style.display = "none";
-        j.classList.remove("active");
-    }
-}
 
-function openSideProductFilterBrand() {
-    let x = document.getElementById("filterBrand");
-    let j = document.getElementById("brand_arrow");
-    if (x.style.display === "none") {
-        x.style.display = "flex";
-        j.classList.add("active");
-    } else {
-        x.style.display = "none";
+    function openSideProductFilterCategory() {
+        var x = document.getElementById("filterCategory");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
     }
-}
+
+    function openSideProductFilterBrand() {
+        var x = document.getElementById("filterBrand");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
 
 function openNav() {
-    document.getElementById("sidePanel").style.width = "33%";
-}
+        document.getElementById("sidePanel").style.width = "33%";
+    }
 
-function closeNav() {
-    document.getElementById("sidePanel").style.width = "0";
-}
+    function closeNav() {
+        document.getElementById("sidePanel").style.width = "0";
+    }
+
+    window.onload = function () {
+        sliderMin();
+        sliderMax();
+    }
+
+    const minVal = document.querySelector('.slider_price_min');
+    const maxVal = document.querySelector('.slider_price_max');
+    const priceInputMin = document.querySelector('.min_input');
+    const priceInputMax = document.querySelector('.max_input');
+    const minTooltip = document.querySelector('.min-tooltip');
+    const maxTooltip = document.querySelector('.max-tooltip');
+    const minGap = 0;
+    const range = document.querySelector('.slider_track');
+    const sliderMinValue = parseInt(minVal.min);
+    const sliderMaxValue = parseInt(maxVal.max);
+
+    function sliderMin() {
+        let gap = parseInt(maxVal.value) - parseInt(minVal.value);
+        if (gap <= minGap) {
+            minVal.value = parseInt(maxVal.value) - minGap;
+        }
+        minTooltip.innerHTML = "{{__('catalog.side_panel.from')}}" + " " + minVal.value;
+        priceInputMin.value = minVal.value;
+        setArea()
+    }
+
+    function sliderMax() {
+        let gap = parseInt(maxVal.value) - parseInt(minVal.value);
+        if (gap <= minGap) {
+            maxVal.value = parseInt(minVal.value) + minGap;
+        }
+        maxTooltip.innerHTML = "{{__('catalog.side_panel.to')}}" + " " + maxVal.value;
+        priceInputMax.value = maxVal.value;
+        setArea()
+    }
+
+    function setArea() {
+        range.style.left = (minVal.value / sliderMaxValue) * 100 + "%";
+        range.style.right = 100 - (maxVal.value / sliderMaxValue) * 100 + "%";
+    }
+
+    function setMinInput() {
+        let minPrice = parseInt(priceInputMin.value);
+        if (minPrice < sliderMinValue) {
+           priceInputMin.value = sliderMinValue;
+        }
+        minVal.value = priceInputMin.value;
+        sliderMin();
+    }
+
+    function setMaxInput() {
+        let maxPrice = parseInt(priceInputMax.value);
+        if (maxPrice > sliderMaxValue) {
+            priceInputMax.value = sliderMaxValue;
+        }
+        maxVal.value = priceInputMax.value;
+        sliderMax();
+    }
 </script>

@@ -46,5 +46,7 @@ return [
         'jackets' => 'Куртки',
         'sweaters' => 'Кофти',
         'trousers' => 'Штани',
+        'from' => 'від',
+        'to' => 'до',
     ],
 ];
