@@ -92,7 +92,7 @@
                            id="min_price"
                            min="129"
                            max="3000"
-                           value=" 129"
+                           value="129"
                            oninput="sliderMin()"
                            class="slider_price_min range_slider_input" >
 
@@ -126,9 +126,44 @@
                     >
                 </div>
             </div>
-        </form>
 
-        <a href="#">{{__('catalog.side_panel.size')}}</a>
+            <div class="side_panel_form_box">
+                <div class="side_panel_form_title_wrapper">
+                    <a href="#" class="side_panel_form_title">{{__('catalog.side_panel.size')}}</a>
+                </div>
+
+                <div class="size_select_container">
+                    <select name="size" id="size" class="size_select">
+                        <option value="xs">XS</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                    </select>
+
+                    <div class="select_icon_container">
+                        <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" alt="select_arrow" class="size_select_arrow">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="apply_filter_btn">
+                <span class="apply_filter_text">
+                     {{__('catalog.side_panel.apply_filter')}}
+                </span>
+                <hr class="vertical_line">
+                <img src="{{asset('storage/images/icons/iconamoon_check-bold.svg')}}" alt="icon" class="filter_icon">
+            </button>
+
+            <button class="apply_filter_btn white_filter_btn">
+                <span class="apply_filter_text">
+                     {{__('catalog.side_panel.reset_filter')}}
+                </span>
+                <hr class="vertical_line">
+                <img src="{{asset('storage/images/icons/mage_filter.svg')}}" alt="icon" class="filter_icon">
+            </button>
+        </form>
     </div>
 </div>
 
@@ -142,7 +177,7 @@
 <script>
 
     function openSideProductFilterCategory() {
-        var x = document.getElementById("filterCategory");
+        const x = document.getElementById("filterCategory");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -151,7 +186,7 @@
     }
 
     function openSideProductFilterBrand() {
-        var x = document.getElementById("filterBrand");
+        const x = document.getElementById("filterBrand");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
