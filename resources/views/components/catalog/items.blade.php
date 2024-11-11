@@ -27,11 +27,13 @@
             <div class="sort_by_box">
                 <span class="sort_by_text">{{ __('catalog.sort_by.sort_text') }}</span>
 
-                <div class="param_box">
-                    <span class="param_text">{{ __('catalog.sort_by.recommended') }}</span>
-                    <hr class="vertical_line">
-                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" alt="arrow_down" class="param_dropdown_arrow">
-                </div>
+{{--                <div class="param_box">--}}
+{{--                    <span class="param_text">{{ __('catalog.sort_by.recommended') }}</span>--}}
+{{--                    <hr class="vertical_line">--}}
+{{--                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" alt="arrow_down" class="param_dropdown_arrow">--}}
+{{--                </div>--}}
+
+                @include('elements.dropdown_menu')
             </div>
         </div>
 

@@ -134,12 +134,12 @@
 
                 <div class="size_select_container">
                     <select name="size" id="size" class="size_select">
-                        <option value="xs">XS</option>
-                        <option value="s">S</option>
-                        <option value="m">M</option>
-                        <option value="l">L</option>
-                        <option value="xl">XL</option>
-                        <option value="xxl">XXL</option>
+                        <option value="xs" class="select_options">XS</option>
+                        <option value="s" class="select_options">S</option>
+                        <option value="m" class="select_options">M</option>
+                        <option value="l" class="select_options">L</option>
+                        <option value="xl" class="select_options">XL</option>
+                        <option value="xxl" class="select_options">XXL</option>
                     </select>
 
                     <div class="select_icon_container">

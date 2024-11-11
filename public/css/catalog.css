@@ -57,6 +57,72 @@
         align-items: center;
 
         gap: 32px;
+
+        .param_dropdown {
+            position: relative;
+
+            .param_select_clicked {
+                border: 2px solid var(--slider-gray);
+                box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.1);
+                border-bottom-right-radius: 0;
+            }
+
+            .param_dropdown_arrow_clicked {
+                transform: rotate(180deg);
+            }
+
+            .param_dropdown_menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                z-index: 1000;
+
+                width: 100%;
+                min-width: 270px;
+                list-style: none;
+
+                background: var(--white);
+
+                border: 1px solid var(--slider-gray);
+                border-top-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+                border-bottom-left-radius: 12px;
+
+                transition: 0.3s;
+                opacity: 0;
+            }
+
+            .param_dropdown_menu_open {
+                display: block;
+                opacity: 1;
+            }
+
+            .param_dropdown_menu li {
+                padding: 24px;
+                cursor: pointer;
+            }
+
+            .param_dropdown_menu li:hover {
+                background: var(--slider-gray);
+                font-weight: 600;
+            }
+
+            .active_dropdown_li {
+                background: var(--slider-gray);
+                font-weight: 600;
+                border-top-left-radius: 12px;
+            }
+        }
+
+        .param_dropdown * {
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        /*.param_dropdown:active {*/
+        /*    border-bottom-right-radius: 0;*/
+        /*}*/
     }
 }
 
@@ -483,8 +549,13 @@
                         }
                     }
 
-                    & select option {
+                    .select_options {
                         background-color: var(--white);
+                        color: var(--black);
+                    }
+
+                    .select_options:hover {
+                        background-color: var(--red);
                         color: var(--black);
                     }
                 }
