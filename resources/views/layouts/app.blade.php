@@ -18,11 +18,9 @@
     @yield('styles')
 </head>
 <body>
-    @include('components.header')
     @yield('content')
-    @include('components.footer')
 
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https:////unpkg.com/alpinejs" defer></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

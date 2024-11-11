@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,8 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
     Route::get('/', [ProductController::class, 'index'])->name('home');
 
     Route::get('/catalog/{category}/{subcategory?}/{last_category?}', [ProductController::class, 'catalog'])->name('catalog');
+
+    Route::get('/login', [AuthController::class, 'signInView'])->name('login');
+//    Route::post('/login', [AuthController::class, 'signIn'])->name('login');
+    Route::get('/register', [AuthController::class, 'signUpView'])->name('register');
 });

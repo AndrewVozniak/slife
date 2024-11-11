@@ -23,7 +23,7 @@ class LocaleController extends Controller
         }
 
         $previousUrl = url()->previous();
-        $urlWithoutLocale = preg_replace('/\/(ua|en|ru)(\/|$)/', "/$lang", $previousUrl);
+        $urlWithoutLocale = preg_replace('/\/(ua|en|ru)(\/|$)/', "/$lang/", $previousUrl);
 
         return redirect($urlWithoutLocale);
     }
