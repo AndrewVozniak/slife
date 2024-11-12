@@ -30,8 +30,12 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
     Route::get('/', [ProductController::class, 'index'])->name('home');
 
     Route::get('/catalog/{category}/{subcategory?}/{last_category?}', [ProductController::class, 'catalog'])->name('catalog');
+    Route::get('/product/{id}', [ProductController::class, 'product'])->name('product');
+
 
     Route::get('/login', [AuthController::class, 'signInView'])->name('login');
-//    Route::post('/login', [AuthController::class, 'signIn'])->name('login');
     Route::get('/register', [AuthController::class, 'signUpView'])->name('register');
+    Route::get('/forgot-password', [AuthController::class, 'forgotPasswordView'])->name('forgotPassword');
+
+    Route::get('/shopping-cart', [ProductController::class, 'shoppingCart'])->name('shoppingCart');
 });

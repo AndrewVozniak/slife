@@ -16,7 +16,6 @@
             </a>
         </div>
 
-
         <div class="content">
             <div class="nav">
                 <div class="nav__links">
@@ -38,30 +37,13 @@
             </div>
 
             <form action="#" class="form" method="POST">
+                <h1 class="form_title">Скинути пароль</h1>
+                <p class="form_text">Введіть свою електронну адресу або номер телефону нижче, і ми надішлемо вам електронний лист з інструкціями щодо створення нового пароля</p>
+
                 <input type="text" class="form_input" placeholder="Ваш Email або номер телефону">
-                <input type="password" class="form_input" placeholder="Ваш пароль">
 
-                <button type="submit" class="form_button">Увійти</button>
-                <a href="{{ route('forgotPassword', ['locale' => App::currentLocale()])  }}" class="form_link">Забули пароль?</a>
+                <button type="submit" class="form_button">Надіслати</button>
             </form>
-
-            <div class="sign_in_social">
-                <span class="sign_in_social__text">Увійти за допомогою:</span>
-                <div class="sign_in_social__icons">
-                    <a href="#" class="sign_in_social__icon">
-                        <img src="{{ asset('/storage/images/google.svg') }}" alt="google">
-                        <span>Google</span>
-                    </a>
-                    <a href="#" class="sign_in_social__icon">
-                        <img src="{{ asset('/storage/images/apple.svg') }}" alt="apple">
-                        <span>Apple</span>
-                    </a>
-                    <a href="#" class="sign_in_social__icon">
-                        <img src="{{ asset('/storage/images/facebook.svg') }}" alt="facebook">
-                        <span>Facebook</span>
-                    </a>
-                </div>
-            </div>
         </div>
     </div>
 

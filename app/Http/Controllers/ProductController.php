@@ -85,4 +85,24 @@ class ProductController extends Controller
 
         return view('catalog', compact('products', 'breadcrumbs'));
     }
+
+    public function product($locale, $id)
+    {
+        $product = null;
+
+        foreach ($this->products as $item) {
+            if ($item['id'] == $id) {
+                $product = $item;
+                break;
+            }
+        }
+
+        return view('product', compact('product'));
+    }
+
+
+    public function shoppingCart()
+    {
+        return view('shopping-cart');
+    }
 }
