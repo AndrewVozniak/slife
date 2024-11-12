@@ -39,7 +39,11 @@
 
             <form action="#" class="form" method="POST">
                 <input type="text" class="form_input" placeholder="Ваш Email або номер телефону">
-                <input type="password" class="form_input" placeholder="Ваш пароль">
+
+                <div x-data="{ showPassword: false }" class="password_field">
+                    <input :type="showPassword ? 'text' : 'password'" class="form_input" placeholder="Ваш пароль">
+                    <img src="{{ asset('/storage/images/icons/eye.svg') }}" alt="show password" class="eye_icon" @click="showPassword = !showPassword">
+                </div>
 
                 <button type="submit" class="form_button">Увійти</button>
                 <a href="{{ route('forgotPassword', ['locale' => App::currentLocale()])  }}" class="form_link">Забули пароль?</a>
