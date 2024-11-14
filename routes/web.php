@@ -38,4 +38,8 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
 
     Route::get('/cabinet/order_history', [UserController::class, 'orderHistory'])->name('orderHistory');
     Route::get('/cabinet/favorite', [UserController::class, 'favorite'])->name('favorite');
+
+    Route::fallback(function () {
+        return view('errors.404');
+    });
 });
