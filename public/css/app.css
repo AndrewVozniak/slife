@@ -13,9 +13,11 @@
     --dark-text: #1D1D1D;
     --gray-text:  #717171;
     --light-gray:  #F3F3F3;
+    --medium-gray:  #F6F6F8;
     --slider-gray:  #E8E9EE;
     --lable-blue: #3411BE;
     --lable-rose: #C201AF;
+    --violet: #96A3E3;
 }
 
 body {
@@ -28,6 +30,10 @@ body {
     text-align: left;
 
     color: var(--black);
+}
+
+p {
+    margin-bottom: 12px;
 }
 
 /*ANIMATIONS*/
@@ -1388,6 +1394,23 @@ body {
     color: var(--black);
 }
 
+.text_600_24_black {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.text_500_16_black {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.text_300_14_black {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--black);
+}
 
 .btn_product_quantity {
     display: flex;
@@ -1417,4 +1440,17 @@ body {
 }
 
 
+.star_rating_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    gap: 5px;
+
+    .star_img {
+        width: 16px;
+        height: 16px;
+    }
+}
 

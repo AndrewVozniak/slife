@@ -133,20 +133,201 @@
         <p>&#42; {{__('product.product_describe.quantity')}}</p>
 
         <div class="hurry_up_box">
-            <span>
-                <b>{{__('product.product_describe.hurry_up')}}&#33;</b>
+            <p>
+                <span class="text_700_16_black">{{__('product.product_describe.hurry_up')}}&#33;</span>
                 {{__('product.product_describe.one_unit_left')}}&#46;
                 {{__('product.product_describe.hurry_up_text')}}&#46;
-            </span>
+            </p>
         </div>
     </div>
 
-    <div class="describe_product">
+    <div class="details_wrapper">
+        <div class="details_box">
+            <div class="details_title_box">
+                <span class="details_title">{{__('product.details.description')}}&#58;</span>
+
+                <button class="img_24_box"  id="toggleButton">
+                    <img src="{{asset('storage/images/icons/iconoir_plus.svg')}}" alt="icon"
+                         class="img_24"  id="toggleIcon">
+                </button>
+            </div>
+
+            <div class="details_text_box" id="textContent" style="display: none;">
+                <p>
+                    <span class="text_500_16_black">{{__('product.details.Material')}}&#58;</span>
+                    95% бавовна, 5% еластан.
+                </p>
+                <p>{{__('product.details.text1')}}</p>
+                <p>{{__('product.details.text2')}}</p>
+            </div>
+        </div>
+
+        <div class="details_box">
+            <div class="details_title_box">
+                <span class="details_title">{{__('product.details.delivery')}}</span>
+
+                <button class="img_24_box"  id="toggleButtonDelivery">
+                    <img src="{{asset('storage/images/icons/iconoir_plus.svg')}}" alt="icon"
+                         class="img_24"  id="toggleIconDelivery">
+                </button>
+            </div>
+
+            <div class="details_text_box" id="textContentDelivery" style="display: none;">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+
+        <div class="details_box">
+            <div class="details_title_box">
+                <span class="details_title">{{__('product.details.payment')}}</span>
+
+                <button class="img_24_box"  id="toggleButtonPayment">
+                    <img src="{{asset('storage/images/icons/iconoir_plus.svg')}}" alt="icon"
+                         class="img_24"  id="toggleIconPayment">
+                </button>
+            </div>
+
+            <div class="details_text_box" id="textContentPayment" style="display: none;">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+
+        <div class="details_box">
+            <div class="details_title_box">
+                <span class="details_title">{{__('product.details.composition_and_care')}}</span>
+
+                <button class="img_24_box"  id="toggleButtonComposition">
+                    <img src="{{asset('storage/images/icons/iconoir_plus.svg')}}" alt="icon"
+                         class="img_24"  id="toggleIconComposition">
+                </button>
+            </div>
+
+            <div class="details_text_box" id="textContentComposition" style="display: none;">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+
+        <div class="details_box">
+            <div class="details_title_box">
+                <span class="details_title">{{__('product.details.certificate')}}</span>
+
+                <button class="img_24_box"  id="toggleButtonCertificate">
+                    <img src="{{asset('storage/images/icons/iconoir_plus.svg')}}" alt="icon"
+                         class="img_24"  id="toggleIconCertificate">
+                </button>
+            </div>
+
+            <div class="details_text_box" id="textContentCertificate" style="display: none;">
+                <p>
+                    {{__('product.details.we_care')}}
+                    <span class="text_500_16_black">{{__('product.details.only_original')}}</span>
+                    {{__('product.details.leading_manufacturers')}}
+                </p>
+
+                <p>
+                    <span class="text_500_16_black">{{__('product.details.product_quality')}}</span>
+                    {{__('product.details.conclusion')}}
+                </p>
+
+                <p>
+                    <span class="text_500_16_black">{{__('product.details.obtaining_certificate')}}</span>
+                    {{__('product.details.request')}}
+                    <span class="mail">slife&#46;ua&#64;ukr&#46;net&#46;</span>
+                    <span>{{__('product.details.managers')}}</span>
+                </p>
+            </div>
+        </div>
 
     </div>
 
-    <div class="reviews">
+    <div class="reviews_wrapper">
+        <div class="reviews_title_box">
+            <span class="text_600_24_black">{{__('product.reviews')}}</span>
 
+            <div class="btn_arrow_wrapper">
+                <button class="btn_arrow left_btn_arr">
+                    <svg width="17" height="16"
+                         viewBox="0 0 17 16"
+                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.792892 8.70711C0.402369 8.31658 0.402369 7.68342 0.792892 7.29289L7.15685
+                         0.928932C7.54738 0.538408 8.18054 0.538408 8.57107 0.928932C8.96159 1.31946 8.96159
+                         1.95262 8.57107 2.34315L2.91421 8L8.57107 13.6569C8.96159 14.0474 8.96159 14.6805 8.57107
+                         15.0711C8.18054 15.4616 7.54738 15.4616 7.15685 15.0711L0.792892 8.70711ZM16.5
+                          9H1.5V7H16.5V9Z" fill="#1D2557"/>
+                    </svg>
+                </button>
+
+                <button class="btn_arrow right_btn_arr">
+                    <svg width="17" height="16"
+                         viewBox="0 0 17 16" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.2071 8.70711C16.5976 8.31658 16.5976 7.68342 16.2071 7.29289L9.84315
+                        0.928932C9.45262 0.538408 8.81946 0.538408 8.42893 0.928932C8.03841 1.31946 8.03841
+                        1.95262 8.42893 2.34315L14.0858 8L8.42893 13.6569C8.03841 14.0474 8.03841 14.6805 8.42893
+                        15.0711C8.81946 15.4616 9.45262 15.4616 9.84315 15.0711L16.2071 8.70711ZM0.5
+                        9H15.5V7H0.5V9Z" fill="white"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+
+        <div class="reviews_box">
+            <div class="author_and_rating_box">
+                <div class="about_author_box">
+                    <div class="photo_author">
+                        <span>A</span>
+                    </div>
+
+                    <div class="author_info_box">
+                        <p class="text_500_16_black">Anna</p>
+                        <span class="text_300_14_black">02/09/2024</span>
+                    </div>
+                </div>
+
+                <div class="star_rating_box">
+                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_img">
+                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_img">
+                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_img">
+                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_img">
+                    <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="star_img">
+                </div>
+            </div>
+
+            <div class="main_text_box">
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum
+                </p>
+            </div>
+        </div>
     </div>
 
     <div class="leave_review">
@@ -174,4 +355,82 @@
             }
         }
     }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('toggleButton');
+        const toggleIcon = document.getElementById('toggleIcon');
+        const textContent = document.getElementById('textContent');
+
+        toggleButton.addEventListener('click', function() {
+            // Перевірка, чи відображається текст
+            const isTextVisible = textContent.style.display === 'block';
+
+            // змінюємо стиль іконки і видимість тексту
+            textContent.style.display = isTextVisible ? 'none' : 'block';
+            toggleIcon.src = isTextVisible ? '{{ asset("storage/images/icons/iconoir_plus.svg") }}' : '{{ asset("storage/images/icons/iconoir_minus.svg") }}';
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('toggleButtonDelivery');
+        const toggleIcon = document.getElementById('toggleIconDelivery');
+        const textContent = document.getElementById('textContentDelivery');
+
+        toggleButton.addEventListener('click', function() {
+            // Перевірка, чи відображається текст
+            const isTextVisible = textContent.style.display === 'block';
+
+            // змінюємо стиль іконки і видимість тексту
+            textContent.style.display = isTextVisible ? 'none' : 'block';
+            toggleIcon.src = isTextVisible ? '{{ asset("storage/images/icons/iconoir_plus.svg") }}' : '{{ asset("storage/images/icons/iconoir_minus.svg") }}';
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('toggleButtonPayment');
+        const toggleIcon = document.getElementById('toggleIconPayment');
+        const textContent = document.getElementById('textContentPayment');
+
+        toggleButton.addEventListener('click', function() {
+            // Перевірка, чи відображається текст
+            const isTextVisible = textContent.style.display === 'block';
+
+            // змінюємо стиль іконки і видимість тексту
+            textContent.style.display = isTextVisible ? 'none' : 'block';
+            toggleIcon.src = isTextVisible ? '{{ asset("storage/images/icons/iconoir_plus.svg") }}' : '{{ asset("storage/images/icons/iconoir_minus.svg") }}';
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('toggleButtonComposition');
+        const toggleIcon = document.getElementById('toggleIconComposition');
+        const textContent = document.getElementById('textContentComposition');
+
+        toggleButton.addEventListener('click', function() {
+            // Перевірка, чи відображається текст
+            const isTextVisible = textContent.style.display === 'block';
+
+            // змінюємо стиль іконки і видимість тексту
+            textContent.style.display = isTextVisible ? 'none' : 'block';
+            toggleIcon.src = isTextVisible ? '{{ asset("storage/images/icons/iconoir_plus.svg") }}' : '{{ asset("storage/images/icons/iconoir_minus.svg") }}';
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('toggleButtonCertificate');
+        const toggleIcon = document.getElementById('toggleIconCertificate');
+        const textContent = document.getElementById('textContentCertificate');
+
+        toggleButton.addEventListener('click', function() {
+            // Перевірка, чи відображається текст
+            const isTextVisible = textContent.style.display === 'block';
+
+            // змінюємо стиль іконки і видимість тексту
+            textContent.style.display = isTextVisible ? 'none' : 'block';
+            toggleIcon.src = isTextVisible ? '{{ asset("storage/images/icons/iconoir_plus.svg") }}' : '{{ asset("storage/images/icons/iconoir_minus.svg") }}';
+        });
+    });
 </script>
+
+
