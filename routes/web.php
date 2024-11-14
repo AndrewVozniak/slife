@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
@@ -38,4 +39,6 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
     Route::get('/forgot-password', [AuthController::class, 'forgotPasswordView'])->name('forgotPassword');
 
     Route::get('/shopping-cart', [ProductController::class, 'shoppingCart'])->name('shoppingCart');
+
+    Route::get('/cabinet/order_history', [UserController::class, 'orderHistory'])->name('orderHistory');
 });
