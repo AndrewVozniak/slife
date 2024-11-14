@@ -2,6 +2,7 @@
     <div class="product_card_img_wrapper">
         <img src="{{ asset($image) }}" alt="photo" class="product_card_img">
 
+        @if(isset($isFavorite) && !$isFavorite)
         <div class="image_overlay">
             <div class="product_card_buttons">
                 <div class="product_card_button">
@@ -33,6 +34,7 @@
                 </div>
             </div>
         </div>
+        @endif
     </div>
     <div class="card_describe_product">
         <div class="product_price_wrapper">
@@ -47,10 +49,16 @@
     </div>
 
     @if($label === 'Top')
-        <span class="product_label top-label">TOP</span>
+        <span class="product_label top-label @if(isset($isFavorite) && $isFavorite) favorite-label @endif">TOP</span>
     @elseif($label === 'Sale')
-        <span class="product_label sale-label">Sale</span>
+        <span class="product_label sale-label @if(isset($isFavorite) && $isFavorite) favorite-label @endif">Sale</span>
     @elseif($label === 'New')
-        <span class="product_label new-label">New</span>
+        <span class="product_label new-label @if(isset($isFavorite) && $isFavorite) favorite-label @endif">New</span>
+    @endif
+
+    @if(isset($isFavorite) && $isFavorite)
+        <div class="favorite">
+            <img src="{{ asset('/storage/images/icons/heart_outline.svg') }}" alt="favorite" class="favorite_img">
+        </div>
     @endif
 </a>

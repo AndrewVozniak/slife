@@ -1084,6 +1084,11 @@ textarea:active {
                 animation: fadeOut 0.3s;
             }
 
+            .favorite-label {
+                opacity: 1;
+                animation: unset;
+            }
+
             .image_overlay {
                 opacity: 1;
                 visibility: visible;
@@ -1161,6 +1166,37 @@ textarea:active {
 
             font-size: 14px;
             font-weight: 400;
+        }
+
+        .favorite {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            color: #fff;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+
+            gap: 10px;
+
+            background-color: #fff;
+
+            position: absolute;
+            top: 12px;
+            right: 0;
+            z-index: 10;
+
+            width: 56px;
+            height: 56px;
+
+            font-size: 14px;
+            font-weight: 400;
+
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: rgba(230, 230, 230, 0.8);
+            }
         }
 
         .new-label {

@@ -36,7 +36,7 @@
                 </a>
             </li>
             <li class="user_navigation__item">
-                <a href="#" class="user_navigation__link">
+                <a href="{{ route('favorite', ['locale' => App::currentLocale()]) }}" class="user_navigation__link">
                     <p class="count">0</p>
                     <img src="{{asset('storage/images/icons/favorite.png')}}" alt="favorite items">
                 </a>

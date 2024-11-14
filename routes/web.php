@@ -22,10 +22,6 @@ Route::get('/', function () {
 
 // Група з префіксом для інших маршрутів з локалізацією
 Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], function () {
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('home');
-
     Route::get('/change-locale/{lang}', 'App\Http\Controllers\LocaleController@changeLang')->name('changeLocale');
     Route::get('/change-currency/{currency}', 'App\Http\Controllers\CurrencyController@changeCurrency')->name('changeCurrency');
     Route::get('/', [ProductController::class, 'index'])->name('home');
@@ -41,4 +37,5 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
     Route::get('/shopping-cart', [ProductController::class, 'shoppingCart'])->name('shoppingCart');
 
     Route::get('/cabinet/order_history', [UserController::class, 'orderHistory'])->name('orderHistory');
+    Route::get('/cabinet/favorite', [UserController::class, 'favorite'])->name('favorite');
 });

@@ -2,8 +2,14 @@
     <div class="container">
         <div class="popular_products_box">
             <div class="product_title_box">
-                <span class="title__big">{{ __('title.new') }}</span>
+                @if(isset($title))
+                    <span class="title__big">{{ $title }}</span>
+                @else
+                    <span class="title__big">{{ __('title.new') }}</span>
+                @endif
 
+
+                @if(isset($isFavorite) && !$isFavorite)
                 <div class="popular_products_btn_box">
                     <button class="left_btn">
                         <svg width="17"
@@ -33,6 +39,7 @@
                         </svg>
                     </button>
                 </div>
+                @endif
             </div>
         </div>
 
@@ -43,6 +50,7 @@
                     :oldPrice="$product['oldPrice'] ?? null"
                     :newPrice="$product['newPrice'] ?? null"
                     :title="$product['title']"
+                    :isFavorite="$isFavorite ?? false"
                     :label="$product['label'] ?? null"
                 />
             @endforeach
