@@ -61,4 +61,9 @@ class UserController extends Controller
     {
         return view('cabinet.favorite', ['products' => $this->products]);
     }
+
+    public function personalData(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('cabinet.personal_data');
+    }
 }
