@@ -107,7 +107,7 @@
 
                 <div class="user_bonus_info_text_box">
                     <div class="pay_with_bonus_box">
-                        <a href="#" class="pay_with_bonus_link">{{__('product.product_describe.login')}}</a>
+                        <a href="{{ route('login', ['locale' => App::currentLocale()]) }}" class="pay_with_bonus_link">{{__('product.product_describe.login')}}</a>
                         <span class="pay_with_bonus_text">{{__('product.product_describe.pay_with_bonus')}}</span>
                     </div>
 

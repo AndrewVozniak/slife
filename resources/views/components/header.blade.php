@@ -42,7 +42,7 @@
                 </a>
             </li>
             <li class="user_navigation__item">
-                <a href="#" class="user_navigation__link">
+                <a href="{{ route('shoppingCart', ['locale' => App::currentLocale()]) }}" class="user_navigation__link">
                     <p class="count">0</p>
                     <img src="{{asset('storage/images/icons/shopping_cart.png')}}" alt="shopping cart">
                 </a>
