@@ -32,7 +32,7 @@
             <button class="gray_description__btn" id="readMoreBtn" onclick="toggleText()">
                 <span id="buttonText">{{ __('title.gray.btn') }}</span>
 
-                <div id="toggleIcon" class="icon">
+                <div id="toggleRotateIcon" class="btn_icon_arrow">
                     <svg
                          width="16"
                          height="17"
@@ -58,16 +58,16 @@
     function toggleText() {
         const extraContent = document.getElementById("extraContent");
         const buttonText = document.getElementById("buttonText");
-        const toggleIcon = document.getElementById("toggleIcon");
+        const toggleRotateIcon = document.getElementById("toggleRotateIcon");
 
         if (extraContent.style.display === "none") {
             extraContent.style.display = "block";
             buttonText.textContent = btnLessText;
-            toggleIcon.classList.add("rotated");
+            toggleRotateIcon.classList.add("rotated");
         } else {
             extraContent.style.display = "none";
             buttonText.textContent = btnMoreText;
-            toggleIcon.classList.remove("rotated");
+            toggleRotateIcon.classList.remove("rotated");
         }
     }
 </script>

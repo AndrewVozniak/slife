@@ -1418,7 +1418,7 @@ textarea:active {
                 color: var(--white);
             }
 
-            .icon {
+            .btn_icon_arrow {
                 width: 15px;
                 height: 15px;
 
@@ -1434,7 +1434,7 @@ textarea:active {
                 fill: var(--red);
             }
 
-            .icon.rotated {
+            .btn_icon_arrow.rotated {
                 transform: rotate(180deg);
             }
 
