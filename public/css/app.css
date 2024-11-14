@@ -5,6 +5,7 @@
     --arrow-gray: #696C7B;
     --white: #ffffff;
     --gray: #E8E9EE;
+    --gray-input-border: #D2D2D2;
     --red: #DB0614;
     --black: #000000;
     --blue:  #050D38;
@@ -34,6 +35,47 @@ body {
 
 p {
     margin-bottom: 12px;
+}
+
+input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 1px solid var(--gray-input-border);
+    border-radius: 12px;
+    outline: none;
+
+    color: var(--dark-text);
+}
+
+input:focus {
+    border: 1px solid var(--gray-text);
+}
+
+input:active {
+    border: 1px solid var(--gray-text);
+}
+
+textarea {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    border: 1px solid var(--gray-input-border);
+    border-radius: 12px;
+    outline: none;
+
+    color: var(--dark-text);
+}
+
+textarea:focus {
+    border: 1px solid var(--gray-text);
+}
+
+textarea:active {
+    border: 1px solid var(--gray-text);
 }
 
 /*ANIMATIONS*/
@@ -1322,15 +1364,24 @@ p {
                 color: var(--white);
             }
 
-            .gray_description__btn svg {
+            .icon {
                 width: 15px;
                 height: 15px;
 
-                transition: 0.3s ease;
+                transition: transform 0.3s;
+            }
+
+            .gray_description__btn svg {
+                width: 15px;
+                height: 15px;
             }
 
             .gray_description__btn svg path {
                 fill: var(--red);
+            }
+
+            .icon.rotated {
+                transform: rotate(180deg);
             }
 
             &:hover svg path {
@@ -1406,6 +1457,12 @@ p {
     color: var(--black);
 }
 
+.text_500_16_black {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
 .text_300_14_black {
     font-size: 14px;
     font-weight: 300;
@@ -1439,7 +1496,6 @@ p {
     }
 }
 
-
 .star_rating_box {
     display: flex;
     justify-content: center;
@@ -1453,4 +1509,5 @@ p {
         height: 16px;
     }
 }
+
 

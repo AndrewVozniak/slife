@@ -330,14 +330,30 @@
         </div>
     </div>
 
-    <div class="leave_review">
+    <div class="leave_review_wrapper">
+        <div class="form_title_box">
+            <div class="form_title">
+                <span >{{__('product.leave_review.leave_review')}}</span>
+            </div>
 
+            <div class="warning">
+                <div class="img_24_box">
+                    <img src="{{asset('storage/images/icons/iconamoon_attention-circle-red.svg')}}" alt="icon"
+                         class="img_24">
+                </div>
+
+                <div class="warning_text">
+                    <p>{{__('product.leave_review.attention')}}
+                    <span class="authorized">{{__('product.leave_review.authorized')}}</span>
+                        {{__('product.leave_review.user_purchased_the_product')}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        @include('components.form.leave_review')
     </div>
 
-    <div class="product_name">
-
-
-    </div>
 </section>
 
 <script>

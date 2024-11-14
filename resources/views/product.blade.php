@@ -13,5 +13,9 @@
 
     </div>
 
+    @include('components.top_category')
+
+    @include('components.gray_description')
+
     @include('components.footer')
 @endsection

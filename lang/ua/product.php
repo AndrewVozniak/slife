@@ -53,4 +53,16 @@ return [
     ],
 
     'reviews' => 'Відгуки',
+
+    'leave_review' => [
+        'leave_review' => 'Залишити відгук про товар',
+        'attention' => 'Відгук може залишити',
+        'authorized' => 'авторизований',
+        'user_purchased_the_product' => 'користувач, який придбав товар',
+        'name' => 'Ім\'я',
+        'textarea_review' => 'Ваш відгук',
+        'rate_product' =>  'Оцініть товар',
+        'send' => 'Надіслати',
+    ],
+
 ];
