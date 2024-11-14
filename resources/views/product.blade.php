@@ -13,9 +13,11 @@
 
     </div>
 
-    @include('components.top_category')
+    <div class="content_wrapper">
+        @include('components.top_category')
 
-    @include('components.gray_description')
+        @include('components.gray_description')
+    </div>
 
     @include('components.footer')
 @endsection
