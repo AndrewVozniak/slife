@@ -6,6 +6,7 @@
     --white: #ffffff;
     --gray: #E8E9EE;
     --gray-input-border: #D2D2D2;
+    --gray-input-border2: #979797;
     --red: #DB0614;
     --black: #000000;
     --blue:  #050D38;
@@ -1492,6 +1493,10 @@ textarea:active {
         object-fit: cover;
     }
 }
+.text_800_32_black {
+    font-size: 32px;
+    font-weight: 800;
+}
 
 .text_700_16_black {
     font-size: 16px;
@@ -1505,6 +1510,11 @@ textarea:active {
     color: var(--black);
 }
 
+.text_600_18_black {
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .text_500_16_black {
     font-size: 16px;
     font-weight: 500;
@@ -1515,6 +1525,11 @@ textarea:active {
     font-size: 16px;
     font-weight: 500;
     color: var(--dark-text);
+}
+
+.text_500_14_black {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .text_300_14_black {
