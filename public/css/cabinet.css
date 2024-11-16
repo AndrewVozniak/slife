@@ -197,7 +197,7 @@
                     width: 67px;
                     height: 100%;
 
-                    rect {
+                    & rect {
                         fill: var(--gray);
 
                         &.active {
@@ -205,7 +205,7 @@
                         }
                     }
 
-                    path:not(.without-stroke) {
+                    & path:not(.without-stroke) {
                         stroke: var(--black);
 
                         &.active {

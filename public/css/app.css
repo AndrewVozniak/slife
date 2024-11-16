@@ -1499,9 +1499,7 @@ textarea:active {
 }
 
 .text_700_16_black {
-    font-size: 16px;
     font-weight: 700;
-    color: var(--black);
 }
 
 .text_600_24_black {
@@ -1521,7 +1519,7 @@ textarea:active {
     color: var(--black);
 }
 
-.text_500_16_black {
+.text_500_16_dark-text {
     font-size: 16px;
     font-weight: 500;
     color: var(--dark-text);
@@ -1530,6 +1528,10 @@ textarea:active {
 .text_500_14_black {
     font-size: 14px;
     font-weight: 500;
+}
+
+.text_400_16_black {
+    font-weight: 400;
 }
 
 .text_300_14_black {

@@ -23,5 +23,4 @@ return [
     'october' => 'Жовтень',
     'november' => 'Листопад',
     'december' => 'Грудень',
-
 ];
