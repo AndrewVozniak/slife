@@ -66,4 +66,9 @@ class UserController extends Controller
     {
         return view('cabinet.personal_data');
     }
+
+    public function myBonuses(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('cabinet.my_bonuses');
+    }
 }
