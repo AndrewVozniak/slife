@@ -104,4 +104,9 @@ class ProductController extends Controller
     {
         return view('shopping-cart');
     }
+
+    public function compare()
+    {
+        return view('product-comparison');
+    }
 }

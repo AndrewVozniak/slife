@@ -28,6 +28,7 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
 
     Route::get('/catalog/{category}/{subcategory?}/{last_category?}', [ProductController::class, 'catalog'])->name('catalog');
     Route::get('/product/{id}', [ProductController::class, 'product'])->name('product');
+    Route::get('/compare', [ProductController::class, 'compare'])->name('compareProduct');
 
 
     Route::get('/login', [AuthController::class, 'signInView'])->name('login');

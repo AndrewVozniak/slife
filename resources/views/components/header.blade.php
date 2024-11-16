@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li class="user_navigation__item">
-                <a href="#" class="user_navigation__link">
+                <a href="{{ route('compareProduct', ['locale' => App::currentLocale()])  }}" class="user_navigation__link">
                     <p class="count">0</p>
                     <img src="{{asset('storage/images/icons/pajamas_comparison.svg')}}" alt="comparison">
                 </a>

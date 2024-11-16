@@ -205,6 +205,16 @@
                         }
                     }
 
+                    .filled {
+                        fill: var(--black);
+
+                        &.active {
+                            &.filled {
+                                fill: var(--white);
+                            }
+                        }
+                    }
+
                     & path:not(.without-stroke) {
                         stroke: var(--black);
 

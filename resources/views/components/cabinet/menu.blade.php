@@ -77,8 +77,7 @@
                                      37.479 40.6085 37.132L39.6605 35.969C39.5355 36.071 39.3585 36.153 38.9755 36.199C38.5725 36.249
                                      38.0405 36.25 37.2405 36.25V37.75ZM40.4255 33.656C40.2635 34.439 40.1555 34.959 40.0255 35.344C39.9025
                                      35.71 39.7855 35.867 39.6605 35.969L40.6085 37.132C41.0355 36.784 41.2745 36.335 41.4465 35.823C41.6125 35.331
-                                     41.7405 34.705 41.8945 33.959L40.4255 33.656Z"
-                          fill="black" @if($activeTab == 'order_history') class="without-stroke active" @else class="without-stroke" @endif/>
+                                     41.7405 34.705 41.8945 33.959L40.4255 33.656Z" @if($activeTab == 'order_history') class="without-stroke filled active" @else class="without-stroke filled" @endif/>
                     <path d="M34 34.5V32.5M34 32.5V30.5M34 32.5H36M34 32.5H32"
                           stroke="black" stroke-linecap="round" @if($activeTab == 'order_history') class="active" @endif/>
                 </svg>
