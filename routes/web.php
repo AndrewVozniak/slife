@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
@@ -29,6 +30,9 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
     Route::get('/catalog/{category}/{subcategory?}/{last_category?}', [ProductController::class, 'catalog'])->name('catalog');
     Route::get('/product/{id}', [ProductController::class, 'product'])->name('product');
     Route::get('/compare', [ProductController::class, 'compare'])->name('compareProduct');
+
+
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 
     Route::get('/login', [AuthController::class, 'signInView'])->name('login');
