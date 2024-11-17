@@ -7,13 +7,17 @@
     --gray: #E8E9EE;
     --gray-input-border: #D2D2D2;
     --gray-input-border2: #979797;
+    --gray-table-border: #D4D5DF;
+    --gray-old-price:  #939191;
     --red: #DB0614;
     --black: #000000;
     --blue:  #050D38;
+    --blue-text: #0065FE;
     --dark-blue: #040927;
     --dark:#242424;
     --dark-text: #1D1D1D;
     --gray-text:  #717171;
+    --gray-none-reviews: #A5A5A5;
     --light-gray:  #F3F3F3;
     --medium-gray:  #F6F6F8;
     --slider-gray:  #E8E9EE;
@@ -1603,6 +1607,10 @@ textarea:active {
 .text_600_18_black {
     font-size: 18px;
     font-weight: 500;
+}
+
+.text_600_18_black {
+    font-weight: 600;
 }
 
 .text_500_16_black {
