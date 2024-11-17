@@ -1598,6 +1598,12 @@ textarea:active {
     font-weight: 700;
 }
 
+.text_700_16_red {
+    font-weight: 700;
+    color: var(--red);
+}
+
+
 .text_600_24_black {
     font-size: 24px;
     font-weight: 600;
