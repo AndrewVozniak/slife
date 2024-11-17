@@ -43,4 +43,14 @@
 
         border: 1px solid rgba(29, 37, 87, 0.1);
     }
+
+    .red_small {
+        text-align: left;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+        color: var(--red);
+    }
 }
