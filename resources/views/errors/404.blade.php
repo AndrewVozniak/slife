@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Історія покупок')
+@section('title', 'Сторінка не знайдена')
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/errors.css') }}">
 @endsection

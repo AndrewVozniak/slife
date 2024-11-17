@@ -46,6 +46,18 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
     Route::get('/cabinet/order_history', [UserController::class, 'orderHistory'])->name('orderHistory');
     Route::get('/cabinet/favorite', [UserController::class, 'favorite'])->name('favorite');
 
+    Route::get('/info/delivery', function () {
+        return view('info.delivery');
+    })->name('delivery');
+
+    Route::get('/info/private_policy', function () {
+        return view('info.private_policy');
+    })->name('private_policy');
+
+    Route::get('/info/return_policy', function () {
+        return view('info.return_policy');
+    })->name('return_policy');
+
     Route::fallback(function () {
         return view('errors.404');
     });
