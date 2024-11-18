@@ -46,6 +46,10 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
     Route::get('/cabinet/order_history', [UserController::class, 'orderHistory'])->name('orderHistory');
     Route::get('/cabinet/favorite', [UserController::class, 'favorite'])->name('favorite');
 
+    Route::get('/contacts', function () {
+        return view('contacts');
+    })->name('contacts');
+
     Route::get('/info/delivery', function () {
         return view('info.delivery');
     })->name('delivery');
