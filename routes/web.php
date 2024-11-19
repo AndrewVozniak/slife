@@ -33,6 +33,7 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
 
 
     Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+    Route::get('/blog/{slug}', [BlogController::class, 'post'])->name('post');
 
 
     Route::get('/login', [AuthController::class, 'signInView'])->name('login');

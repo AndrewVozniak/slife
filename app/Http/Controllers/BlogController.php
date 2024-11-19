@@ -10,4 +10,9 @@ class BlogController extends Controller
     {
         return view('blog.index');
     }
+
+    public function post($locale, $slug)
+    {
+        return view('blog.post', ['slug' => $slug]);
+    }
 }
