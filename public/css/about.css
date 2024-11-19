@@ -33,3 +33,30 @@
         width: 70%;
     }
 }
+
+.photo_section_wrapper {
+    display: unset;
+
+    .photo_image_wrapper {
+        width: 100%;
+        height: 682px;
+        margin-top: 36px;
+
+        overflow: hidden;
+        position: relative;
+        object-position: center;
+
+        border-radius: 56px 56px 0 0;
+
+        .photo_image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+=
+}

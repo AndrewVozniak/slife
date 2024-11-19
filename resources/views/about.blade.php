@@ -25,6 +25,10 @@
                 </p>
             </section>
         </div>
+
+        <section >
+            @include('components.about.photo_section')
+        </section>
     </div>
 
     @include('components.footer')
