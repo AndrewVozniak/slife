@@ -63,7 +63,7 @@
 
         .image {
             width: 100%;
-            height: auto;
+            height: 533px;
             object-fit: cover;
         }
     }
@@ -186,6 +186,11 @@
 
     padding-top: 64px;
     padding-bottom: 120px;
+
+    @media screen and (max-width: 1200px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 
     .article__section {
         display: flex;
