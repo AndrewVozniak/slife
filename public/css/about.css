@@ -1,0 +1,35 @@
+.breadcrumbs {
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+
+.about__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    .about_title {
+        font-size: 80px;
+        font-weight: 800;
+        line-height: 94px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        white-space: nowrap;
+    }
+
+    .about_description {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+        white-space: pre-line;
+
+        width: 70%;
+    }
+}

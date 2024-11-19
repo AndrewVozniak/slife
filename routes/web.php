@@ -63,6 +63,10 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'ua|en|ru']], func
         return view('info.return_policy');
     })->name('return_policy');
 
+    Route::get('/about', function () {
+        return view('about');
+    })->name('about');
+
     Route::fallback(function () {
         return view('errors.404');
     });
