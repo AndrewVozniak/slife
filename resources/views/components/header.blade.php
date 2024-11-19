@@ -47,19 +47,25 @@
                     <img src="{{asset('storage/images/icons/shopping_cart.png')}}" alt="shopping cart">
                 </a>
             </li>
+
+            <li  class="user_navigation__item">
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <img src="{{asset('storage/images/icons/hugeicons_menu-02.svg')}}" alt="open menu">
+                </button>
+            </li>
         </ul>
     </main>
 
-    <ul class="categories container">
+    <ul class="categories container" id="menu">
         <li class="category_item main">
             <div class="main_item active">
-                <a href="#" class="category_link">{{ __('header.categories.men') }}</a>
+                <a href="#" class="category_link_main">{{ __('header.categories.men') }}</a>
             </div>
             <div class="main_item">
-                <a href="#" class="category_link">{{ __('header.categories.women') }}</a>
+                <a href="#" class="category_link_main">{{ __('header.categories.women') }}</a>
             </div>
             <div class="main_item">
-                <a href="#" class="category_link">{{ __('header.categories.children') }}</a>
+                <a href="#" class="category_link_main">{{ __('header.categories.children') }}</a>
             </div>
         </li>
         <li class="category_item">
@@ -83,5 +89,12 @@
         <li class="category_item">
             <a href="{{ route('catalog', ['category' => 'sale', 'locale' => App::currentLocale()]) }}" class="category_link">{{ __('header.categories.sale') }}</a>
         </li>
-    </ul>
+    </ul >
 </header>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    }
+</script>
