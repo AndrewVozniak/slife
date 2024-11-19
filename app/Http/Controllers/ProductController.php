@@ -96,7 +96,9 @@ class ProductController extends Controller
             }
         }
 
-        return view('product', compact('product'));
+        $products = $this->products;
+
+        return view('product', compact('product', 'products'));
     }
 
 
