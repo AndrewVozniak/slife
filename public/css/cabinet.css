@@ -1,3 +1,8 @@
+.breadcrumbs {
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+
 .personal_data_wrapper {
     display: flex;
     justify-content: space-between;

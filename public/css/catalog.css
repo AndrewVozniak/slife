@@ -65,6 +65,7 @@
                 border: 2px solid var(--slider-gray);
                 box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.1);
                 border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0 !important;
             }
 
             .param_dropdown_arrow_clicked {

@@ -7,6 +7,12 @@
 @section('content')
     @include('components.header')
 
+    <div class="container breadcrumbs">
+        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">Головна</a>
+        <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right.svg')}}" alt="filter" class="param_image">
+        <a href="{{ url()->current() }}" class="breadcrumb active">Користувач</a>
+    </div>
+
     <div class="content_wrapper">
         <div class="container">
             <div class="personal_data_wrapper">
