@@ -151,4 +151,58 @@
     }
 }
 
+.advantages_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+    gap: 50px;
+
+    .advantages_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        width: 30%;
+        gap: 24px;
+        padding: 120px 0;
+
+        .advantages_img_box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 76px;
+            height: 76px;
+            padding: 18px;
+            border-radius: 12px;
+
+            background-color: rgba(29, 37, 87, 0.1);
+            object-position: center;
+
+            .advantages_img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .advantages_title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 28px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+            color: var(--dark-text2);
+        }
+
+        .advantages_text {
+            color: var(--dark-text2);
+        }
+    }
+}
+
 

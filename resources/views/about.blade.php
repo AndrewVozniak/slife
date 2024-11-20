@@ -32,6 +32,54 @@
         <section >
             @include('components.about.photo_section')
         </section>
+
+        <section>
+            <div class="container">
+                <div class="advantages_wrapper">
+                    <div class="advantages_wrapper">
+                        <div class="advantages_img_box">
+                            <img src="{{ asset('storage/images/icons/solar_widget-add-bold-duotone.svg') }}" alt="widget" class="advantages_img">
+                        </div>
+
+                        <div class="advantages_title">
+                            <p>{{__('about.advantages_section.choice_of_models')}}&#58;</p>
+                        </div>
+
+                        <div class="advantages_text">
+                            <p>{{__('about.advantages_section.choice')}}&#46;</p>
+                        </div>
+                    </div>
+
+                    <div class="advantages_wrapper">
+                        <div class="advantages_img_box">
+                            <img src="{{ asset('storage/images/icons/solar_ticket-sale-bold-duotone.svg') }}" alt="widget" class="advantages_img">
+                        </div>
+
+                        <div class="advantages_title">
+                            <p>{{__('about.advantages_section.promotional_offers')}}</p>
+                        </div>
+
+                        <div class="advantages_text">
+                            <p>{{__('about.advantages_section.discounts')}}&#33;</p>
+                        </div>
+                    </div>
+
+                    <div class="advantages_wrapper">
+                        <div class="advantages_img_box">
+                            <img src="{{ asset('storage/images/icons/solar_atom-bold-duotone.svg') }}" alt="widget" class="advantages_img">
+                        </div>
+
+                        <div class="advantages_title">
+                            <p>{{__('about.advantages_section.practicality')}}&#58;</p>
+                        </div>
+
+                        <div class="advantages_text">
+                            <p>{{__('about.advantages_section.practicality_text')}}&#46;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     @include('components.footer')
