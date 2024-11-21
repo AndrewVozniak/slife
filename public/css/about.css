@@ -271,6 +271,8 @@
     right: 15%;
     transform: translateY(-50%);
     z-index: 3;
+
+    width: 55%;
 }
 
 .right__goal_and_history {
@@ -279,20 +281,36 @@
     left: 15%;
     transform: translateY(-50%);
     z-index: 3;
+
+    width: 55%;
 }
 
 .text__goal_and_history_box {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
 
-    width: 55%;
     height: 100%;
+}
 
-    .text_600_24_dark-text {
-        font-size: 24px;
-        font-weight: 600;
-        color: var(--dark-text2);
-    }
+.text_600_24_dark-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-text2);
+    text-align: left;
+}
+
+.left_triangle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.right_triangle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 3;
 }
