@@ -80,6 +80,10 @@
                 </div>
             </div>
         </section>
+
+        <section>
+            @include('components.about.history_and_goal')
+        </section>
     </div>
 
     @include('components.footer')

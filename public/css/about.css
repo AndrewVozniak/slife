@@ -206,3 +206,93 @@
 }
 
 
+
+.left_upper {
+    grid-area: left_upper;
+}
+
+.right_upper {
+    grid-area: right_upper;
+    background-color: var(--gray);
+}
+
+.left_bottom {
+    grid-area: left_bottom;
+    background-color: var(--gray);
+}
+
+.right_bottom {
+    grid-area: right_bottom;
+}
+
+.grid_wrapper {
+    display: grid;
+    grid-template-areas:
+        "left_upper right_upper"
+        "left_bottom right_bottom";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    width: 100%;
+    height: 100%;
+}
+
+.grid_wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.bg_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title_goal_and_history {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 112px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    color: var(--white);
+}
+
+.left__goal_and_history {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.right__goal_and_history {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.text__goal_and_history_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 55%;
+    height: 100%;
+
+    .text_600_24_dark-text {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--dark-text2);
+    }
+}
