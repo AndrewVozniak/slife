@@ -4,7 +4,7 @@
             <div class="mailing_list_box_grid">
                 <div class="item1">
                    <a href="#">
-                       <img src="{{asset('storage/images/logo_white.png')}}" alt="logo" class="logo">
+                       <img src="{{asset('storage/images/logo_white.png')}}" alt="logo">
                    </a>
                 </div>
                 <div class="item2">
@@ -108,6 +108,27 @@
                            <img src="{{asset('storage/images/social_media/cart.svg')}}" alt="icon"
                                 class="footer_messenger_cart">
                        </a>
+
+                        <a href="#">
+                            <img src="{{asset('storage/images/social_media/cart_insta.svg')}}" alt="icon"
+                                 class="footer_messenger_cart">
+                        </a>
+
+                        <a href="#">
+                            <img src="{{asset('storage/images/social_media/cart _telegram.svg')}}" alt="icon"
+                                 class="footer_messenger_cart">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item10">
+                    <span class="text_500_18"> {{ __('footer.main.join') }} &#33;</span>
+
+                    <div class="footer_img_messenger_box">
+                        <a href="#">
+                            <img src="{{asset('storage/images/social_media/cart.svg')}}" alt="icon"
+                                 class="footer_messenger_cart">
+                        </a>
 
                         <a href="#">
                             <img src="{{asset('storage/images/social_media/cart_insta.svg')}}" alt="icon"

@@ -44,6 +44,13 @@ p {
     margin-bottom: 12px;
 }
 
+@media screen and (max-width: 930px) {
+    body {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
 input {
     display: flex;
     justify-content: flex-start;
@@ -145,6 +152,13 @@ textarea:active {
     }
 }
 
+@media screen and (max-width: 930px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 32px;
+    }
+}
 
 .content_wrapper {
     display: flex;
@@ -163,6 +177,12 @@ textarea:active {
     text-align: left;
 
     color: var(--black);
+}
+
+@media screen and (max-width: 930px) {
+    .title {
+        font-size: 18px;
+    }
 }
 
 .title__big {
@@ -682,6 +702,9 @@ textarea:active {
     }
 }
 
+
+/********************FOOTER*********************************/
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -713,7 +736,13 @@ textarea:active {
             justify-content: flex-start;
             align-items: center;
 
-            width: 305px;
+           width: 305px;
+        }
+
+        @media screen and (max-width: 1325px){
+            .item1, .item2 {
+                width: 227px;
+            }
         }
 
         .mailing_list__title {
@@ -786,6 +815,33 @@ textarea:active {
         }
     }
 
+    @media screen and (max-width: 930px){
+        .footer__mailing_list_wrapper {
+            padding: 29px 0;
+
+            .item1 {
+                width: 132px;
+                margin-right: 47px;
+            }
+
+            .mailing_list_box_grid {
+                gap: 0;
+            }
+
+            .item2 {
+                width: fit-content;
+                margin-right: 12px;
+
+                .mailing_list__title {
+                    align-items: center;
+
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+
     .footer__main_info_wrapper {
         display: flex;
         justify-content: flex-start;
@@ -810,39 +866,28 @@ textarea:active {
             justify-content: end;
         }
 
-        @media screen and (max-width: 1320px){
-            .item8 {
-                font-size: 18px;
-            }
-        }
-
         .footer__grid_container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-areas:
-            'logo mailing_list input_box input_box'
             'about_company for_customers category contacts'
             'join_in join_in_networks category contacts';
 
             padding: 32px 0 32px 0;
             gap: 20px;
-        }
 
+            .item10 {
+                display: none;
+            }
+        }
 
         .footer__grid_container > div {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
 
-            min-width: 305px;
+            width: 305px;
         }
-
-        @media screen and (max-width: 1320px) {
-            .footer__grid_container > div {
-                min-width: 227px;
-            }
-        }
-
 
         .footer__item_title {
             display: flex;
@@ -911,8 +956,79 @@ textarea:active {
                 height: 55px;
             }
         }
+
+
+        @media screen and (max-width: 1325px){
+            .footer__grid_container > div {
+                width: 227px;
+            }
+
+            .item8 {grid-area: join_in;
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 1085px){
+            .footer__grid_container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas:
+                'about_company for_customers  contacts'
+                'category join contacts';
+
+                padding: 32px 0 32px 0;
+                gap: 20px;
+
+                .item8 {grid-area: none;}
+                .item9 {grid-area: none;}
+
+                .item8, .item9 {
+                    display: none;
+                }
+
+                .item10 {
+                    grid-area: join;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    gap: 24px;
+                }
+
+                .footer_img_messenger_box {
+                    gap: 12px;
+
+                    .footer_messenger_cart {
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 930px) {
+            .footer__item_title {
+                font-size: 14px;
+                line-height: 20px;
+
+                margin-bottom: 24px;
+            }
+
+            .footer_messenger_box {
+                gap: 8px;
+                font-size: 12px;
+
+                .footer_messenger_icon {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
     }
 }
+
 
 .footer_copyright_wrapper {
     padding: 18px 0 18px 0;
@@ -930,9 +1046,18 @@ textarea:active {
         line-height: 16px;
         text-align: left;
     }
+
+    @media screen and (max-width: 930px){
+        .footer__copy_box {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
 }
 
-/*main section*/
+/******************************         main section   *********************************/
+
+/*********************************         SLIDER   *********************************/
 
 .slider {
     display: flex;
@@ -1076,6 +1201,8 @@ textarea:active {
         }
     }
 }
+
+/*********************************        NEW PRODUCTS   *********************************/
 
 .new_products_wrapper{
     display: flex;
@@ -1383,6 +1510,8 @@ textarea:active {
 
 }
 
+/*********************************        POPULAR PRODUCTS   *********************************/
+
 .popular_products_box {
     display: flex;
     flex-direction: column;
@@ -1481,6 +1610,8 @@ textarea:active {
     }
 }
 
+/*********************************        TOP CATEGORY   *********************************/
+
 .top_category__wrapper {
     display: flex;
     justify-content: center;
@@ -1530,16 +1661,49 @@ textarea:active {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-
-        min-width: 305px;
     }
 
-    @media screen and (max-width: 1320px) {
+    @media screen and (max-width: 930px) {
+        .top_category__wrapper {
+            padding: 80px 0;
+        }
+
         .top_category__box > div {
             min-width: 167px;
         }
+
+        .top_category__title {
+            font-size: 32px;
+            line-height: 38px;
+        }
+    }
+
+    @media screen and (max-width: 765px) {
+        .top_category__title {
+            font-size: 28px;
+            line-height: 33px;
+        }
+
+        .top_category__box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+            'top_clothes top_footwear'
+            'top_accessories top_category';
+
+            gap: 24px;
+        }
     }
 }
+
+@media screen and (max-width: 930px) {
+    .top_category__wrapper {
+        padding: 80px 0;
+    }
+}
+
+/*********************************        GRAY DESCRIPTION   *********************************/
 
 .gray_description__block_wrapper {
     display: flex;
@@ -1618,8 +1782,29 @@ textarea:active {
                 fill: var(--white);
             }
         }
+
     }
 }
+
+@media screen and (max-width: 930px) {
+    .gray_description__block_wrapper {
+        padding: 80px 0;
+
+        .gray_description__block_box {
+            gap: 5px;
+
+            .gray_description__btn {
+                width: 227px;
+                height: 60px;
+
+                font-size: 14px;
+            }
+
+        }
+    }
+}
+
+/*********************************        GENERAL   *********************************/
 
 .img_18_box {
     display: flex;
@@ -1700,6 +1885,11 @@ textarea:active {
 
 .text_600_18_black {
     font-weight: 600;
+}
+
+.text_500_18 {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .text_500_16_black {
