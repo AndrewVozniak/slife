@@ -810,6 +810,12 @@ textarea:active {
             justify-content: end;
         }
 
+        @media screen and (max-width: 1320px){
+            .item8 {
+                font-size: 18px;
+            }
+        }
+
         .footer__grid_container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -822,21 +828,21 @@ textarea:active {
             gap: 20px;
         }
 
+
         .footer__grid_container > div {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
 
-            width: calc(100% / 4);
             min-width: 305px;
         }
 
         @media screen and (max-width: 1320px) {
             .footer__grid_container > div {
-                width: calc(100% / 4);
                 min-width: 227px;
             }
         }
+
 
         .footer__item_title {
             display: flex;
@@ -1525,13 +1531,11 @@ textarea:active {
         justify-content: flex-start;
         align-items: flex-start;
 
-        width: calc(100% / 4);
         min-width: 305px;
     }
 
     @media screen and (max-width: 1320px) {
         .top_category__box > div {
-            width: calc(100% / 4);
             min-width: 167px;
         }
     }
