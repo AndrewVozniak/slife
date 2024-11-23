@@ -3,7 +3,8 @@
 // lang/en/footer.php
 
 return [
-    'subscribe' => 'Subscribe to the newsletter',
+    'subscribe' => 'Subscribe to',
+    'newsletter' => 'the newsletter',
     'email' => 'Your Email',
     'main' => [
         'about' => 'About the company',
