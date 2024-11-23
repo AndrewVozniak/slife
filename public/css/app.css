@@ -923,7 +923,7 @@ textarea:active {
         }
     }
 
-    @media screen and (max-width: 650px){
+    @media screen and (max-width: 450px){
         .footer__mailing_list_wrapper {
 
             .mailing_list__form {
