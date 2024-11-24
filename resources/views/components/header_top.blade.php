@@ -16,6 +16,31 @@
                     </li>
                 </ul>
 
+                <div class="params__mobile_dropdown" x-data="{ open: false }">
+                    <div @click="open = !open" class="params__mobile_dropdown_button">
+                        <span class="params__mobile_dropdown_button_text">{{ App::currentLocale() }}</span>
+                        <div class="img__wrapper">
+                            <img src="{{asset('storage/images/icons/arrow_down_header.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotated': open }">
+                        </div>
+                    </div>
+                    <div x-show="open" @click.away="open = false" class="params__mobile_dropdown_content">
+                        <ul class="params__mobile_dropdown_list">
+                            <li class="list__item
+                                @if(App::currentLocale() == 'ua') active @endif">
+                                <a href="{{ route('changeLocale', ['locale' => 'ua', 'lang' => 'ua']) }}" class="language_link">UA</a>
+                            </li>
+                            <li class="list__item
+                                @if(App::currentLocale() == 'en') active @endif">
+                                <a href="{{ route('changeLocale', ['locale' => 'en', 'lang' => 'en']) }}" class="language_link">ENG</a>
+                            </li>
+                            <li class="list__item
+                                @if(App::currentLocale() == 'ru') active @endif">
+                                <a href="{{ route('changeLocale', ['locale' => 'ru', 'lang' => 'ru']) }}" class="language_link">RU</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 <hr class="vertical_line">
 
                 <ul class="params__list">
@@ -29,6 +54,31 @@
                         <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'EUR']) }}" class="currency_link @if(session('currency') == 'EUR') active @endif">€</a>
                     </li>
                 </ul>
+
+                <div class="params__mobile_dropdown" x-data="{ open: false }">
+                    <div @click="open = !open" class="params__mobile_dropdown_button">
+                        <span class="params__mobile_dropdown_button_text">@if(session('currency') == 'UAH') ₴ @elseif(session('currency') == 'USD') $ @else € @endif</span>
+                        <div class="img__wrapper">
+                            <img src="{{asset('storage/images/icons/arrow_down_header.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotated': open }">
+                        </div>
+                    </div>
+                    <div x-show="open" @click.away="open = false" class="params__mobile_dropdown_content">
+                        <ul class="params__mobile_dropdown_list">
+                            <li class="list__item
+                                @if(session('currency') == 'UAH') active @endif">
+                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'UAH']) }}" class="currency_link">₴</a>
+                            </li>
+                            <li class="list__item
+                                @if(session('currency') == 'USD') active @endif">
+                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'USD']) }}" class="currency_link">$</a>
+                            </li>
+                            <li class="list__item
+                                @if(session('currency') == 'EUR') active @endif">
+                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'EUR']) }}" class="currency_link">€</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="links">
