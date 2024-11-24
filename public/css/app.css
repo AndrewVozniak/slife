@@ -134,37 +134,28 @@ textarea:active {
 .container {
     width: 1280px;
     margin: 0 auto;
-}
 
-@media screen and (max-width: 1320px) {
-    .container {
+    @media screen and (max-width: 1320px) {
         width: 1080px;
         margin: 0 auto;
         padding: 0 10px;
     }
-}
 
-@media screen and (max-width: 1080px) {
-    .container {
+    @media screen and (max-width: 1080px) {
         width: 900px;
         padding: 0 10px;
     }
-}
 
-@media screen and (max-width: 930px) {
-    .container {
+    @media screen and (max-width: 930px) {
         width: 100%;
         padding: 0 32px;
     }
-}
 
-@media screen and (max-width: 765px) {
-    .container {
+    @media screen and (max-width: 765px) {
         margin: 0 auto;
         padding: 0 15px;
     }
 }
-
 
 .content_wrapper {
     display: flex;
