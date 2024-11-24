@@ -142,6 +142,36 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="item11">
+                    <div class="params">
+                        <ul class="params__list">
+                            <li class="list__item">
+                                <a href="{{ route('changeLocale', ['locale' => 'ua', 'lang' => 'ua']) }}" class="language_link @if(App::currentLocale() == 'ua') active @endif">UA</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="{{ route('changeLocale', ['locale' => 'en', 'lang' => 'en']) }}" class="language_link @if(App::currentLocale() == 'en') active @endif">ENG</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="{{ route('changeLocale', ['locale' => 'ru', 'lang' => 'ru']) }}" class="language_link @if(App::currentLocale() == 'ru') active @endif">RU</a>
+                            </li>
+                        </ul>
+
+                        <hr class="vertical_line">
+
+                        <ul class="params__list">
+                            <li class="list__item">
+                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'UAH']) }}" class="currency_link @if(session('currency') == 'UAH') active @endif">₴</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'USD']) }}" class="currency_link @if(session('currency') == 'USD') active @endif">$</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'EUR']) }}" class="currency_link @if(session('currency') == 'EUR') active @endif">€</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -969,6 +969,10 @@ textarea:active {
             .item10 {
                 display: none;
             }
+
+            .item11 {
+                display: none;
+            }
         }
 
         .footer__grid_container > div {
@@ -1114,6 +1118,38 @@ textarea:active {
                     width: 18px;
                     height: 18px;
                 }
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            .footer__item_title {
+                margin-bottom: 18px;
+            }
+
+            .footer__grid_container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                'about_company category'
+                'for_customers for_customers'
+                'contacts contacts'
+                'language language'
+                'join join';
+
+                .item11 {
+                    grid-area: language;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    gap: 24px;
+                }
+            }
+
+            .footer__grid_container > div {
+                width: 100%;
             }
         }
     }
