@@ -1,7 +1,9 @@
 
 <section class="top_category__wrapper">
     <div class="container">
-        <div class="top_category__title">{{ __('top_category.title') }}</div>
+        <div class="top_category__title">
+            <span>{{ __('top_category.title') }}</span>
+        </div>
         <div class="top_category__box">
             <div class="top_clothes">
                 <a href="#" class="title">{{ __('top_category.clothes.clothes') }}</a>

@@ -179,6 +179,13 @@ textarea:active {
 @media screen and (max-width: 930px) {
     .title {
         font-size: 18px;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .title {
+        margin-bottom: 18px;
     }
 }
 
@@ -1977,10 +1984,6 @@ textarea:active {
     }
 
     @media screen and (max-width: 930px) {
-        .top_category__wrapper {
-            padding: 80px 0;
-        }
-
         .top_category__box > div {
             min-width: 167px;
         }
@@ -1988,6 +1991,12 @@ textarea:active {
         .top_category__title {
             font-size: 32px;
             line-height: 38px;
+
+            margin-bottom: 32px;
+        }
+
+        .top_category__box {
+            gap: 12px;
         }
     }
 
@@ -1995,6 +2004,8 @@ textarea:active {
         .top_category__title {
             font-size: 28px;
             line-height: 33px;
+
+            margin-bottom: 24px;
         }
 
         .top_category__box {
@@ -2005,7 +2016,18 @@ textarea:active {
             'top_clothes top_footwear'
             'top_accessories top_category';
 
-            gap: 24px;
+            gap: 10px;
+        }
+
+        .top_category__box > div {
+            display: flex;
+            flex-wrap: wrap;
+
+            min-width: 120px;
+        }
+
+        .top_clothes, .top_footwear {
+            margin-bottom: 14px;
         }
     }
 }
@@ -2013,6 +2035,12 @@ textarea:active {
 @media screen and (max-width: 930px) {
     .top_category__wrapper {
         padding: 80px 0;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .top_category__wrapper {
+        padding: 80px 15px;
     }
 }
 
@@ -2114,6 +2142,12 @@ textarea:active {
             }
 
         }
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .gray_description__block_wrapper {
+       display: none;
     }
 }
 
