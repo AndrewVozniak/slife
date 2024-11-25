@@ -1244,6 +1244,14 @@ textarea:active {
                             display: flex;
                             flex-direction: row;
                             gap: 12px;
+
+                            .language_link {
+                                color: rgba(255, 255, 255, 0.3);
+
+                                &.active {
+                                    color: var(--white);
+                                }
+                            }
                         }
 
                         .footer_vertical_line {
