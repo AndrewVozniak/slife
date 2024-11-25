@@ -35,7 +35,7 @@
 
         <section>
             <div class="container">
-                <div class="advantages_wrapper">
+                <div class="advantages_container">
                     <div class="advantages_wrapper">
                         <div class="advantages_img_box">
                             <img src="{{ asset('storage/images/icons/solar_widget-add-bold-duotone.svg') }}" alt="widget" class="advantages_img">
@@ -50,6 +50,8 @@
                         </div>
                     </div>
 
+                    <div class="line_gray"></div>
+
                     <div class="advantages_wrapper">
                         <div class="advantages_img_box">
                             <img src="{{ asset('storage/images/icons/solar_ticket-sale-bold-duotone.svg') }}" alt="widget" class="advantages_img">
@@ -63,6 +65,8 @@
                             <p>{{__('about.advantages_section.discounts')}}&#33;</p>
                         </div>
                     </div>
+
+                    <div class="line_gray"></div>
 
                     <div class="advantages_wrapper">
                         <div class="advantages_img_box">

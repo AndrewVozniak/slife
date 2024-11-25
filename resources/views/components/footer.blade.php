@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="item7">
-                    <span class="footer__item_title"> {{ __('footer.main.contacts') }}</span>
+                    <span class="footer__item_title contacts"> {{ __('footer.main.contacts') }}</span>
                     <div class="footer_item_category_box">
                         <span class="footer_phone">
                             &#43;38 &#40;068&#41;&#8722;367&#8722;38&#8722;37
@@ -98,6 +98,34 @@
                                  class="footer_messenger_icon">
                             <span> {{ __('footer.main.write') }} Whatsapp</span>
                         </a>
+                    </div>
+
+                    <div class="footer_params">
+                        <ul class="footer_params__list">
+                            <li class="list__item">
+                                <a href="{{ route('changeLocale', ['locale' => 'ua', 'lang' => 'ua']) }}" class="language_link @if(App::currentLocale() == 'ua') active @endif">UA</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="{{ route('changeLocale', ['locale' => 'en', 'lang' => 'en']) }}" class="language_link @if(App::currentLocale() == 'en') active @endif">ENG</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="{{ route('changeLocale', ['locale' => 'ru', 'lang' => 'ru']) }}" class="language_link @if(App::currentLocale() == 'ru') active @endif">RU</a>
+                            </li>
+                        </ul>
+
+                        <hr class="footer_vertical_line">
+
+                        <ul class="footer_params__list">
+                            <li class="list__item">
+                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'UAH']) }}" class="currency_link @if(session('currency') == 'UAH') active @endif">₴</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'USD']) }}" class="currency_link @if(session('currency') == 'USD') active @endif">$</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'EUR']) }}" class="currency_link @if(session('currency') == 'EUR') active @endif">€</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="item8">
@@ -140,36 +168,6 @@
                             <img src="{{asset('storage/images/social_media/cart _telegram.svg')}}" alt="icon"
                                  class="footer_messenger_cart">
                         </a>
-                    </div>
-                </div>
-
-                <div class="item11">
-                    <div class="params">
-                        <ul class="params__list">
-                            <li class="list__item">
-                                <a href="{{ route('changeLocale', ['locale' => 'ua', 'lang' => 'ua']) }}" class="language_link @if(App::currentLocale() == 'ua') active @endif">UA</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="{{ route('changeLocale', ['locale' => 'en', 'lang' => 'en']) }}" class="language_link @if(App::currentLocale() == 'en') active @endif">ENG</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="{{ route('changeLocale', ['locale' => 'ru', 'lang' => 'ru']) }}" class="language_link @if(App::currentLocale() == 'ru') active @endif">RU</a>
-                            </li>
-                        </ul>
-
-                        <hr class="vertical_line">
-
-                        <ul class="params__list">
-                            <li class="list__item">
-                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'UAH']) }}" class="currency_link @if(session('currency') == 'UAH') active @endif">₴</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'USD']) }}" class="currency_link @if(session('currency') == 'USD') active @endif">$</a>
-                            </li>
-                            <li class="list__item">
-                                <a href="{{ route('changeCurrency', ['locale' => App::currentLocale(), 'currency' => 'EUR']) }}" class="currency_link @if(session('currency') == 'EUR') active @endif">€</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>

@@ -153,7 +153,7 @@ textarea:active {
 
     @media screen and (max-width: 765px) {
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 0;
     }
 }
 
@@ -1007,7 +1007,7 @@ textarea:active {
         .footer__mailing_list_wrapper {
 
             .mailing_list__form {
-                width: 100%;
+                width: 90%;
             }
         }
     }
@@ -1023,7 +1023,13 @@ textarea:active {
         .item4 {grid-area: about_company;}
         .item5 {grid-area: for_customers;}
         .item6 {grid-area: category;}
-        .item7 {grid-area: contacts;}
+        .item7 {
+            grid-area: contacts;
+
+            .footer_params {
+                display: none;
+            }
+        }
         .item8 {grid-area: join_in;
             justify-content: end;
 
@@ -1047,10 +1053,6 @@ textarea:active {
             gap: 20px;
 
             .item10 {
-                display: none;
-            }
-
-            .item11 {
                 display: none;
             }
         }
@@ -1190,20 +1192,31 @@ textarea:active {
                 margin-bottom: 24px;
             }
 
-            .footer_messenger_box {
-                gap: 8px;
-                font-size: 12px;
+            .footer__grid_container {
+                .footer_messenger_box {
+                    gap: 8px;
+                    font-size: 12px;
 
-                .footer_messenger_icon {
-                    width: 18px;
-                    height: 18px;
+                    .footer_messenger_icon {
+                        width: 18px;
+                        height: 18px;
+                    }
                 }
             }
         }
 
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 765px){
             .footer__item_title {
-                margin-bottom: 18px;
+                margin-bottom: 14px;
+            }
+
+            .contacts {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 23px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
             }
 
             .footer__grid_container {
@@ -1213,23 +1226,72 @@ textarea:active {
                 'about_company category'
                 'for_customers for_customers'
                 'contacts contacts'
-                'language language'
                 'join join';
 
-                .item11 {
-                    grid-area: language;
+                gap: 0;
 
+                .item7 {
+                    .footer_params {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        margin-top: 18px;
+                        gap: 24px;
+
+                        .footer_params__list {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 12px;
+                        }
+
+                        .footer_vertical_line {
+                            width: 1px;
+                            height: 14px;
+                            background-color: rgba(255, 255, 255, 0.2);
+                            border: none;
+                            outline: none;
+                        }
+                    }
+                }
+
+                .item10 {
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     justify-content: flex-start;
-                    align-items: flex-start;
+                    align-items: center;
 
-                    gap: 24px;
+                    width: 100%;
+                    gap: 0;
+
+                    .footer_img_messenger_box {
+                        padding: 5px 12px;
+                        gap: 8px;
+
+                        .footer_messenger_cart {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+
+                .footer_messenger_box {
+                    gap: 12px;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 20px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
                 }
             }
 
             .footer__grid_container > div {
                 width: 100%;
+                padding: 32px 15px;
+
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
         }
     }
@@ -1257,6 +1319,23 @@ textarea:active {
         .footer__copy_box {
             font-size: 12px;
             line-height: 14px;
+        }
+    }
+
+    @media screen and (max-width: 765px){
+        .footer_copyright_wrapper {
+            padding: 18px 0;
+            margin: 0 auto;
+        }
+
+        .footer__copy_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            gap: 12px;
         }
     }
 }

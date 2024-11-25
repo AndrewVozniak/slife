@@ -20,6 +20,8 @@
                 </div>
             </div>
 
+            <div class="hr_gray"></div>
+
             <div class="about_box_bg_photo">
                 <div class="about_title_bg_photo">
                     <span>&#60; 20
@@ -31,6 +33,8 @@
                     <span>{{__('about.clients')}}</span>
                 </div>
             </div>
+
+            <div class="hr_gray"></div>
 
             <div class="about_box_bg_photo">
                 <div class="about_title_bg_photo">
