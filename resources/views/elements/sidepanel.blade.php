@@ -194,8 +194,20 @@
         }
     }
 
-function openNav() {
-        document.getElementById("sidePanel").style.width = "33%";
+    function openNav() {
+        let width = window.innerWidth;
+        if (width < 576) {
+            document.getElementById("sidePanel").style.width = "100%";
+        }
+        else if (width < 768) {
+            document.getElementById("sidePanel").style.width = "40%";
+        } else if (width < 1024) {
+            document.getElementById("sidePanel").style.width = "50%";
+        } else if (width < 1440) {
+            document.getElementById("sidePanel").style.width = "40%";
+        } else if (width < 1920) {
+            document.getElementById("sidePanel").style.width = "33%";
+        }
     }
 
     function closeNav() {

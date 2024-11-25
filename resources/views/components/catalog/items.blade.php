@@ -9,31 +9,21 @@
 
 
     <div class="container">
-        <div class="popular_products_box">
-            <div class="product_title_box">
-                <span class="title__big">{{ __('title.new') }}</span>
+        <div class="heading">
+            <div class="popular_products_box">
+                <div class="product_title_box">
+                    <span class="title__big">{{ __('title.new') }}</span>
+                </div>
             </div>
-        </div>
 
-        <div class="filter_and_sort_by_box">
-{{--            <div class="param_box">--}}
-{{--                <img src="{{asset('storage/images/icons/filter.svg')}}" alt="filter" class="param_image">--}}
-{{--                <hr class="vertical_line">--}}
-{{--                <span class="param_text">{{ __('catalog.filter_by.filter_text') }}</span>--}}
-{{--            </div>--}}
+            <div class="filter_and_sort_by_box">
+                @include('elements.sidepanel')
 
-            @include('elements.sidepanel')
+                <div class="sort_by_box">
+                    <span class="sort_by_text">{{ __('catalog.sort_by.sort_text') }}</span>
 
-            <div class="sort_by_box">
-                <span class="sort_by_text">{{ __('catalog.sort_by.sort_text') }}</span>
-
-{{--                <div class="param_box">--}}
-{{--                    <span class="param_text">{{ __('catalog.sort_by.recommended') }}</span>--}}
-{{--                    <hr class="vertical_line">--}}
-{{--                    <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" alt="arrow_down" class="param_dropdown_arrow">--}}
-{{--                </div>--}}
-
-                @include('elements.dropdown_menu')
+                    @include('elements.dropdown_menu')
+                </div>
             </div>
         </div>
 
@@ -45,6 +35,7 @@
                     :newPrice="$product['newPrice'] ?? null"
                     :title="$product['title']"
                     :label="$product['label'] ?? null"
+                    :isFavorite="false"
                 />
             @endforeach
         </div>
