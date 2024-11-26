@@ -13,7 +13,7 @@
                     <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">Головна</a>
                     <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right_post.svg')}}" alt="filter" class="param_image">
                     <a href="{{ route('blog', ['locale' => App::currentLocale()]) }}" class="breadcrumb">Новини</a>
-                    <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right_post.svg')}}" alt="filter" class="param_image">
+                    <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right_post.svg')}}" alt="filter" class="param_image last">
                     <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => $slug]) }}" class="breadcrumb active">
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
                     </a>
@@ -63,8 +63,7 @@
         <div class="article_content">
             <div class="article__section">
                 <h1 class="title">Спортивний одяг для чоловіків, жінок та дітей</h1>
-                <p class="text">
-                    Sit nullam ornare ac inceptos posuere interdum. Magnis arcu netus aptent habitant tincidunt dictum. Facilisis ante aenean, semper hendrerit mus sapien. Aliquet posuere volutpat montes arcu dictum ante eros eros. Molestie lorem vulputate, leo ac proin magnis. Velit viverra sodales commodo egestas pretium malesuada venenatis. Aptent consequat ut auctor vehicula, ullamcorper donec varius nisi dictum.
+                <p class="text">Sit nullam ornare ac inceptos posuere interdum. Magnis arcu netus aptent habitant tincidunt dictum. Facilisis ante aenean, semper hendrerit mus sapien. Aliquet posuere volutpat montes arcu dictum ante eros eros. Molestie lorem vulputate, leo ac proin magnis. Velit viverra sodales commodo egestas pretium malesuada venenatis. Aptent consequat ut auctor vehicula, ullamcorper donec varius nisi dictum.
 
                     Etiam parturient per donec lobortis orci fusce convallis. Porta vivamus lectus pretium et sit habitant. Massa curae tincidunt diam maecenas dignissim hendrerit. Leo enim senectus proin, euismod aptent eros habitasse. Quisque scelerisque fames integer inceptos cubilia ac id posuere penatibus. Pulvinar rutrum consequat ligula lacinia volutpat pretium platea. Habitant torquent urna adipiscing non elementum. In a laoreet pretium, mus a conubia id porta condimentum! Quisque venenatis feugiat dapibus; curae parturient tortor.
 
