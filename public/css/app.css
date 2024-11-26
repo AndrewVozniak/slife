@@ -198,6 +198,14 @@ textarea:active {
     color: var(--black);
 }
 
+@media screen and (max-width: 930px) {
+    .title__big {
+        font-size: 32px;
+        line-height: 38px;
+        text-align: left;
+    }
+}
+
 .base_text {
     font-size: 16px;
     font-weight: 300;
@@ -1518,7 +1526,8 @@ textarea:active {
     }
 }
 
-.popular_products_wrapper{
+/*********************************        POPULAR PRODUCTS   *********************************/
+.popular_products_wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1526,7 +1535,18 @@ textarea:active {
     padding: 120px;
 
     background-color: var(--gray);
+}
 
+@media screen and (max-width: 930px) {
+    .popular_products_wrapper {
+        padding: 80px 0;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .popular_products_wrapper {
+        padding: 80px 15px;
+    }
 }
 
 .products_item_container {
@@ -1538,6 +1558,7 @@ textarea:active {
 
     @media screen and (max-width: 1320px) {
         grid-template-columns: repeat(auto-fit, minmax(167px, 1fr));
+        gap: 12px;
     }
 
     .product_card {
@@ -1552,6 +1573,7 @@ textarea:active {
 
         @media screen and (max-width: 1320px) {
             width: 167px;
+            gap: 12px;
         }
 
 
@@ -1764,6 +1786,28 @@ textarea:active {
             }
         }
 
+        @media screen and (max-width: 1320px) {
+            .card_describe_product {
+                gap: 8px;
+
+                .product_price_wrapper, .new_price, .single_price, .product_title {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 765px) {
+            .card_describe_product {
+                gap: 4px;
+
+                .product_price_wrapper, .new_price, .single_price, .product_title {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+        }
+
         .product_label {
             display: flex;
             justify-content: center;
@@ -1829,8 +1873,6 @@ textarea:active {
     }
 
 }
-
-/*********************************        POPULAR PRODUCTS   *********************************/
 
 .popular_products_box {
     display: flex;
@@ -1924,6 +1966,17 @@ textarea:active {
 
                 &:hover svg path {
                     fill: var(--arrow-blue);
+                }
+            }
+
+            @media screen and (max-width: 930px) {
+                .popular_products_btn_box {
+                    gap: 8px;
+                }
+
+                .left_btn, .right_btn {
+                    width: 55px;
+                    height: 55px;
                 }
             }
         }
