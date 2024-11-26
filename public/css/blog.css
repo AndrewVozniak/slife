@@ -6,6 +6,14 @@
     flex-direction: column;
     gap: 48px;
 
+    @media screen and (max-width: 768px) {
+        gap: 32px;
+    }
+
+    @media screen and (max-width: 634px) {
+        gap: 40px;
+    }
+
 
     .content {
         display: flex;
@@ -14,24 +22,46 @@
 
         gap: 32px;
 
+        @media screen and (max-width: 768px) {
+            gap: 24px;
+        }
+
         .content_title {
             font-size: 50px;
             font-weight: 800;
             line-height: 59px;
+
+            @media (max-width: 768px) {
+                font-size: 32px;
+                line-height: 38px;
+            }
+
+            @media (max-width: 280px) {
+                font-size: 28px;
+                line-height: 33px;
+            }
         }
 
         .cards_wrapper {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* 2 части для "half", 1 часть для остальных */
             gap: 20px;
+
+
+            @media (max-width: 768px) {
+                gap: 12px;
+            }
+
+            @media screen and (max-width: 634px) {
+                grid-template-columns: 1fr; /* 1 часть для всех */
+
+            }
 
             .card {
                 display: flex;
                 flex-direction: column;
-                width: 31%;
-
+                /*width: 31%;*/
+                grid-column: span 1;
                 border-radius: 18px;
 
                 cursor: pointer;
@@ -57,11 +87,20 @@
                     border-bottom-right-radius: 18px;
                     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
+                    @media (max-width: 768px) {
+                        padding: 12px;
+                        gap: 12px;
+                    }
+
                     .card_date {
                         font-size: 14px;
                         font-weight: 400;
                         color: rgba(23, 4, 84, 0.44);
                         line-height: 20px;
+
+                        @media (max-width: 768px) {
+                            font-size: 12px;
+                        }
                     }
 
                     .card_title {
@@ -74,6 +113,10 @@
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
+
+                        @media (max-width: 768px) {
+                            font-size: 14px;
+                        }
                     }
 
                     .card_text {
@@ -87,6 +130,11 @@
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
+
+                        @media (max-width: 768px) {
+                            font-size: 14px;
+                            margin-bottom: 0;
+                        }
                     }
 
                     .card_link_wrapper {
@@ -97,20 +145,37 @@
                         gap: 16px;
                         cursor: pointer;
 
+                        @media (max-width: 768px) {
+                            gap: 6px;
+                        }
+
                         .card_link {
                             font-weight: 500;
                             font-size: 16px;
                             line-height: 21px;
                             text-transform: uppercase;
                             color: rgba(232, 16, 16, 1);
+
+                            @media (max-width: 768px) {
+                                font-size: 14px;
+                            }
+                        }
+
+                        .arrow {
+                            width: 12px;
                         }
                     }
                 }
 
                 &.half {
                     flex-direction: row;
-                    flex-grow: 1;
-                    width: 60%;
+                    grid-column: span 2;
+
+                    @media screen and (max-width: 634px) {
+                        flex-direction: column;
+                        width: 100%;
+                        grid-column: span 1;
+                    }
 
                     .card_image {
                         height: 100%;
@@ -119,18 +184,45 @@
 
                         /*normal image width to height ratio*/
                         object-fit: cover;
+
+                        @media screen and (max-width: 634px) {
+                            width: 100%;
+                            border-top-left-radius: 18px;
+                            border-top-right-radius: 18px;
+                        }
                     }
 
                     .card_content {
                         border-radius: 0 18px 18px 0;
 
+                        @media screen and (max-width: 634px) {
+                            border-radius: 0 0 18px 18px;
+                        }
+
 
                         .card_title {
                             -webkit-line-clamp: 5;
+
+                            @media (max-width: 768px) {
+                                -webkit-line-clamp: 4;
+                                font-size: 14px;
+                            }
                         }
 
                         .card_text {
                             -webkit-line-clamp: 12;
+
+                            @media (max-width: 1320px) {
+                                -webkit-line-clamp: 9;
+                            }
+
+                            @media (max-width: 1080px) {
+                                -webkit-line-clamp: 7;
+                            }
+
+                            @media (max-width: 768px) {
+                                font-size: 14px;
+                            }
                         }
                     }
                 }

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Кошик')
+@section('title', 'Новини')
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
 @endsection
