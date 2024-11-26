@@ -3,6 +3,20 @@
     margin-bottom: 48px;
 }
 
+@media screen and (max-width: 1325px) {
+    .breadcrumbs {
+        margin-top: 16px;
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .breadcrumbs {
+        margin-top: 16px;
+        margin-bottom: 40px;
+    }
+}
+
 .info_wrapper {
     display: flex;
     flex-direction: column;
@@ -22,13 +36,11 @@
         width: 100%;
     }
 
-    & ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+    .delivery_1_paragraph {
+        margin-bottom: 24px;
+    }
 
-        width: 100%;
+    & ul {
         margin-bottom: 32px;
     }
 
@@ -38,6 +50,56 @@
         margin-left: 15px;
         list-style-type: disc;
         list-style-position: outside;
+    }
+
+    .delivery_title {
+        margin-bottom: 24px;
+
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+        text-align: left;
+
+        color: var(--black);
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .delivery_cost {
+        margin-bottom: 16px;
+
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .delivery_options_bottom {
+        margin-bottom: 24px;
+    }
+
+    .ukr_post_ul {
+        margin-bottom: 12px
+    }
+
+    .delivery_importantly {
+        margin-bottom: 24px;
+        color: var(--red);
+    }
+
+    .delivery_address {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        margin-bottom: 32px;
+    }
+
+    .delivery_address_768 {
+        display: none;
     }
 
     .base_text {
@@ -179,3 +241,92 @@
         content: counter(item) "." counter(subitem) ". ";
     }
 }
+
+@media screen and (max-width: 770px) {
+    .info_wrapper {
+        gap: 24px;
+        margin-bottom: 80px;
+
+        .delivery_1_paragraph {
+            margin-bottom: 16px;
+        }
+
+        & ul {
+            margin-bottom: 32px;
+        }
+
+        & ul li {
+           font-size: 14px;
+        }
+
+        .delivery_title {
+            margin-bottom: 16px;
+
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .delivery_options_bottom {
+            margin-bottom: 16px;
+        }
+
+        .ukr_post_ul li {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .delivery_importantly {
+            margin-bottom: 16px;
+            color: var(--red);
+        }
+
+        .delivery_address {
+          display: none;
+        }
+
+        .delivery_address_768 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .delivery_cost {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .line {
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .info_wrapper {
+        gap: 32px;
+
+        & ul {
+            margin-bottom: 24px;
+        }
+
+        .ukr_post_ul li {
+            font-size: 14px;
+        }
+
+        .delivery_address {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            margin-bottom: 24px;
+        }
+
+        .delivery_address_768 {
+            display: none;
+        }
+    }
+}
+
+
