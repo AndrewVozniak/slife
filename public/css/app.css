@@ -206,6 +206,13 @@ textarea:active {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .title__big {
+        font-size: 28px;
+        line-height: 33px;
+    }
+}
+
 .base_text {
     font-size: 16px;
     font-weight: 300;
@@ -1356,7 +1363,7 @@ textarea:active {
 
             .footer__grid_container > div {
                 width: 100%;
-                padding: 32px 15px;
+                padding: 32px 0;
 
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
@@ -1599,6 +1606,12 @@ textarea:active {
         gap: 12px;
     }
 
+    @media screen and (max-width: 380px) {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+
     .product_card {
         display: flex;
         flex-direction: column;
@@ -1612,6 +1625,11 @@ textarea:active {
         @media screen and (max-width: 1320px) {
             width: 167px;
             gap: 12px;
+        }
+
+        @media screen and (max-width: 380px) {
+            width: 120px;
+            gap: 8px;
         }
 
 
@@ -1724,6 +1742,10 @@ textarea:active {
 
             @media screen and (max-width: 1320px) {
                 height: 216px;
+            }
+
+            @media screen and (max-width: 380px) {
+                height: 156px;
             }
 
             .product_card_img {
@@ -1865,6 +1887,26 @@ textarea:active {
 
             font-size: 14px;
             font-weight: 400;
+        }
+
+        @media screen and (max-width: 1320px) {
+            .product_label {
+                width: 40px;
+                height: 30px;
+                padding: 8px;
+
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 380px) {
+            .product_label {
+                width: 28px;
+                height: 20px;
+                padding: 4px;
+
+                font-size: 10px;
+            }
         }
 
         .favorite {
@@ -2015,6 +2057,31 @@ textarea:active {
                 .left_btn, .right_btn {
                     width: 55px;
                     height: 55px;
+
+                    .left_btn svg, .right_btn svg {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .popular_products_box {
+        margin-bottom: 32px;
+        gap: 30px;
+
+        .product_title_box {
+            gap: 30px;
+
+            .popular_products_btn_box {
+                gap: 4px;
+
+                .left_btn, .right_btn {
+                    width: 40px;
+                    height: 40px;
                 }
             }
         }
