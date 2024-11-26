@@ -1,4 +1,5 @@
 <div class="side_panel_wrapper" id="sidePanel">
+
     <div class="side_panel_box">
         <div class="filter_and_close_btn_box">
             <div class="param_box filter">
@@ -167,9 +168,15 @@
     </div>
 </div>
 
-
 <button class="param_box" onclick="openNav()">
     <img src="{{asset('storage/images/icons/filter.svg')}}" alt="filter" class="param_image">
+    <hr class="vertical_line">
+    <span class="param_text">{{ __('catalog.filter_by.filter_text') }}</span>
+</button>
+
+
+<button class="mobile_param_box" onclick="openNav()">
+    <img src="{{asset('storage/images/icons/filter_white.svg')}}" alt="filter" class="param_image">
     <hr class="vertical_line">
     <span class="param_text">{{ __('catalog.filter_by.filter_text') }}</span>
 </button>
@@ -207,6 +214,8 @@
             document.getElementById("sidePanel").style.width = "40%";
         } else if (width < 1920) {
             document.getElementById("sidePanel").style.width = "33%";
+        } else {
+            document.getElementById("sidePanel").style.width = "50%";
         }
     }
 
