@@ -6,7 +6,7 @@
     <div class="content_wrapper">
         <x-slider />
 
-        @include('components.new_products', ['products' => $products])
+        @include('components.new_products', ['products' => $products, 'isFavorite' => false])
 
         @include('components.popular_products', ['products' => $products])
 
