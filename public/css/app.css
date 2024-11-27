@@ -582,7 +582,6 @@ textarea:active {
         display: none;
     }
 
-    /* Відображаємо кнопку і приховуємо список для мобільних */
     @media (max-width: 1320px) {
         .categories {
             display: none;
@@ -661,6 +660,12 @@ textarea:active {
 
             border: none;
             cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 930px) {
+        .header__main {
+            padding: 16px 32px;
         }
     }
 }
@@ -917,10 +922,10 @@ textarea:active {
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 930px) {
     .header__navbar {
         height: 33px;
-        margin-bottom: 16px;
+        margin-bottom: 0;
     }
 }
 
@@ -931,7 +936,6 @@ textarea:active {
         padding-bottom: 12px;
     }
 }
-
 
 /***************************************FOOTER*********************************/
 
