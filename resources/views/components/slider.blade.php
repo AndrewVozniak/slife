@@ -1,5 +1,6 @@
 <div class="slider"
      x-data="sliderComponent()"
+     x-init="init()"
      :style="`background-image: url('${images[currentIndex]}')`">
     <div class="slider_content">
         <div class="slider_text_wrapper">
@@ -20,8 +21,7 @@
             </button>
         </div>
 
-
-        <!-- Ліва стрілка -->
+        <!-- left arrow -->
         <button class="slider_arrow slider_arrow_left" @click="prevSlide">
             <svg width="17"
                  height="16"
@@ -36,7 +36,7 @@
         </button>
 
 
-        <!-- Права стрілка -->
+        <!-- right arrow -->
         <button class="slider_arrow slider_arrow_right" @click="nextSlide">
             <svg width="17"
                  height="16"
@@ -48,6 +48,16 @@
                 9.84315 15.0711L16.2071 8.70711ZM0.5 9H15.5V7H0.5V9Z" fill="white"/>
             </svg>
         </button>
+    </div>
+
+    <!-- slider dots -->
+    <div class="slider_dots_wrapper">
+        <template x-for="(image, index) in images" :key="index">
+            <button class="slider_dots"
+                    :class="{'active': index === currentIndex}"
+                    @click="goToSlide(index)">
+            </button>
+        </template>
     </div>
 </div>
 
@@ -61,18 +71,27 @@
                 "{{ asset('storage/images/models/gym_suit.png') }}"
             ],
             currentIndex: 0,
+
             nextSlide() {
                 this.currentIndex = (this.currentIndex + 1) % this.images.length;
             },
+
             prevSlide() {
                 this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
             },
+
+            goToSlide(index) {
+                this.currentIndex = index;
+            },
+
             startAutoSlide() {
                 setInterval(() => {
                     this.nextSlide();
                 }, 10000);
             },
+
             init() {
+                this.currentIndex = 0;
                 this.startAutoSlide();
             }
         }

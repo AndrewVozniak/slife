@@ -1,4 +1,4 @@
-<section class="new_products_wrapper">
+<section class="new_products">
     <div class="container">
         <div class="popular_products_box">
             <div class="product_title_box">
