@@ -679,29 +679,45 @@ textarea:active {
         flex-direction: row;
         justify-content: space-between;
 
-        .shipping_text {
-            font-size: 14px;
-            font-weight: 400;
 
-            .underlined {
-                font-weight: 600;
-                text-decoration: underline;
-                text-underline-offset: 3px;
-                transition: color 0.3s;
+        .shipping_text_wrapper{
+            .shipping_text {
+                font-size: 14px;
+                font-weight: 400;
 
-                &:hover {
-                    color: #f5f5f5;
+                .underlined {
+                    font-weight: 600;
+                    text-decoration: underline;
+                    text-underline-offset: 3px;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: #f5f5f5;
+                    }
                 }
             }
         }
 
         @media screen and (max-width: 1150px) {
-            .shipping_text {
-                font-size: 12px;
-
-                .underlined {
+            .shipping_text_wrapper {
+                .shipping_text {
                     font-size: 12px;
+
+                    .underlined {
+                        font-size: 12px;
+                    }
                 }
+            }
+        }
+
+        @media screen and (max-width: 730px) {
+            .shipping_text_wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+                text-align: center;
             }
         }
 
@@ -892,6 +908,12 @@ textarea:active {
                 gap: 23px;
             }
         }
+
+        @media screen and (max-width: 730px) {
+            .interactive_menu {
+                display: none;
+            }
+        }
     }
 }
 
@@ -899,6 +921,14 @@ textarea:active {
     .header__navbar {
         height: 33px;
         margin-bottom: 16px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .header__navbar {
+        height: 73px;
+        padding-top: 33px;
+        padding-bottom: 12px;
     }
 }
 

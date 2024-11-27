@@ -1,6 +1,11 @@
     <nav class="header__navbar">
     <div class="container">
-        <span class="shipping_text">{{ __('header.free_shipping') }} <a href="#" class="underlined">{{ __('header.detailed_information') }}</a></span>
+        <div class="shipping_text_wrapper">
+            <span class="shipping_text">{{ __('header.free_shipping') }}
+                <a href="#" class="underlined">{{ __('header.detailed_information') }}
+                </a>
+            </span>
+        </div>
 
         <div class="interactive_menu">
             <div class="params">
