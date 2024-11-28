@@ -22,10 +22,10 @@
                         </a>
                     </p>
 
-                    <p class="title">{{__('return_policy.general_warranty')}}</p>
+                    <p class="return_title">{{__('return_policy.general_warranty')}}</p>
                     <p style="margin-bottom: 32px">{{__('return_policy.exchange_is_carried_out')}}&#46;</p>
 
-                    <p class="title" style="margin-bottom: 16px">{{__('return_policy.return_of_goods')}}</p>
+                    <p class="return_title">{{__('return_policy.return_of_goods')}}</p>
                     <p>{{__('return_policy.client_has_the_right')}}&#58;</p>
                     <ul>
                         <li>{{__('return_policy.product_was_not_used')}}&#59;</li>
@@ -44,7 +44,7 @@
 
                     <div class="line"></div>
 
-                    <p class="title" style="margin-bottom: 16px">{{__('return_policy.exchange_with_recalculation_of_value')}}
+                    <p class="return_title">{{__('return_policy.exchange_with_recalculation_of_value')}}
                     </p>
                     <p>{{__('return_policy.no_similar_product')}}&#58;</p>
                     <ul>
