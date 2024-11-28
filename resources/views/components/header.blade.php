@@ -29,24 +29,35 @@
                     <img src="{{asset('storage/images/icons/user.svg')}}" alt="user">
                 </a>
             </li>
+
+            <li class="hr_menu"></li>
+
             <li class="user_navigation__item">
                 <a href="{{ route('compareProduct', ['locale' => App::currentLocale()])  }}" class="user_navigation__link">
                     <p class="count">0</p>
                     <img src="{{asset('storage/images/icons/pajamas_comparison.svg')}}" alt="comparison">
                 </a>
             </li>
+
+            <li class="hr_menu"></li>
+
             <li class="user_navigation__item">
                 <a href="{{ route('favorite', ['locale' => App::currentLocale()]) }}" class="user_navigation__link">
                     <p class="count">0</p>
                     <img src="{{asset('storage/images/icons/favorite.png')}}" alt="favorite items">
                 </a>
             </li>
+
+            <li class="hr_menu"></li>
+
             <li class="user_navigation__item">
                 <a href="{{ route('shoppingCart', ['locale' => App::currentLocale()]) }}" class="user_navigation__link">
                     <p class="count">0</p>
                     <img src="{{asset('storage/images/icons/shopping_cart.png')}}" alt="shopping cart">
                 </a>
             </li>
+
+            <li class="hr_menu"></li>
 
             <li  class="user_navigation__item">
                 <button class="menu-toggle" onclick="toggleMenu()">
