@@ -292,6 +292,123 @@
                 </div>
             </div>
 
+            <aside class="cart mobile_only">
+                <div class="cart_header">
+                    <h2 class="cart__title">Ваш кошик</h2>
+                </div>
+
+                <div class="cart_content">
+                    <div class="cart__items">
+                        <div class="cart__item">
+                            <div class="item__image">
+                                <img src="{{ asset('/storage/images/products/product_1.jpg') }}" alt="product" class="item__img">
+                            </div>
+
+                            <div class="item__info">
+                                <div class="basic_info">
+                                    <span class="item__title">Вітровка New Balance Jacket NB Athletics</span>
+                                    <div class="price">
+                                        <span class="item__new_price">1550 ₴</span>
+                                    </div>
+                                </div>
+
+                                <div class="details">
+                                    <div class="items_count">
+                                        <div class="counter">
+                                            <img src="{{ asset('/storage/images/icons/minus.svg') }}" alt="minus" class="counter_item">
+                                            <hr class="vertical_line">
+                                            <span class="counter_item max">2</span>
+                                            <hr class="vertical_line">
+                                            <img src="{{ asset('/storage/images/icons/plus.svg') }}" alt="plus" class="counter_item disabled">
+                                        </div>
+                                        <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="attention" class="attention">
+                                    </div>
+
+                                    <img src="{{ asset('/storage/images/icons/trash.svg') }}" alt="trash" class="trash">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart__item">
+                            <div class="item__image">
+                                <img src="{{ asset('/storage/images/products/product_2.jpg') }}" alt="product" class="item__img">
+                            </div>
+
+                            <div class="item__info">
+                                <div class="basic_info">
+                                    <span class="item__title">Вітровка New Balance Jacket NB Athletics</span>
+                                    <div class="price">
+                                        <span class="item__old_price">1750 ₴</span>
+                                        <span class="item__new_price">1550 ₴</span>
+                                    </div>
+                                </div>
+
+                                <div class="details">
+                                    <div class="items_count">
+                                        <div class="counter">
+                                            <img src="{{ asset('/storage/images/icons/minus.svg') }}" alt="attention" class="counter_item">
+                                            <hr class="vertical_line">
+                                            <span class="counter_item">2</span>
+                                            <hr class="vertical_line">
+                                            <img src="{{ asset('/storage/images/icons/plus.svg') }}" alt="attention" class="counter_item">
+                                        </div>
+                                    </div>
+
+                                    <img src="{{ asset('/storage/images/icons/trash.svg') }}" alt="trash" class="trash">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart__item">
+                            <div class="item__image">
+                                <img src="{{ asset('/storage/images/products/product_3.jpg') }}" alt="product" class="item__img">
+                            </div>
+
+                            <div class="item__info">
+                                <div class="basic_info">
+                                    <span class="item__title">Вітровка New Balance Jacket NB Athletics</span>
+                                    <div class="price">
+                                        <span class="item__old_price">1750 ₴</span>
+                                        <span class="item__new_price">1550 ₴</span>
+                                    </div>
+                                </div>
+
+                                <div class="details">
+                                    <div class="items_count">
+                                        <div class="counter">
+                                            <img src="{{ asset('/storage/images/icons/minus.svg') }}" alt="attention" class="counter_item">
+                                            <hr class="vertical_line">
+                                            <span class="counter_item">2</span>
+                                            <hr class="vertical_line">
+                                            <img src="{{ asset('/storage/images/icons/plus.svg') }}" alt="attention" class="counter_item">
+                                        </div>
+                                    </div>
+
+                                    <img src="{{ asset('/storage/images/icons/trash.svg') }}" alt="trash" class="trash">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart_summary">
+                        <div class="summary__item">
+                            <span class="summary__text">Вартість</span>
+                            <span class="summary__value">4200 ₴</span>
+                        </div>
+
+                        <div class="summary__item">
+                            <span class="summary__text">Доставка</span>
+                            <span class="summary__value thin">Нова пошта <span class="bold">(приблизно 70₴) </span></span>
+                        </div>
+
+                        <div class="summary__item">
+                            <span class="summary__text bold">Загальна вартість</span>
+                            <span class="summary__value bold">4270 ₴</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
             <div class="form_group payment_methods__wrapper">
                 <h1 class="group__title">Інформація оплати</h1>
 
