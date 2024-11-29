@@ -11,6 +11,15 @@ body {
 
     margin-right: auto;
     margin-left: auto;
+
+    @media screen and (max-width: 780px) {
+        width: 515px;
+    }
+
+    @media screen and (max-width: 550px) {
+        width: 100%;
+        padding: 0 16px;
+    }
 }
 
 .content_wrapper {
@@ -26,6 +35,23 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+
+        @media screen and (max-width: 780px) {
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+            align-items: flex-end;
+        }
+
+        .nav_img {
+            @media screen and (max-width: 780px) {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
 
         .close_btn {
             display: flex;
@@ -58,7 +84,7 @@ body {
 
         gap: 32px;
 
-        width: 629px;
+        width: 100%;
         height: 100%;
 
 
@@ -67,11 +93,20 @@ body {
 
         background-color: #fff;
 
+        @media screen and (max-width: 780px) {
+            padding: 24px;
+            gap: 24px;
+        }
+
         .nav {
             display: flex;
             flex-direction: column;
 
             gap: 32px;
+
+            @media screen and (max-width: 780px) {
+                gap: 16px;
+            }
 
             .nav__links {
                 display: flex;
@@ -90,6 +125,19 @@ body {
                     text-align: center;
 
                     color: rgba(0, 0, 0, 1);
+
+                    @media screen and (max-width: 780px) {
+                        font-size: 14px;
+                    }
+
+                    @media screen and (max-width: 550px) {
+                        font-size: 16px;
+
+                        &:last-child {
+                            margin-left: 16px;
+                        }
+                    }
+
 
                     &.active {
                         font-weight: 600;
@@ -128,10 +176,34 @@ body {
 
                     &.left {
                         left: 60px;
+
+                        @media screen and (max-width: 480px) {
+                            left: 13%;
+                        }
+
+                        @media screen and (max-width: 360px) {
+                            left: 7%;
+                        }
+
+                        @media screen and (max-width: 320px) {
+                            left: 3%;
+                        }
                     }
 
                     &.right {
                         right: 60px;
+
+                        @media screen and (max-width: 480px) {
+                            right: 13%;
+                        }
+
+                        @media screen and (max-width: 360px) {
+                            right: 7%;
+                        }
+
+                        @media screen and (max-width: 320px) {
+                            right: 3%;
+                        }
                     }
                 }
             }
@@ -144,6 +216,10 @@ body {
 
             width: 100%;
 
+            @media screen and (max-width: 780px) {
+                gap: 12px;
+            }
+
             .form_title {
                 font-size: 24px;
                 font-weight: 600;
@@ -151,6 +227,10 @@ body {
                 text-align: center;
 
                 color: rgba(0, 0, 0, 1);
+
+                @media screen and (max-width: 780px) {
+                    font-size: 18px;
+                }
             }
 
             .form_text {
@@ -167,19 +247,24 @@ body {
 
                 border: 1px solid rgba(151, 151, 151, 1);
                 border-radius: 12px;
+                font-size: 18px;
 
                 padding: 16px 24px;
 
                 &::placeholder {
                     font-family: 'Roboto', sans-serif;
                     font-weight: 300;
-                    font-size: 18px;
                     color: rgba(0, 0, 0, 0.5);
                 }
 
                 &:focus {
                     outline: none;
                     border: 1px solid rgba(219, 6, 20, 1);
+                }
+
+                @media screen and (max-width: 780px) {
+                    padding: 17px 14px;
+                    font-size: 14px;
                 }
             }
 
@@ -194,6 +279,13 @@ body {
                     top: 50%;
                     transform: translateY(-50%);
                     cursor: pointer;
+
+
+                    @media screen and (max-width: 480px) {
+                        width: 18px;
+                        height: 18px;
+                        right: 16px;
+                    }
                 }
             }
 
@@ -218,6 +310,11 @@ body {
 
                     width: 100%;
 
+                    @media screen and (max-width: 580px) {
+                        flex-direction: column;
+                        gap: 8px;
+                    }
+
                     .date_of_birth_field {
                         display: flex;
                         flex-direction: row;
@@ -231,6 +328,14 @@ body {
                             width: 66%;
                         }
 
+                        @media screen and (max-width: 580px) {
+                            width: 100%;
+
+                            &:nth-child(2) {
+                                width: 100%;
+                            }
+                        }
+
                         .date_of_birth_arrow {
                             position: absolute;
                             right: 24px;
@@ -239,6 +344,10 @@ body {
                             cursor: pointer;
 
                             transition: 0.3s ease-in-out;
+
+                            @media screen and (max-width: 480px) {
+                                right: 16px;
+                            }
 
                             &.rotate {
                                 transform: translateY(-50%) rotate(180deg);
@@ -321,6 +430,11 @@ body {
                 cursor: pointer;
                 transition: 0.3s ease-in-out;
 
+                @media screen and (max-width: 780px) {
+                    padding: 14px;
+                    font-size: 14px;
+                }
+
                 &:hover {
                     background-color: rgba(219, 6, 20, 0.8);
                 }
@@ -357,12 +471,21 @@ body {
 
             &.registration {
                 margin-bottom: 16px;
+
+                @media screen and (max-width: 780px) {
+                    margin-bottom: 0;
+                }
             }
 
             .sign_in_social__text {
                 font-weight: 600;
                 font-size: 24px;
                 color: #000;
+                text-align: center;
+
+                @media screen and (max-width: 780px) {
+                    font-size: 18px;
+                }
             }
 
             .sign_in_social__icons {
@@ -373,6 +496,11 @@ body {
 
                 gap: 12px;
                 width: 100%;
+
+                @media screen and (max-width: 480px) {
+                    flex-direction: column;
+                    gap: 8px;
+                }
 
                 .sign_in_social__icon {
                     display: flex;
@@ -392,14 +520,32 @@ body {
                     cursor: pointer;
                     transition: 0.3s ease-in-out;
 
+                    @media screen and (max-width: 780px) {
+                        padding: 14px;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        width: 100%;
+                    }
+
                     &:hover {
                         border: 1px solid rgba(219, 6, 20, 1);
+                    }
+
+                    img {
+                        @media screen and (max-width: 780px) {
+                            height: 18px;
+                        }
                     }
 
                     span {
                         font-weight: 400;
                         font-size: 18px;
                         color: #000;
+
+                        @media screen and (max-width: 780px) {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
