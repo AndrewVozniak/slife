@@ -14,12 +14,12 @@
 
     <div class="content_wrapper">
         <div class="container">
-            <div class="info_wrapper">
+            <div class="info_wrapper priv">
                 <div class="title__big">{{__('private_policy.privacy_policy')}}</div>
                 <div class="info_text">
                     <p class="subtitle">{{__('private_policy.about_processing_and_protection')}}&#46;</p>
 
-                    <p class="title" style="margin-bottom: 16px">{{__('private_policy.content.content')}}</p>
+                    <p class="return_title">{{__('private_policy.content.content')}}</p>
                     <div class="content_ol_list_wrapper">
                         <ol class="content_ol">
                             <li class="content_ol_li">{{__('private_policy.content.general_concepts')}}</li>
@@ -189,6 +189,7 @@
                                     </li>
                                 </ol>
                             </li>
+
                             <li class="content_ol_li_2">
                                 {{__('private_policy.content.processing_order')}}
                                 <ol>
@@ -230,7 +231,6 @@
                                     </li>
                                 </ol>
                             </li>
-
 
                             <li class="content_ol_li_2">
                                 {{__('private_policy.content.terms_of_disclosure_of_information')}}
