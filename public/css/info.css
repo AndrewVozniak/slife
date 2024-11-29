@@ -58,7 +58,7 @@
     }
 
     & ul li {
-        width: 100%;
+        width: calc(100% - 15px);
         margin-bottom: 12px;
         margin-left: 15px;
         list-style-type: disc;
