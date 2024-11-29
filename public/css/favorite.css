@@ -6,3 +6,40 @@
     padding: 0;
     padding-top: 48px;
 }
+
+@media screen and (max-width: 780px) {
+    .new_products {
+        padding-top: 32px;
+
+        .popular_products_box {
+            margin-bottom: 24px;
+        }
+
+        .favorite {
+            width: 40px !important;
+            height: 40px !important;
+            padding: 0 !important;
+
+            .favorite_img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 330px) {
+    .new_products {
+        .favorite {
+            width: 30px !important;
+            height: 30px !important;
+            padding: 0 !important;
+
+            .favorite_img {
+                width: 14px !important;
+                height: 14px !important;
+            }
+        }
+    }
+}
