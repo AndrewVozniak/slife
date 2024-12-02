@@ -12,16 +12,18 @@
     </textarea>
 
     <div class="rate_and_submit">
-        <div class="review_rate_box">
-            <span class="text_500_16_black">{{__('product.leave_review.rate_product')}}&#58;</span>
-        </div>
+        <div class="rate">
+            <div class="review_rate_box">
+                <span>{{__('product.leave_review.rate_product')}}&#58;</span>
+            </div>
 
-        <div class="star_rating_box">
-            <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_img">
-            <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_img">
-            <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_img">
-            <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_img">
-            <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_img">
+            <div class="star_rating_box">
+                <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_img">
+                <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_img">
+                <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_img">
+                <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_img">
+                <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_img">
+            </div>
         </div>
 
         <input type="submit" value="{{__('product.leave_review.send')}}"

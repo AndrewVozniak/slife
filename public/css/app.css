@@ -77,11 +77,16 @@ textarea {
     align-items: center;
 
     width: 100%;
+    padding: 18px;
     border: 1px solid var(--gray-input-border);
     border-radius: 12px;
     outline: none;
 
     color: var(--dark-text);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
 }
 
 textarea:focus {
@@ -2779,6 +2784,17 @@ textarea:active {
     }
 }
 
+@media screen and (max-width: 1275px) {
+    .img_24_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 18px;
+        height: 18px;
+    }
+}
+
 .img_32_box {
     display: flex;
     justify-content: center;
@@ -2794,6 +2810,14 @@ textarea:active {
         object-fit: cover;
     }
 }
+
+@media screen and (max-width: 1275px) {
+    .img_32_box {
+        width: 24px;
+        height: 24px;
+    }
+}
+
 .text_800_32_black {
     font-size: 32px;
     font-weight: 800;
@@ -2812,6 +2836,12 @@ textarea:active {
     font-size: 24px;
     font-weight: 600;
     color: var(--black);
+}
+
+@media screen and (max-width: 1275px) {
+    .text_600_24_black {
+        font-size: 18px;
+    }
 }
 
 .text_600_18_black {
@@ -2862,6 +2892,13 @@ textarea:active {
     color: var(--black);
 }
 
+@media screen and (max-width: 770px) {
+    .text_300_14_black {
+        font-size: 12px;
+    }
+}
+
+
 .btn_product_quantity {
     display: flex;
     justify-content: space-between;
@@ -2889,6 +2926,30 @@ textarea:active {
     }
 }
 
+@media screen and (max-width: 1275px) {
+    .btn_product_quantity {
+        width: 45%;
+        height: 50px;
+        padding: 19px 14px;
+
+        border-radius: 8px;
+        border: 1px solid var(--dark);
+        background-color:  rgba(36, 36, 36, 0.1);
+
+        transition: 0.3s ease;
+
+        .hr {
+            height: 12px;
+            border: 1px solid rgba(177, 177, 177, 0.3)
+        }
+
+        .quantity {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
 .star_rating_box {
     display: flex;
     justify-content: center;
@@ -2903,4 +2964,14 @@ textarea:active {
     }
 }
 
+@media screen and (max-width: 1275px) {
+    .star_rating_box {
+        gap: 2px;
+
+        .star_img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
 

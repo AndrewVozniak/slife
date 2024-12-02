@@ -5,7 +5,7 @@
             <span>{{__('product.product_describe.jacket')}}</span>
         </div>
 
-        <div class="product_info_box">
+        <div class="product_info_box availability_box">
             <div class="availability">
                 <div class="availability_img_box">
                     <img src="{{asset('storage/images/icons/iconamoon_check-bold.svg')}}" alt="icon" class="iconamoon_img">
@@ -31,7 +31,7 @@
 
         <div class="gray_line"></div>
 
-        <div class="product_info_box">
+        <div class="product_info_box color_and_price_box">
             <div class="product_title_options_box">
                 <span>{{__('product.color.color')}}</span>
             </div>
@@ -62,7 +62,7 @@
         <div class="gray_line"></div>
 
         <div class="product_info_box">
-            <div class="product_title_options_size">
+            <div class="product_title_options_size size_box">
                 <div class="product_title_options_box">
                     <span>{{__('product.product_describe.size')}}</span>
                 </div>
@@ -77,7 +77,7 @@
 
         <div class="gray_line"></div>
 
-        <div class="product_info_box">
+        <div class="product_info_box color_and_price_box">
             <div class="product_title_options_box">
                 <span>{{__('product.product_describe.price')}}</span>
             </div>
@@ -107,7 +107,9 @@
 
                 <div class="user_bonus_info_text_box">
                     <div class="pay_with_bonus_box">
-                        <a href="{{ route('login', ['locale' => App::currentLocale()]) }}" class="pay_with_bonus_link">{{__('product.product_describe.login')}}</a>
+                        <a href="{{ route('login', ['locale' => App::currentLocale()]) }}" class="pay_with_bonus_link">
+                            {{__('product.product_describe.login')}}
+                        </a>
                         <span class="pay_with_bonus_text">{{__('product.product_describe.pay_with_bonus')}}</span>
                     </div>
 
@@ -337,9 +339,9 @@
             </div>
 
             <div class="warning">
-                <div class="img_24_box">
+                <div class="warning_img_box">
                     <img src="{{asset('storage/images/icons/iconamoon_attention-circle-red.svg')}}" alt="icon"
-                         class="img_24">
+                         class="warning_img">
                 </div>
 
                 <div class="warning_text">
@@ -353,7 +355,6 @@
 
         @include('components.form.leave_review')
     </div>
-
 </section>
 
 <script>

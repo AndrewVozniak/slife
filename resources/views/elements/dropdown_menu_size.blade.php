@@ -103,6 +103,33 @@
             font-weight: 600;
         }
     }
+
+    @media screen and (max-width: 1275px) {
+        .param_dropdown {
+            max-width: 166px;
+            height: 50px;
+            padding: 15px 14px;
+
+            .dropdown_size_select {
+                font-size: 14px;
+            }
+
+            .param_dropdown_menu li {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+            .param_dropdown_menu li:hover {
+                background: var(--slider-gray);
+                font-weight: 600;
+            }
+
+            .active_dropdown_li {
+                background: var(--slider-gray);
+                font-weight: 600;
+            }
+        }
+    }
 </style>
 
 <script>
