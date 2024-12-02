@@ -3,172 +3,204 @@
     margin-bottom: 48px;
 }
 
-.product_comparison_wrapper {
+.product_comparison__content_wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
     width: 100%;
-    gap: 40px;
     margin-bottom: 120px;
 
-
-    .comparison-grid {
-        display: grid;
-        grid-template-columns: 320px 320px 320px 320px;
-        grid-template-rows: auto;
+    .product_comparison_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
 
         width: 100%;
-        gap: 1px;
+        gap: 40px;
 
-        overflow: hidden;
-        background-color:  var(--gray-table-border);
-        border: 1px solid var(--gray-table-border);
-        border-radius: 24px;
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 320px 320px 320px 320px;
+            grid-template-rows: auto;
 
-        .th1 {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            width: 100%;
+            gap: 1px;
 
-            font-weight: 600;
-            padding-left: 20px;
-            padding-right: 20px;
+            overflow: hidden;
+            background-color:  var(--gray-table-border);
+            border: 1px solid var(--gray-table-border);
+            border-radius: 24px;
+
+            .th1 {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+
+                font-weight: 600;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .th2 {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: left;
+
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .old_price {
+                font-weight: 400;
+
+                color: var(--gray-old-price);
+                text-decoration: line-through;
+            }
         }
 
-        .th2 {
+        .comparison-grid > div {
+            padding: 12px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .comparison-grid > div.header {
+            padding: 34px 20px;
+
+            background-color: var(--gray);
+            grid-column: span 1;
+        }
+
+        .product_photo {
+            width: 72px;
+            height: 92px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        .comparison-grid .rating {
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
-            text-align: left;
 
-            padding-left: 20px;
-            padding-right: 20px;
+            .comparison-grid .rating .star_rating_box {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                gap: 4px;
+
+                .comparison-grid .rating .star_rating_box img{
+                    width: 14px;
+                    height: 14px;
+                }
+            }
         }
 
-        .old_price {
+        .comparison-grid .rating .reviews {
+            font-family: Gilroy, sans-serif;
             font-weight: 400;
 
-            color: var(--gray-old-price);
-            text-decoration: line-through;
+            text-align: left;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: var(--blue-text);
         }
-    }
 
-    .comparison-grid > div {
-        padding: 12px;
-        background-color: #fff;
-        text-align: center;
-    }
+        .comparison-grid .rating .none_reviews {
+            font-family: Gilroy, sans-serif;
+            font-weight: 400;
 
-    .comparison-grid > div.header {
-        padding: 34px 20px;
+            color: var(--gray-none-reviews);
+            text-decoration: none;
+        }
 
-        background-color: var(--gray);
-    }
-
-    .product_photo {
-        width: 72px;
-        height: 92px;
-        object-fit: cover;
-        margin: 0 auto;
-    }
-
-    .comparison-grid .rating {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .comparison-grid .rating .star_rating_box {
+        .product_comparison_btn_box {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
 
-            gap: 4px;
+            width: 100%;
+            gap: 10px;
+            margin: 0 auto;
+        }
 
-            .comparison-grid .rating .star_rating_box img{
-                width: 14px;
-                height: 14px;
+        .btn-add {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 19px 46px;
+            border-radius: 12px;
+            border: none;
+
+            background-color: var(--red);
+            opacity: 30%;
+            color: white;
+
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn-add:hover {
+            opacity: 100%;
+        }
+
+        .btn-delete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 60px;
+            height: 60px;
+            padding: 18px;
+
+            background-color: var(--gray);
+
+            border-radius: 8px;
+            border: none;
+            object-position: center;
+
+            cursor: pointer;
+
+            .trash_btn {
+                width: 24px;
+                height: 24px;
             }
         }
     }
 
-    .comparison-grid .rating .reviews {
-        font-family: Gilroy, sans-serif;
-        font-weight: 400;
 
-        text-align: left;
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        color: var(--blue-text);
-    }
+}
 
-    .comparison-grid .rating .none_reviews {
-        font-family: Gilroy, sans-serif;
-        font-weight: 400;
+@media screen and (max-width: 1320px) {
+    .product_comparison__content_wrapper {
+        margin-bottom: 80px;
 
-        color: var(--gray-none-reviews);
-        text-decoration: none;
-    }
+        .product_comparison_wrapper {
+            gap: 24px;
 
-    .product_comparison_btn_box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            .comparison-grid {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1rf 1fr;
+                grid-template-rows: auto;
+                overflow-x: scroll;
+            }
 
-        width: 100%;
-        gap: 10px;
-        margin: 0 auto;
-    }
-
-    .btn-add {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        padding: 19px 46px;
-        border-radius: 12px;
-        border: none;
-
-        background-color: var(--red);
-        opacity: 30%;
-        color: white;
-
-        font-size: 20px;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
-
-        cursor: pointer;
-        transition: 0.3s ease-in-out;
-    }
-
-    .btn-add:hover {
-        opacity: 100%;
-    }
-
-    .btn-delete {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 60px;
-        height: 60px;
-        padding: 18px;
-
-        background-color: var(--gray);
-
-        border-radius: 8px;
-        border: none;
-        object-position: center;
-
-        cursor: pointer;
-
-        .trash_btn {
-            width: 24px;
-            height: 24px;
+            .comparison-grid > .header {
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }

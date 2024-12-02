@@ -12,17 +12,18 @@
         <a href="{{ route('compareProduct', ['locale' => App::currentLocale()]) }}" class="breadcrumb active">Порівняння товарів</a>
     </div>
 
-    <div class="content_wrapper">
+    <div class="product_comparison__content_wrapper">
         <div class="container">
             <div class="product_comparison_wrapper">
                 <div class="title__big">{{__('product_comparison.product_comparison')}}</div>
 
                 <div class="comparison-grid">
                     <!-- Header Row -->
-                    <div class="header th1">{{__('product_comparison.products_in_the_list')}}</div>
-                    <div class="header">{{__('product_comparison.windbreaker')}} New Balance Jacket NB Athletics</div>
-                    <div class="header">{{__('product_comparison.t-shirt')}}  Nike W NSW ESSNTL RIB CRP TANK</div>
-                    <div class="header">{{__('product_comparison.shorts')}} New Balance Short NB Small Logo</div>
+                    <div class="header th1" id="products">{{__('product_comparison.products_in_the_list')}}</div>
+                    <div class="header" id="product1">{{__('product_comparison.windbreaker')}} New Balance Jacket NB Athletics</div>
+                    <div class="header" id="product2">{{__('product_comparison.t-shirt')}}  Nike W NSW ESSNTL RIB CRP TANK</div>
+                    <div class="header" id="product3">{{__('product_comparison.shorts')}} New Balance Short NB Small Logo</div>
+
 
                     <!-- Image Row -->
                     <div class="text_400_16_black th2">{{__('product_comparison.photo')}}</div>
@@ -40,15 +41,18 @@
 
                     <!-- Price Row -->
                     <div class="text_400_16_black th2">{{__('product_comparison.price')}}</div>
-                    <div><span class="old_price"></span>
+                    <div>
+                        <span class="old_price"></span>
                         <span  class="text_700_16_black"> 1250 &#8372;</span>
                     </div>
 
-                    <div><span class="old_price">1750 &#8372; </span>
+                    <div>
+                        <span class="old_price">1750 &#8372; </span>
                         <span  class="text_700_16_black"> 1550 &#8372;</span>
                     </div>
 
-                    <div><span class="old_price">1950 &#8372; </span>
+                    <div>
+                        <span class="old_price">1950 &#8372; </span>
                         <span  class="text_700_16_black"> 1750 &#8372;</span>
                     </div>
 
