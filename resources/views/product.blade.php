@@ -17,9 +17,10 @@
     </div>
 
     <div class="product_container">
+        @include('elements.slider_small')
+
         @include('components.product.gallery')
         @include('components.product.product_description')
-
     </div>
 
     <div class="content_wrapper">

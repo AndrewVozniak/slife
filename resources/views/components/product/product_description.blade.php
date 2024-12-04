@@ -1,6 +1,23 @@
 
 <section class="describe_product_wrapper">
     <div class="add_to_cart">
+        <div class="product_info_box price_mobile">
+            <div class="product_title_options_box">
+                <span>{{__('product.product_describe.price')}}</span>
+            </div>
+
+            <div class="price_and_cashback">
+                <div class="price_value">
+                    <span class="old_price">1 950 &#8372;</span>
+                    <span class="new_price">1 750 &#8372;</span>
+                </div>
+
+                <div class="cashback">
+                    <span class="cashback_text">{{__('product.product_describe.cashback2')}} &#8211; 5&#37;</span>
+                </div>
+            </div>
+        </div>
+
         <div class="product_name">
             <span>{{__('product.product_describe.jacket')}}</span>
         </div>
@@ -31,7 +48,7 @@
 
         <div class="gray_line"></div>
 
-        <div class="product_info_box color_and_price_box">
+        <div class="product_info_box color_box">
             <div class="product_title_options_box">
                 <span>{{__('product.color.color')}}</span>
             </div>
@@ -77,7 +94,7 @@
 
         <div class="gray_line"></div>
 
-        <div class="product_info_box color_and_price_box">
+        <div class="product_info_box price_box">
             <div class="product_title_options_box">
                 <span>{{__('product.product_describe.price')}}</span>
             </div>

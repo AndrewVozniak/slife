@@ -12,6 +12,7 @@ return [
         'add_to_cart' => 'Додати в кошик',
         'description' => 'Опис',
         'cashback' => 'Кешбек',
+        'cashback2' => 'Процент кешбеку',
         'pay_with_bonus' => 'для оплати бонусами',
         'login' => 'Увійти',
         'currency' => 'грн',
