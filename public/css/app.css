@@ -2818,6 +2818,13 @@ textarea:active {
     }
 }
 
+@media screen and (max-width: 750px) {
+    .img_32_box {
+        width: 18px;
+        height: 18px;
+    }
+}
+
 .text_800_32_black {
     font-size: 32px;
     font-weight: 800;
@@ -2947,6 +2954,15 @@ textarea:active {
             font-size: 14px;
             font-weight: 500;
         }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .btn_product_quantity {
+        width: 100%;
+        padding: 13px 24px;
+
+        border-radius: 12px;
     }
 }
 

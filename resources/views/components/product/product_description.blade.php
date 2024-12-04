@@ -78,7 +78,7 @@
 
         <div class="gray_line"></div>
 
-        <div class="product_info_box">
+        <div class="product_info_box size_box_wrapper">
             <div class="product_title_options_size size_box">
                 <div class="product_title_options_box">
                     <span>{{__('product.product_describe.size')}}</span>
@@ -92,7 +92,7 @@
             @include('elements.dropdown_menu_size')
         </div>
 
-        <div class="gray_line"></div>
+        <div class="gray_line line_hidden"></div>
 
         <div class="product_info_box price_box">
             <div class="product_title_options_box">
@@ -137,6 +137,8 @@
                 </div>
             </div>
 
+            <div class="gray_line_bonus_box"></div>
+
             <div class="bonus_add_box">
                 <span class="bonus_red">&#43; 18</span>
                 <span>{{__('product.product_describe.bonus')}}</span>
@@ -165,9 +167,9 @@
             <div class="details_title_box">
                 <span class="details_title">{{__('product.details.description')}}&#58;</span>
 
-                <button class="img_24_box"  id="toggleButton">
+                <button class="details_img_box"  id="toggleButton">
                     <img src="{{asset('storage/images/icons/iconoir_plus.svg')}}" alt="icon"
-                         class="img_24"  id="toggleIcon">
+                         class="details_img"  id="toggleIcon">
                 </button>
             </div>
 
@@ -185,9 +187,9 @@
             <div class="details_title_box">
                 <span class="details_title">{{__('product.details.delivery')}}</span>
 
-                <button class="img_24_box"  id="toggleButtonDelivery">
+                <button class="details_img_box"  id="toggleButtonDelivery">
                     <img src="{{asset('storage/images/icons/iconoir_plus.svg')}}" alt="icon"
-                         class="img_24"  id="toggleIconDelivery">
+                         class="details_img"  id="toggleIconDelivery">
                 </button>
             </div>
 
@@ -207,9 +209,9 @@
             <div class="details_title_box">
                 <span class="details_title">{{__('product.details.payment')}}</span>
 
-                <button class="img_24_box"  id="toggleButtonPayment">
+                <button class="details_img_box"  id="toggleButtonPayment">
                     <img src="{{asset('storage/images/icons/iconoir_plus.svg')}}" alt="icon"
-                         class="img_24"  id="toggleIconPayment">
+                         class="details_img"  id="toggleIconPayment">
                 </button>
             </div>
 
@@ -229,9 +231,9 @@
             <div class="details_title_box">
                 <span class="details_title">{{__('product.details.composition_and_care')}}</span>
 
-                <button class="img_24_box"  id="toggleButtonComposition">
+                <button class="details_img_box"  id="toggleButtonComposition">
                     <img src="{{asset('storage/images/icons/iconoir_plus.svg')}}" alt="icon"
-                         class="img_24"  id="toggleIconComposition">
+                         class="details_img"  id="toggleIconComposition">
                 </button>
             </div>
 
@@ -251,9 +253,9 @@
             <div class="details_title_box">
                 <span class="details_title">{{__('product.details.certificate')}}</span>
 
-                <button class="img_24_box"  id="toggleButtonCertificate">
+                <button class="details_img"  id="toggleButtonCertificate">
                     <img src="{{asset('storage/images/icons/iconoir_plus.svg')}}" alt="icon"
-                         class="img_24"  id="toggleIconCertificate">
+                         class="details_img_box"  id="toggleIconCertificate">
                 </button>
             </div>
 

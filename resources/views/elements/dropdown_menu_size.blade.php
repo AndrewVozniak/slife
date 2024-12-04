@@ -130,6 +130,37 @@
             }
         }
     }
+
+    @media screen and (max-width: 750px) {
+        .param_dropdown {
+            width: 100%;
+            max-width: 100%;
+            padding: 10px 12px;
+
+            .param_dropdown_menu {
+                top: 40px;
+            }
+
+            .param_dropdown_menu li {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+
+            .param_dropdown_arrow {
+                width: 11px;
+                height: 6px;
+            }
+
+            .param_dropdown_menu_open li {
+                display: block;
+                opacity: 1;
+
+                padding: 10px 12px;
+            }
+
+        }
+    }
 </style>
 
 <script>
