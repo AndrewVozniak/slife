@@ -328,12 +328,12 @@
                     </div>
                 </div>
 
-                <div class="star_rating_box">
-                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_img">
-                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_img">
-                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_img">
-                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_img">
-                    <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="star_img">
+                <div class="star_rating_wrapper">
+                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_rating_img">
+                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_rating_img">
+                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_rating_img">
+                    <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="star_rating_img">
+                    <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="star_rating_img">
                 </div>
             </div>
 

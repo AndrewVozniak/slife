@@ -702,6 +702,20 @@
 
                     }
                 }
+
+                .star_rating_wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: fit-content;
+                    gap: 5px;
+
+                    .star_rating_img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
             }
 
             .main_text_box {
@@ -1155,6 +1169,15 @@
                             height: 48px;
 
                             font-size: 18px;
+                        }
+                    }
+
+                    .star_rating_wrapper {
+                        gap: 2px;
+
+                        .star_rating_img {
+                            width: 14px;
+                            height: 14px;
                         }
                     }
                 }
@@ -1660,109 +1683,100 @@
         }
 
         .reviews_wrapper {
-            gap: 18px;
+            gap: 16px;
 
             .reviews_title_box {
-                gap: 15px;
 
                 .btn_arrow_wrapper {
-                    gap: 8px;
+                    gap: 4px;
 
                     .btn_arrow {
-                        width: 50px;
-                        height: 50px;
+                        width: 40px;
+                        height: 40px;
                     }
                 }
             }
 
             .reviews_box {
                 padding: 16px;
+                border-radius: 20px;
 
                 .author_and_rating_box {
                     padding-bottom: 16px;
+                    gap: 25px;
 
                     .about_author_box {
-                        gap: 12px;
+                        gap: 8px;
 
                         .photo_author {
-                            width: 48px;
-                            height: 48px;
+                            font-size: 20px;
+                        }
+                    }
 
-                            font-size: 18px;
+                    .star_rating_wrapper {
+                        gap: 4px;
+
+                        .star_rating_img {
+                            width: 12px;
+                            height: 12px;
                         }
                     }
                 }
 
                 .main_text_box {
-                    padding-top: 16px;
+                    font-size: 12px;
                 }
             }
-
         }
 
         .leave_review_wrapper {
-            padding: 16px;
-            gap: 16px;
+            width: 100%;
+            padding: 32px 0;
+            gap: 12px;
 
             .form_title_box {
+                gap: 18px;
 
                 .form_title {
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-
-                    width: 100%;
-                    font-size: 18px;
+                    font-size: 16px;
                 }
 
                 .warning {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
                     width: 100%;
 
                     .warning_text {
-                        width: 100%;
-                        max-width: 280px;
-                        font-size: 14px;
+                        font-size: 12px;
                     }
 
                     .warning_img_box {
-                        width: 20px;
-                        height: 20px;
+                        width: 24px;
+                        height: 24px;
                         object-position: center;
-
-                        .warning_img {
-                            width: 100%;
-                            height: 100%;
-                        }
                     }
                 }
             }
 
             .form_leave_review {
-                padding: 16px;
-                gap: 12px;
-                background: var(--white);
-                border-radius: 16px;
-                box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.06);
+                padding: 0;
+                border-radius: 12px;
 
                 .input_wrapper {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
-
-                    width: 100%;
-                    gap: 12px;
+                    order: 0;
 
                     .input_leave_review {
-                        width: 100%;
-                        height: 50px;
-                        padding: 17px 14px;
+                        padding: 17px 18px;
 
                         font-size: 14px;
+                        font-weight: 300;
                     }
                 }
 
                 .rate_and_submit {
+                    order: 1;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;

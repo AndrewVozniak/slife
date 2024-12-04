@@ -2851,6 +2851,12 @@ textarea:active {
     }
 }
 
+@media screen and (max-width: 750px) {
+    .text_600_24_black {
+        font-size: 16px;
+    }
+}
+
 .text_600_18_black {
     font-size: 18px;
     font-weight: 500;
@@ -2990,4 +2996,6 @@ textarea:active {
         }
     }
 }
+
+
 
