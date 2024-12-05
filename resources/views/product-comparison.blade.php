@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Кошик')
+@section('title', 'Порівняння товарів')
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/product_comparison.css') }}">
 @endsection
@@ -143,7 +143,390 @@
 
             </div>
         </div>
+
+        <div class="custom_container">
+            <div class="table">
+                <div class="section-header">
+                    <h1 class="text">{{__('product_comparison.products_in_the_list')}}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="cell">
+                        <p class="text">New Balance Jacket NB Athletics</p>
+                        <img src="{{ asset('/storage/images/products/product_3.svg') }}"
+                             alt="favorite" class="product_photo">
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">Nike W NSW ESSNTL RIB CRP TANK</p>
+                        <img src="{{ asset('/storage/images/products/product_1.svg') }}"
+                             alt="favorite" class="product_photo">
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">New Balance Short NB Small Logo</p>
+                        <img src="{{ asset('/storage/images/products/product_4.svg') }}"
+                             alt="favorite" class="product_photo">
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">New Balance Jacket NB Athletics</p>
+                        <img src="{{ asset('/storage/images/products/product_3.svg') }}"
+                             alt="favorite" class="product_photo">
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">Nike W NSW ESSNTL RIB CRP TANK</p>
+                        <img src="{{ asset('/storage/images/products/product_1.svg') }}"
+                             alt="favorite" class="product_photo">
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">New Balance Short NB Small Logo</p>
+                        <img src="{{ asset('/storage/images/products/product_4.svg') }}"
+                             alt="favorite" class="product_photo">
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">New Balance Jacket NB Athletics</p>
+                        <img src="{{ asset('/storage/images/products/product_3.svg') }}"
+                             alt="favorite" class="product_photo">
+                    </div>
+                </div>
+
+
+                <div class="section-header">
+                    <h1 class="text">{{__('product_comparison.price')}}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="cell rowed">
+                        <p class="text">1250 &#8372;</p>
+                    </div>
+
+                    <div class="cell rowed">
+                        <p class="old_price">1750 &#8372;</p>
+                        <p class="text">1550 &#8372;</p>
+                    </div>
+
+                    <div class="cell rowed">
+                        <p class="old_price">1950 &#8372;</p>
+                        <p class="text">1750 &#8372;</p>
+                    </div>
+
+                    <div class="cell rowed">
+                        <p class="old_price">1550 &#8372;</p>
+                        <p class="text">1250 &#8372;</p>
+                    </div>
+
+                    <div class="cell rowed">
+                        <p class="old_price">1750 &#8372;</p>
+                        <p class="text">1550 &#8372;</p>
+                    </div>
+
+                    <div class="cell rowed">
+                        <p class="old_price">1950 &#8372;</p>
+                        <p class="text">1750 &#8372;</p>
+                    </div>
+
+                    <div class="cell rowed">
+                        <p class="text">1250 &#8372;</p>
+                    </div>
+                </div>
+
+
+                <div class="section-header">
+                    <h1 class="text">{{__('product_comparison.article')}}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="cell">
+                        <p class="text">00192</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">004736</p>
+                    </div>
+
+                    <div class="cell few_cells" style="width: calc(124px * 4)">
+                        <p class="text">883620</p>
+                    </div>
+
+
+                    <div class="cell">
+                        <p class="text">00192</p>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <h1 class="text">{{__('product_comparison.description')}}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="cell">
+                        <p class="desc">{{__('product_comparison.description_text')}}</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="desc">{{__('product_comparison.description_text')}}</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="desc">{{__('product_comparison.description_text')}}</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="desc">{{__('product_comparison.description_text')}}</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="desc">{{__('product_comparison.description_text')}}</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="desc">{{__('product_comparison.description_text')}}</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="desc">{{__('product_comparison.description_text')}}</p>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <h1 class="text">{{__('product_comparison.producer')}}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="cell">
+                        <p class="text">New Balance</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">Nike</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">New Balance</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">New Balance</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">Nike</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">New Balance</p>
+                    </div>
+
+                    <div class="cell">
+                        <p class="text">New Balance</p>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <h1 class="text">{{__('product_comparison.rating')}}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="cell">
+                        <div class="rating">
+                            <div class="star_rating_box">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="star_img">
+                            </div>
+                            <span class="reviews">&#40;8 {{__('product_comparison.reviews')}}&#41;</span>
+                        </div>
+                    </div>
+
+                    <div class="cell">
+                        <div class="rating">
+                            <div class="star_rating_box">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="stars">
+                            </div>
+                            <span class="reviews none_reviews">&#40;0 {{__('product_comparison.reviews')}}&#41;</span>
+                        </div>
+                    </div>
+
+                    <div class="cell">
+                        <div class="rating">
+                            <div class="star_rating_box">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="stars">
+                            </div>
+                            <span class="reviews">&#40;44 {{__('product_comparison.reviews_2')}}&#41;</span>
+                        </div>
+                    </div>
+
+                    <div class="cell">
+                        <div class="rating">
+                            <div class="star_rating_box">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="star_img">
+                            </div>
+                            <span class="reviews">&#40;8 {{__('product_comparison.reviews')}}&#41;</span>
+                        </div>
+                    </div>
+
+                    <div class="cell">
+                        <div class="rating">
+                            <div class="star_rating_box">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="star_img">
+                            </div>
+                            <span class="reviews">&#40;8 {{__('product_comparison.reviews')}}&#41;</span>
+                        </div>
+                    </div>
+
+                    <div class="cell">
+                        <div class="rating">
+                            <div class="star_rating_box">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="star_img">
+                            </div>
+                            <span class="reviews">&#40;8 {{__('product_comparison.reviews')}}&#41;</span>
+                        </div>
+                    </div>
+
+                    <div class="cell">
+                        <div class="rating">
+                            <div class="star_rating_box">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star-fill.svg') }}" alt="star" class="stars">
+                                <img src="{{ asset('storage/images/icons/star.svg') }}" alt="star" class="star_img">
+                            </div>
+                            <span class="reviews">&#40;8 {{__('product_comparison.reviews')}}&#41;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <h1 class="text">{{__('product_comparison.material')}}</h1>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+                        <div class="cell">
+                            <p class="text">100&#37; {{__('product_comparison.nylon')}}</p>
+                        </div>
+
+                        <div class="cell">
+                            <p class="text">100&#37; {{__('product_comparison.polyester')}}</p>
+                        </div>
+
+                        <div class="cell">
+                            <p class="text">100&#37; {{__('product_comparison.nylon')}}</p>
+                        </div>
+
+                        <div class="cell">
+                            <p class="text">100&#37; {{__('product_comparison.nylon')}}</p>
+                        </div>
+
+                        <div class="cell">
+                            <p class="text">100&#37; {{__('product_comparison.polyester')}}</p>
+                        </div>
+
+                        <div class="cell">
+                            <p class="text">100&#37; {{__('product_comparison.nylon')}}</p>
+                        </div>
+
+                        <div class="cell">
+                            <p class="text">100&#37; {{__('product_comparison.nylon')}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            <a href="#" class="basket_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/basket_white.svg') }}" alt="star" class="basket_btn">
+                            </a>
+                            <a href="#" class="trash_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/fluent_delete-28-filled.svg') }}" alt="star" class="trash_btn">
+                            </a>
+                        </div>
+
+                        <div class="cell">
+                            <a href="#" class="basket_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/basket_white.svg') }}" alt="star" class="basket_btn">
+                            </a>
+                            <a href="#" class="trash_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/fluent_delete-28-filled.svg') }}" alt="star" class="trash_btn">
+                            </a>
+                        </div>
+
+                        <div class="cell">
+                            <a href="#" class="basket_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/basket_white.svg') }}" alt="star" class="basket_btn">
+                            </a>
+                            <a href="#" class="trash_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/fluent_delete-28-filled.svg') }}" alt="star" class="trash_btn">
+                            </a>
+                        </div>
+
+                        <div class="cell">
+                            <a href="#" class="basket_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/basket_white.svg') }}" alt="star" class="basket_btn">
+                            </a>
+                            <a href="#" class="trash_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/fluent_delete-28-filled.svg') }}" alt="star" class="trash_btn">
+                            </a>
+                        </div>
+
+                        <div class="cell">
+                            <a href="#" class="basket_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/basket_white.svg') }}" alt="star" class="basket_btn">
+                            </a>
+                            <a href="#" class="trash_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/fluent_delete-28-filled.svg') }}" alt="star" class="trash_btn">
+                            </a>
+                        </div>
+
+                        <div class="cell">
+                            <a href="#" class="basket_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/basket_white.svg') }}" alt="star" class="basket_btn">
+                            </a>
+                            <a href="#" class="trash_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/fluent_delete-28-filled.svg') }}" alt="star" class="trash_btn">
+                            </a>
+                        </div>
+
+                        <div class="cell">
+                            <a href="#" class="basket_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/basket_white.svg') }}" alt="star" class="basket_btn">
+                            </a>
+                            <a href="#" class="trash_btn_wrapper">
+                                <img src="{{ asset('storage/images/icons/fluent_delete-28-filled.svg') }}" alt="star" class="trash_btn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     @include('components.footer')
 @endsection
