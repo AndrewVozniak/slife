@@ -876,6 +876,20 @@
                             color: var(--black);
                         }
                     }
+
+                    .star_red_rating_box {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        width: fit-content;
+                        gap: 5px;
+
+                        .star_red_img {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
                 }
 
                 .btn_send {
@@ -1268,6 +1282,15 @@
                         .review_rate_box span {
                             font-size: 14px;
                             font-weight: 500;
+                        }
+
+                        .star_red_rating_box {
+                            gap: 2px;
+
+                            .star_red_img {
+                                width: 14px;
+                                height: 14px;
+                            }
                         }
                     }
 
@@ -1765,8 +1788,6 @@
                 border-radius: 12px;
 
                 .input_wrapper {
-                    order: 0;
-
                     .input_leave_review {
                         padding: 17px 18px;
 
@@ -1776,7 +1797,6 @@
                 }
 
                 .rate_and_submit {
-                    order: 1;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -1787,22 +1807,26 @@
 
 
                     .rate {
-                        justify-content: center;
+                        justify-content: space-between;
                         padding: 17px;
 
-                        .review_rate_box span {
-                            font-size: 14px;
-                            font-weight: 500;
+                        .star_red_rating_box {
+                            gap: 4px;
+
+                            .star_red_img {
+                                width: 16px;
+                                height: 16px;
+                            }
                         }
                     }
 
+
                     .btn_send {
                         width: 100%;
-                        max-width: 314px;
+                        max-width: 750px;
                         height: 50px;
 
-                        font-size: 14px;
-                        font-weight: 700;
+                        font-size: 16px;
                     }
                 }
             }
