@@ -235,6 +235,7 @@ textarea:active {
     display: flex;
     flex-direction: row;
     gap: 8px;
+    flex-wrap: wrap;
 
     .breadcrumb {
         font-family: 'Roboto', sans-serif;

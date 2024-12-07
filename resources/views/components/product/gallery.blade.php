@@ -25,6 +25,10 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        if (window.innerWidth > 750) {
+            return;
+        }
+
         const gallery = document.querySelector('.gallery');
         const scrollbar = document.querySelector(".scrollbar");
         const thumb = document.querySelector(".scroll-thumb");

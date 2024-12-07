@@ -1,7 +1,7 @@
 <div class="product_slider"
      x-data="productSliderComponent()"
      x-init="init()"
-     :style="`background-image: url('${images[currentIndex]}')`">
+     :style="`background-image: url('${images[currentIndex]}')`;">
 
     <div class="product_slider_content">
         <div class="product__slider_dots">

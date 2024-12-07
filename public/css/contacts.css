@@ -1,10 +1,24 @@
 .content_wrapper {
     margin-top: 32px;
     margin-bottom: 120px;
+
+    min-height: unset;
+
+    @media screen and (max-width: 600px) {
+        padding: 0;
+    }
 }
 
 .breadcrumbs {
     margin-bottom: 48px;
+
+    @media screen and (max-width: 780px) {
+        margin-bottom: 32px;
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 0 16px;
+    }
 }
 
 
@@ -13,10 +27,31 @@
     flex-direction: column;
     gap: 75px;
 
+    @media screen and (max-width: 890px) {
+        gap: 32px;
+    }
+
+    @media screen and (max-width: 780px) {
+        gap: 24px;
+    }
+
     .content_title {
         font-size: 50px;
         font-weight: 800;
         line-height: 59px;
+
+        @media screen and (max-width: 780px) {
+            font-size: 32px;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 28px;
+            padding: 0 16px;
+        }
+
+        @media screen and (max-width: 320px) {
+            font-size: 24px;
+        }
     }
 
     .contacts_info {
@@ -29,13 +64,29 @@
         top: 0;
         left: 0;
 
-        height: calc(100% + 40px);
+        /*height: calc(100% + 40px);*/
         width: 25%;
         min-width: max-content;
 
         background-color: #fff;
         border-radius: 20px;
         box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+
+        @media screen and (max-width: 600px) {
+            width: calc(100% - 32px);
+            padding: 16px;
+            gap: 20px;
+
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media screen and (max-width: 320px) {
+            align-items: center;
+            width: 250px;
+        }
+
+
 
         .contacts__heading {
             display: flex;
@@ -52,6 +103,10 @@
                     font-weight: 600;
                     line-height: 28px;
                     margin-bottom: 0;
+
+                    @media screen and (max-width: 780px) {
+                        font-size: 20px;
+                    }
                 }
             }
 
@@ -60,6 +115,10 @@
                 font-weight: 300;
                 line-height: 18px;
                 color: rgba(51, 51, 51, 1);
+
+                @media screen and (max-width: 780px) {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -68,6 +127,10 @@
             font-weight: 800;
             line-height: 28px;
             color: rgba(227, 30, 37, 1);
+
+            @media screen and (max-width: 780px) {
+                font-size: 20px;
+            }
         }
 
         .social__media {
@@ -107,6 +170,10 @@
             font-size: 16px;
             font-weight: 600;
             line-height: 18px;
+
+            @media screen and (max-width: 780px) {
+                font-size: 14px;
+            }
         }
 
         .work_hours {
@@ -117,6 +184,16 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 18px;
+
+            @media screen and (max-width: 780px) {
+                font-size: 14px;
+            }
+
+            img {
+                @media screen and (max-width: 780px) {
+                    width: 16px;
+                }
+            }
         }
     }
 
@@ -124,12 +201,37 @@
         display: flex;
         position: relative;
         width: 100%;
-        height: auto;
+        height: 430px;
+
+        @media screen and (max-width: 780px) {
+            height: 403px;
+        }
+
+        @media screen and (max-width: 600px) {
+            height: 803px;
+        }
 
         .image {
             width: 100%;
             max-width: 1279px;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+            @media screen and (max-width: 780px) {
+                height: 100%;
+            }
+
+            @media screen and (max-width: 600px) {
+                position: absolute;
+                bottom: 0;
+                height: 431px;
+                object-position: calc(50% - 50px) center;
+            }
+
+            @media screen and (max-width: 320px) {
+                height: 400px;
+            }
         }
 
         .mark__wrapper {
@@ -137,11 +239,21 @@
             top: calc(40 / 593 * 100%);
             left: calc(491 / 1279 * 100%);
 
+            @media screen and (max-width: 890px) {
+                left: calc(650 / 1279 * 100%);
+            }
+
+            @media screen and (max-width: 600px) {
+                top: 430px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+
             .mark__description {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
-                width: 100%;
                 max-height: 145px;
                 max-width: 300px;
 
@@ -150,10 +262,27 @@
                 box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
                 background-color: #fff;
 
+                @media screen and (max-width: 780px) {
+                    padding: 16px;
+                }
+
+                @media screen and (max-width: 600px) {
+                    width: 250px;
+                    gap: 12px;
+                }
+
+                @media screen and (max-width: 780px) {
+                    padding: 16px;
+                }
+
                 .mark__description__text {
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 22px;
+
+                    @media screen and (max-width: 780px) {
+                        font-size: 12px;
+                    }
                 }
 
                 .horizontal-line {
@@ -173,6 +302,10 @@
                     font-weight: 500;
                     line-height: 21px;
                     color: rgba(232, 16, 16, 1);
+
+                    @media screen and (max-width: 780px) {
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -180,6 +313,20 @@
                 position: absolute;
                 top: calc(130 / 145 * 100%);
                 right: calc(80 / 300 * 100%);
+
+                @media screen and (max-width: 1080px) {
+                    right: calc(110 / 300 * 100%);
+                }
+
+                @media screen and (max-width: 890px) {
+                    top: calc(135 / 145 * 100%);
+                    right: calc(240 / 300 * 100%);
+                }
+
+                @media screen and (max-width: 600px) {
+                    right: 50%;
+                    transform: translateX(50%);
+                }
             }
         }
     }
