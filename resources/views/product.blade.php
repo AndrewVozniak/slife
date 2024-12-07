@@ -24,10 +24,14 @@
     </div>
 
     <div class="content_wrapper">
-        @include('components.new_products', ['products' => $products, 'title' => 'Також може Вас зацікавити', 'isFavorite' => false])
+        <div class="new_products">
+            @include('components.new_products', ['products' => $products, 'title' => 'Також може Вас зацікавити', 'isFavorite' => false])
+        </div>
         @include('components.top_category')
         @include('components.gray_description')
     </div>
 
     @include('components.footer')
 @endsection
+
+

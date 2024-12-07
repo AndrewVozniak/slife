@@ -6,13 +6,25 @@
                placeholder="E-mail" size="30" required />
    </div>
 
+    <div class="rate_mobile">
+        <div class="star_red_rating_box_mobile">
+            <span class="star_red_rating_text_mobile">{{__('product.leave_review.rate_product')}}&#58;</span>
+        </div>
 
-    <textarea  rows="7" cols="20" name="review" id="review"
-               placeholder="{{__('product.leave_review.textarea_review')}}" required>
-    </textarea>
+        <div class="star_red_rating_box_mobile">
+            <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_red_img">
+            <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_red_img">
+            <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_red_img">
+            <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_red_img">
+            <img src="{{ asset('storage/images/icons/ph_star-red.svg') }}" alt="star" class="star_red_img">
+        </div>
+    </div>
+
+    <textarea rows="7" cols="20" name="review" id="review"
+              placeholder="{{ __('product.leave_review.textarea_review') }}" required></textarea>
 
     <div class="rate_and_submit">
-        <div class="rate" i>
+        <div class="rate">
             <div class="review_rate_box">
                 <span>{{__('product.leave_review.rate_product')}}&#58;</span>
             </div>

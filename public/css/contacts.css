@@ -120,6 +120,10 @@
                     font-size: 14px;
                 }
             }
+
+            .contacts_description_2 {
+                display: none;
+            }
         }
 
         .phone {
@@ -326,6 +330,274 @@
                 @media screen and (max-width: 600px) {
                     right: 50%;
                     transform: translateX(50%);
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1325px) {
+    .content_wrapper {
+        margin-top: 16px;
+        margin-bottom: 80px;
+    }
+
+    .breadcrumbs {
+        margin-bottom: 32px;
+    }
+
+    .content {
+        gap: 24px;
+
+        .content_title {
+            font-size: 32px;
+            line-height: 38px;
+        }
+
+        .contacts_info {
+            padding: 24px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            height: fit-content;
+            width: 23%;
+            min-width: fit-content;
+
+            border-radius: 16px;
+
+            .contacts__heading {
+               width: 100%;
+
+                .row {
+
+                    .title {
+                        font-size: 20px;
+                        line-height: 24px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                .contacts_description {
+                    display: none;
+                }
+
+                .contacts_description_2 {
+                    display: flex;
+
+                    width: 100%;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: rgba(51, 51, 51, 1);
+                }
+            }
+
+            .phone {
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 24px;
+            }
+
+            .email {
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            .email img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .work_hours {
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            .work_hours img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .image_wrapper {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            .image {
+                width: 100%;
+                max-width: 1279px;
+                height: auto;
+            }
+
+            .mark__wrapper {
+                position: absolute;
+                top: calc(40 / 593 * 100%);
+                left: calc(491 / 1279 * 100%);
+
+                .mark__description {
+                    gap: 12px;
+                    max-height: 100px;
+                    max-width: 250px;
+
+                    padding: 16px;
+
+                    .mark__description__text {
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 14px;
+                    }
+
+                    .mark__description__link {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+
+                .marker {
+                    position: absolute;
+                    top: calc(130 / 145 * 100%);
+                    right: calc(80 / 300 * 100%);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .content_wrapper {
+        margin-top: 16px;
+        margin-bottom: 48px;
+    }
+
+    .breadcrumbs {
+        margin-bottom: 40px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        gap: 33px;
+
+        .content_title {
+            text-align: center;
+            font-size: 28px;
+            line-height: 38px;
+        }
+
+        .contacts_info {
+            padding: 16px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            height: fit-content;
+            width: 100%;
+            border-radius: 20px;
+            gap: 24px;
+
+            .contacts__heading {
+                width: 100%;
+
+                .row {
+                    justify-content: center;
+
+                    .title {
+                        text-align: center;
+
+                        font-size: 18px;
+                        line-height: 21px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                .contacts_description {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 17px;
+                    color: rgba(51, 51, 51, 1);
+                }
+
+                .contacts_description_2 {
+                  display: none;
+                }
+            }
+
+            .phone {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 21px;
+            }
+
+            .social__media {
+                justify-content: center;
+            }
+
+            .email {
+                display: flex;
+                justify-content: center;
+            }
+
+            .work_hours {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .image_wrapper {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            .image {
+                width: 100%;
+                max-width: 1279px;
+                height: auto;
+            }
+
+            .mark__wrapper {
+                position: absolute;
+                top: calc(40 / 593 * 100%);
+                left: calc(491 / 1279 * 100%);
+
+                .mark__description {
+                    gap: 16px;
+                    max-height: 114px;
+                    max-width: 250px;
+
+                    .mark__description__text {
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 16px;
+                    }
+
+                    .mark__description__link {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+
+                .marker {
+                    position: absolute;
+                    top: calc(130 / 145 * 100%);
+                    right: calc(80 / 300 * 100%);
                 }
             }
         }
