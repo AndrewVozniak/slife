@@ -8,6 +8,11 @@
     width: 100%;
     min-height: 100%;
 
+    @media screen and (max-width: 765px) {
+        min-height: 610px !important;
+        height: 100%;
+    }
+
     .background {
         position: absolute;
         top: 0;
@@ -62,6 +67,11 @@
 
         top: 50%;
         transform: translateY(-50%);
+
+        @media screen and (max-width: 750px) {
+            top: 75px;
+            transform: unset;
+        }
 
         .main {
             display: flex;
@@ -120,8 +130,7 @@
 
 @media screen and (max-width: 1080px) {
     .content_wrapper {
-        min-height: 420px;
-        height: calc(100vh - 672px);
+        min-height: 610px;
     }
 
     .image_wrapper {
@@ -169,10 +178,6 @@
 }
 
 @media screen and (max-width: 765px) {
-    .content_wrapper {
-        min-height: 100%;
-    }
-
     .image_wrapper {
         .content {
             display: flex;
