@@ -3,7 +3,7 @@
 // lang/ru/footer.php
 
 return [
-    'subscribe' => 'Подписаться на новостную рассылку',
+    'subscribe' => 'Подписаться на',
     'newsletter' => 'новостную рассылку',
     'email' => 'Ваш Email',
 

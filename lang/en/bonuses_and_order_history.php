@@ -1,31 +1,32 @@
 <?php
 
+// lang/en
+
 return [
     'bonuses' => [
-        'bonuses' => 'Мої бонуси',
-        'on_your_account' => 'На вашому рахунку',
-        'bonuses_amount' => 'бонусів',
-        'bonuses_calculated' => 'Як нараховуються бонуси',
-        'bonuses_calculated_text' => 'Бонусні кошти нараховуються кожному учасникові програми лояльності
-         за покупки товарів у мережі магазинів та на сайті Slife. Отже, купуючи товари у Slife, ви отримуєте кешбек — тобто,
-         частина витрачених коштів повертається у вигляді бонусів, які згодом ви можете використати для оплати нових покупок',
-
+        'bonuses' => 'My Bonuses',
+        'on_your_account' => 'On your account',
+        'bonuses_amount' => 'bonuses',
+        'bonuses_calculated' => 'How bonuses are calculated',
+        'bonuses_calculated_text' => 'Bonus funds are credited to every member of the loyalty program
+         for purchasing products in the store network and on the Slife website. Thus, by buying products at Slife, you get cashback —
+         that is, part of the money spent is returned in the form of bonuses, which you can later use to pay for new purchases',
     ],
 
     'order_history' => [
-        'order_history' => 'Історія замовлень',
-        'order_number' => 'Замовлення',
-        'sent' => 'Відправлено',
-        'order_amount' => 'Сума замовлення',
-        'number_of_products' => 'Кі-сть товарів',
-        'windbreaker' => 'Вітровка',
-        'cost' => 'Вартість',
-        'delivery' => 'Доставка',
-        'total' => 'Загальна вартість',
-        'new_post' => 'Нова пошта',
-        'nearly' => 'приблизно',
-        'delivery_date' => 'Дата доставки',
-        'phone' => 'тел',
-        'address' => 'Київ, Киівська обл. НП №18 вул. Соборна 22',
+        'order_history' => 'Order History',
+        'order_number' => 'Order',
+        'sent' => 'Sent',
+        'order_amount' => 'Order Amount',
+        'number_of_products' => 'Number of products',
+        'windbreaker' => 'Windbreaker',
+        'cost' => 'Cost',
+        'delivery' => 'Delivery',
+        'total' => 'Total cost',
+        'new_post' => 'New Post',
+        'nearly' => 'approximately',
+        'delivery_date' => 'Delivery Date',
+        'phone' => 'phone',
+        'address' => 'Kyiv, Kyiv Region, NP #18, Soborna St. 22',
     ],
 ];

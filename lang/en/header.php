@@ -1,24 +1,24 @@
 <?php
 
-// lang/ua/header.php
+// lang/en/header.php
 
 return [
-    'free_shipping' => 'Free доставка при замовленні від 2000 грн.',
-    'detailed_information' => 'Детальніше',
+    'free_shipping' => 'Free shipping for orders over 2000 UAH.',
+    'detailed_information' => 'More details',
 
-    'search_goods' => 'Пошук товару',
-    'choose_category' => 'Обрати категорію',
+    'search_goods' => 'Search for goods',
+    'choose_category' => 'Choose a category',
 
     'categories' => [
-        'men' => 'Чоловікам',
-        'women' => 'Жінкам',
-        'children' => 'Дітям',
-        'new' => 'Новинки',
+        'men' => 'For Men',
+        'women' => 'For Women',
+        'children' => 'For Children',
+        'new' => 'New Arrivals',
 
-        'clothes' => 'Одяг',
-        'shoes' => 'Взуття',
-        'accessories' => 'Аксесуари',
-        'popular' => 'Популярне',
-        'sale' => 'Розпродаж',
+        'clothes' => 'Clothes',
+        'shoes' => 'Shoes',
+        'accessories' => 'Accessories',
+        'popular' => 'Popular',
+        'sale' => 'Sale',
     ]
 ];

@@ -1,4 +1,4 @@
-<a href="#" class="product_card">
+<a href="{{ route('product', ['locale' => App::currentLocale(), 'id' => $id])  }}" class="product_card">
     <div class="product_card_img_wrapper">
         <img src="{{ asset($image) }}" alt="photo" class="product_card_img">
 

@@ -2,14 +2,14 @@
 
 return [
     'gray' => [
-        'title' => 'Спортивний одяг для чоловіків, жінок та дітей',
+        'title' => 'Sportswear for men, women, and children',
         'description' => '...',
-        'btn' => 'Читати повністю',
-        'btn_less' => 'Згорнути',
+        'btn' => 'Read more',
+        'btn_less' => 'Collapse',
     ],
 
-    'new' => 'Новинки',
-    'sport_collection' => 'Спортивна колекція до',
-    'sale' => 'Знижки на чоловічий спортивний одяг та взуття до -40% з 01.09. до 29.09',
-    'slider_btn' => 'До товарів',
+    'new' => 'New Arrivals',
+    'sport_collection' => 'Sports collection up to',
+    'sale' => 'Discounts on men\'s sportswear and footwear up to -40% from 01.09 to 29.09',
+    'slider_btn' => 'View products',
 ];

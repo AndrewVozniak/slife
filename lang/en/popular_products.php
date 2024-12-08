@@ -1,7 +1,9 @@
 <?php
 
+// lang/en
+
 return [
-    'popular_title' => 'Популярні товари',
-    'text_empty' => 'Нет популярных товаров',
-    'text_view' => 'Просмотреть все',
+    'popular_title' => 'Popular Products',
+    'text_empty' => 'No popular products',
+    'text_view' => 'View all',
 ];

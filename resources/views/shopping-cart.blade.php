@@ -15,11 +15,11 @@
     <div class="container content__wrapper">
         <form action="#" class="form">
             <div class="form_group">
-                <h1 class="group__title">Отримувач</h1>
+                <h1 class="group__title">{{ __('shopping_cart.receiver') }}</h1>
 
                 <div class="group__inputs" >
-                    <input type="text" placeholder="Ім’я *" class="group__input half" required>
-                    <input type="text" placeholder="Прізвище *" class="group__input half" required>
+                    <input type="text" placeholder="{{ __('shopping_cart.name') }} *" class="group__input half" required>
+                    <input type="text" placeholder="{{ __('shopping_cart.surname') }} *" class="group__input half" required>
                     <input type="tel" placeholder="+38(_ _)-_ _ _-_ _-_ _ *" pattern="\+38\(\d{2}\)-\d{3}-\d{2}-\d{2}" class="group__input half" required>
                     <input type="email" placeholder="Email *" class="group__input half" required>
                 </div>
@@ -36,10 +36,10 @@
                     deliveryBranch: '',
                     showBranches: false,
                 }">
-                <h1 class="group__title">Доставка</h1>
+                <h1 class="group__title">{{ __('shopping_cart.delivery') }}</h1>
 
                 <div class="group__inputs">
-                    <label for="country" class="group__label">Країна доставки</label>
+                    <label for="country" class="group__label">{{ __('shopping_cart.country_for_delivery') }}</label>
 
                     <div class="group__select" x-on:click.away="showCountries = false">
                         <div class="select_input__wrapper">
@@ -94,7 +94,7 @@
                             <input type="radio" id="nova_poshta" class="radio__input" name="delivery_method" checked>
                             <label for="nova_poshta" class="radio__label">
                                 <img src="{{ asset('/storage/images/icons/nova_poshta.svg') }}" alt="nova poshta" class="radio__icon">
-                                <span class="radio__text">Нова пошта</span>
+                                <span class="radio__text">{{ __('shopping_cart.nova_poshta') }}</span>
                             </label>
                         </div>
                     </div>
@@ -104,17 +104,17 @@
                             <input type="radio" id="ukrposhta" class="radio__input" name="delivery_method">
                             <label for="ukrposhta" class="radio__label">
                                 <img src="{{ asset('/storage/images/icons/ukrposhta.svg') }}" alt="nova poshta" class="radio__icon">
-                                <span class="radio__text">Укрпошта</span>
+                                <span class="radio__text">{{ __('shopping_cart.ukrposhta') }}</span>
                             </label>
                         </div>
-                        <span class="radio__description">За умови повної передоплати</span>
+                        <span class="radio__description">{{ __('shopping_cart.with_full_prepayment') }}</span>
                     </div>
 
                     <div class="group__radio">
                         <div class="radio__wrapper">
                             <input type="radio" id="self_pickup" class="radio__input" name="delivery_method">
                             <label for="self_pickup" class="radio__label">
-                                <span class="radio__text">Самовивіз</span>
+                                <span class="radio__text">{{ __('shopping_cart.self_delivery') }}</span>
                             </label>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                             <input
                                 type="text"
                                 class="group__input"
-                                placeholder="На відділення"
+                                placeholder="{{ __('shopping_cart.on_office') }}"
                                 name="country"
                                 readonly
                                 x-model="onBranch"
@@ -145,15 +145,15 @@
                             <ul class="dropdown_list">
                                 <li
                                     class="dropdown_item"
-                                    @click="onBranch = 'На віділення'; showOnBranch = false"
+                                    @click="onBranch = '{{ __('shopping_cart.on_office') }}'; showOnBranch = false"
                                 >
-                                    На віділення
+                                    {{ __('shopping_cart.on_office') }}
                                 </li>
                                 <li
                                     class="dropdown_item"
-                                    @click="onBranch = 'На почтомат'; showOnBranch = false"
+                                    @click="onBranch = '{{ __('shopping_cart.on_postmachine') }}'; showOnBranch = false"
                                 >
-                                    На почтомат
+                                    {{ __('shopping_cart.on_postmachine') }}
                                 </li>
                             </ul>
                         </div>
@@ -202,7 +202,7 @@
                             <input
                                 type="text"
                                 class="group__input"
-                                placeholder="Оберіть відділення"
+                                placeholder="{{ __('shopping_cart.choose_office') }}"
                                 name="country"
                                 readonly
                                 x-model="deliveryBranch"
@@ -238,48 +238,48 @@
 
                 <div class="group__inputs" x-show="deliveryCountry != 'Україна'">
                     <div class="input__wrapper half">
-                        <label for="city" class="input__label">Місто *</label>
-                        <input type="text" placeholder="Наприклад: Вроцлав" class="group__input" required id="city">
+                        <label for="city" class="input__label">{{ __('shopping_cart.city') }} *</label>
+                        <input type="text" placeholder="{{ __('shopping_cart.for_example_city') }}" class="group__input" required id="city">
                     </div>
 
                     <div class="input__wrapper half">
-                        <label for="address" class="input__label">Адреса *</label>
-                        <input type="text" placeholder="Наприклад: Na polance 7c" class="group__input" required id="address">
+                        <label for="address" class="input__label">{{ __('shopping_cart.address') }} *</label>
+                        <input type="text" placeholder="{{ __('shopping_cart.for_example_address') }}" class="group__input" required id="address">
                     </div>
 
                     <div class="input__wrapper half">
-                        <label for="postcode" class="input__label">Поштовий індекс *</label>
-                        <input type="text" placeholder="Наприклад: 51-109" class="group__input" required id="postcode">
+                        <label for="postcode" class="input__label">{{ __('shopping_cart.post_index') }} *</label>
+                        <input type="text" placeholder="{{ __('shopping_cart.for_example_post_index') }}" class="group__input" required id="postcode">
                     </div>
 
                     <div class="input__wrapper half">
-                        <label for="phone" class="input__label">Телефон *</label>
+                        <label for="phone" class="input__label">{{ __('shopping_cart.phone') }} *</label>
                         <input type="tel" placeholder="+48(_ _)-_ _ _-_ _-_ _" pattern="\+38\(\d{2}\)-\d{3}-\d{2}-\d{2}" class="group__input" required id="phone">
                     </div>
                 </div>
 
                 <div class="delivery_info" x-show="deliveryCountry != 'Україна'">
                     <div class="info__item">
-                        <span class="info__text">Приблизна вартість доставки</span>
-                        <span class="info__value">від 350 до 1000₴</span>
+                        <span class="info__text">{{ __('shopping_cart.estimated_delivery_price') }}</span>
+                        <span class="info__value">{{ __('shopping_cart.from') }} 350 {{ __('shopping_cart.to') }} 1000₴</span>
                     </div>
 
                     <div class="info__item">
-                        <span class="info__text">Приблизні терміни доставки</span>
-                        <span class="info__value">від 7 до 14 днів</span>
+                        <span class="info__text">{{ __('shopping_cart.estimated_delivery_time') }}</span>
+                        <span class="info__value">{{ __('shopping_cart.from') }} 7 {{ __('shopping_cart.to') }} 14 {{ __('shopping_cart.days') }}</span>
                     </div>
                 </div>
             </div>
 
             <div class="form_group">
                 <div class="group__heading">
-                    <h1 class="group__title">Бонуси</h1>
-                    <span class="group__info_text"><a href="{{ route('login', ['locale' => App::currentLocale()]) }}" class="underline">{{__('product.product_describe.login')}}</a> {{__('product.product_describe.pay_with_bonus')}}</span>
+                    <h1 class="group__title">{{ __('shopping_cart.bonus') }}</h1>
+                    <span class="group__info_text"><a href="{{ route('login', ['locale' => App::currentLocale()]) }}" class="underline">{{__('product.product_describe.login')}}</a> {{ __('shopping_cart.to_pay_bonus') }}</span>
                 </div>
 
                 <div class="group__inputs row">
-                    <label for="city" class="input__label">На вашому рахунку <span class="red">346</span> бонусів</label>
-                    <input type="text" placeholder="Введіть кі-сть бонусів" class="group__input half">
+                    <label for="city" class="input__label">{{ __('shopping_cart.on_your_account') }} <span class="red">346</span> {{ __('shopping_cart.bonuses') }}</label>
+                    <input type="text" placeholder="{{ __('shopping_cart.enter_bonus') }}" class="group__input half">
                 </div>
             </div>
 
@@ -288,7 +288,7 @@
             <div class="form_group">
                 <div class="checkbox_group">
                     <input type="checkbox" class="checkbox__input" id="dont_call">
-                    <label for="dont_call" class="checkbox__label">Не телефонувати мені для підтвердження замовлення</label>
+                    <label for="dont_call" class="checkbox__label">{{ __('shopping_cart.dont_call_me_to_confirm_order') }}</label>
                 </div>
             </div>
 

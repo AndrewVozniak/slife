@@ -25,7 +25,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        if (window.innerWidth > 750) {
+        if (window.innerWidth < 750) {
             return;
         }
 

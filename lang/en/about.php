@@ -1,47 +1,48 @@
 <?php
 
+// lang/en
+
 return [
-    'about' => 'Про нас',
-    'new_service' => 'Ми раді запропонувати нашим постійним клієнтам, а також новій аудиторії наш новий сервіс!
-        Понад 9 років на ринку, за які ми зрозуміли чого хочуть сучасні споживачі.
-        Сьогодні наш бренд зібрав широкий вибір якісного, комфортного спортивного одягу на кожен день',
-    'online_store' => 'Інтернет-магазин дає можливість нашим клієнтам зручно обрати свій гардероб та виконувати замовлення
-        всього в декілька кліків. Ми створили комфортний сервіс, бо інтереси нашої аудиторії завжди на першому місці',
+    'about' => 'About Us',
+    'new_service' => 'We are pleased to offer our loyal customers, as well as new audiences, our new service!
+        Over 9 years in the market, during which we have understood what modern consumers want.
+        Today our brand has gathered a wide selection of high-quality, comfortable sportswear for everyday use',
+    'online_store' => 'The online store allows our customers to conveniently choose their wardrobe and place orders
+        in just a few clicks. We have created a comfortable service because the interests of our audience always come first',
 
-
-    'years' => 'Років досвіду',
-    'thousands' => 'тис',
-    'clients' => 'Задоволених покупців',
-    'current_offers' => 'Актуальних пропозицій',
+    'years' => 'Years of experience',
+    'thousands' => 'thousand',
+    'clients' => 'Satisfied customers',
+    'current_offers' => 'Current offers',
 
     'advantages_section' => [
-        'choice_of_models' => 'Широкий вибір моделей',
-        'choice' => 'Наш магазин має один із найбільших в Україні складів спортивного одягу, взуття та аксесуарів.
-            Нам завжди є що вам запропонувати. В каталозі розміщені сотні і навіть більше моделей стильного та зручного
-            одягу на кожен день. Весь товар завжди є в наявності та доступний для замовлення. Продукція в нашому магазині
-            є повністю оригінальною. Всі ціни, представлені в каталозі, є актуальними. Більше того, ми встановили єдину
-            вартість на кожен розмір однієї і тієї ж моделі одягу або взуття',
-        'promotional_offers' => 'Акційні пропозиції',
-        'discounts' => 'Ставайте постійним клієнтом нашого інтернет-магазину та отримуйте персональні вигідні пропозиції
-            від бренду. Акції та спеціальні знижки доступні кожен тиждень. Не пропустіть можливість придбати нові моделі
-            одягу за вигідними умовами',
-        'practicality' => 'Практичність одягу',
-        'practicality_text' => 'Спортивний гардероб може бути стильним и комфортним, якщо це оригінальна продукція відомих
-            світових брендів. Відпочинок, тренування чи звичайна прогулянка – одяг від нашого магазину гарантує зручність для
-            будь-якого ритму життя'
+        'choice_of_models' => 'Wide selection of models',
+        'choice' => 'Our store has one of the largest warehouses of sportswear, shoes, and accessories in Ukraine.
+            We always have something to offer you. The catalog features hundreds and even more models of stylish and
+            comfortable clothing for every day. All products are always in stock and available for order. The products
+            in our store are completely original. All prices listed in the catalog are up to date. Moreover, we have
+            set a single price for each size of the same clothing or footwear model',
+        'promotional_offers' => 'Promotional offers',
+        'discounts' => 'Become a regular customer of our online store and receive personalized profitable offers
+            from the brand. Promotions and special discounts are available every week. Don’t miss the chance to buy
+            new clothing models on favorable terms',
+        'practicality' => 'Practicality of clothing',
+        'practicality_text' => 'A sports wardrobe can be stylish and comfortable if it is original products from well-known
+            global brands. Whether relaxing, training, or just walking, clothing from our store guarantees convenience for
+            any lifestyle',
     ],
 
     'our_history_and_goal' => [
-        'goal' => 'Наша мета',
-        'history' => 'Наша історія',
+        'goal' => 'Our Goal',
+        'history' => 'Our History',
 
-        'catalog' => 'Наш каталог – це місце, де активні люди знаходять сучасні, практичні речі на кожен день',
-        'we_want' => 'Ми прагнемо забезпечити кожного покупця максимально зручним сервісом та, звичайно, найкращою
-            продукцією на ринку спортивного одягу. Наша мета – додати комфорту у життя наших покупців, і ми знаємо, як
-            це зробити',
-        'we_started' => 'Ми починали, як невеликий магазин спортивного взуття',
-        'today' => 'Старанність в своїй справі та якість, яку майданчик пропонував клієнтам, дали можливість гучно заявити
-            про себе на широку аудиторію. Сьогодні наш каталог один із найбільших на ринку. Ми значно розширили список
-            пропозицій і готові задовольнити потреби клієнтів з будь-якими смаками',
+        'catalog' => 'Our catalog is a place where active people find modern, practical items for everyday use',
+        'we_want' => 'We strive to provide every customer with the most convenient service and, of course, the best
+            products on the sportswear market. Our goal is to add comfort to our customers’ lives, and we know how
+            to make it happen',
+        'we_started' => 'We started as a small sports shoe store',
+        'today' => 'Diligence in our work and the quality that the platform offered to customers allowed us to make
+            a loud statement to a wide audience. Today, our catalog is one of the largest on the market. We have
+            significantly expanded our offerings and are ready to meet the needs of customers with any preferences',
     ],
 ];

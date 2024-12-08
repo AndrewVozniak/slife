@@ -1,54 +1,56 @@
 <?php
 
+// lang/en
+
 return [
     'filter_by' => [
-        'filter_text' => 'Фільтр',
+        'filter_text' => 'Filter',
 
         'categories' => [
-            'title' => 'Категорія товару',
+            'title' => 'Product Category',
         ],
 
         "brands" => [
-            "title" => "Бренди",
+            "title" => "Brands",
         ],
 
         "price" => [
-            "title" => "Ціна",
-            "from" => "Від",
-            "to" => "До",
+            "title" => "Price",
+            "from" => "From",
+            "to" => "To",
         ],
 
         "size" => [
-            "title" => "Розмір",
+            "title" => "Size",
         ],
 
-        "apply_filter" => "Застосувати фільтр",
-        "reset_filter" => "Скинути фільтр",
+        "apply_filter" => "Apply Filter",
+        "reset_filter" => "Reset Filter",
     ],
 
     'sort_by' => [
-        "sort_text" => "Сортувати за",
-        "recommended" => "Рекомендовані",
-        "by_rating" => "За рейтингом",
-        "by_reviews_count" => "За кількістю відгуків",
-        "by_price_asc" => "Ціна (від низької до високої)",
-        "by_price_desc" => "Ціна (від високої до низької)",
-        "by_name_asc" => "Назва (від А до Я)",
-        "by_name_desc" => "Назва (від Я до А)",
+        "sort_text" => "Sort By",
+        "recommended" => "Recommended",
+        "by_rating" => "By Rating",
+        "by_reviews_count" => "By Number of Reviews",
+        "by_price_asc" => "Price (Low to High)",
+        "by_price_desc" => "Price (High to Low)",
+        "by_name_asc" => "Name (A to Z)",
+        "by_name_desc" => "Name (Z to A)",
     ],
 
     'side_panel' => [
-        "categories" => "Категорія товару",
-        "brand" => "Бренд",
-        "price" => "Ціна",
-        "size" => "Розмір",
-        "t-shirts" => "Футболки",
-        'jackets' => 'Куртки',
-        'sweaters' => 'Кофти',
-        'trousers' => 'Штани',
-        'from' => 'від',
-        'to' => 'до',
-        'apply_filter' => 'Застосувати фільтри',
-        'reset_filter' => 'Скинути фільтри',
+        "categories" => "Product Category",
+        "brand" => "Brand",
+        "price" => "Price",
+        "size" => "Size",
+        "t-shirts" => "T-Shirts",
+        'jackets' => 'Jackets',
+        'sweaters' => 'Sweaters',
+        'trousers' => 'Trousers',
+        'from' => 'from',
+        'to' => 'to',
+        'apply_filter' => 'Apply Filters',
+        'reset_filter' => 'Reset Filters',
     ],
 ];

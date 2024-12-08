@@ -30,6 +30,7 @@
         <div class="products_item_container">
             @foreach($products as $product)
                 <x-product-card
+                    :id="$product['id']"
                     :image="$product['image']"
                     :oldPrice="$product['oldPrice'] ?? null"
                     :newPrice="$product['newPrice'] ?? null"

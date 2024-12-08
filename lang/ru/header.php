@@ -1,24 +1,24 @@
 <?php
 
-// lang/ua/header.php
+// lang/ru/header.php
 
 return [
-    'free_shipping' => 'ASDASDASDSD доставка при замовленні від 2000 грн.',
-    'detailed_information' => 'Детальніше',
+    'free_shipping' => 'Бесплатная доставка при заказе от 2000 грн.',
+    'detailed_information' => 'Подробнее',
 
-    'search_goods' => 'Пошук товару',
-    'choose_category' => 'Обрати категорію',
+    'search_goods' => 'Поиск товара',
+    'choose_category' => 'Выбрать категорию',
 
     'categories' => [
-        'men' => 'Чоловікам',
-        'women' => 'Жінкам',
-        'children' => 'Дітям',
+        'men' => 'Мужчинам',
+        'women' => 'Женщинам',
+        'children' => 'Детям',
         'new' => 'Новинки',
 
-        'clothes' => 'Одяг',
-        'shoes' => 'Взуття',
-        'accessories' => 'Аксесуари',
-        'popular' => 'Популярне',
-        'sale' => 'Розпродаж',
+        'clothes' => 'Одежда',
+        'shoes' => 'Обувь',
+        'accessories' => 'Аксессуары',
+        'popular' => 'Популярное',
+        'sale' => 'Распродажа',
     ]
 ];
