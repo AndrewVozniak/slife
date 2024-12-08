@@ -7,9 +7,13 @@
     @include('components.header')
 
     <div class="container breadcrumbs">
-        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">Головна</a>
+        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">
+            {{__('private_policy.breadcrumbs.main')}}
+        </a>
         <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right.svg')}}" alt="filter" class="param_image">
-        <a href="{{ url()->current() }}" class="breadcrumb active">Оплата та доставка</a>
+        <a href="{{ url()->current() }}" class="breadcrumb active">
+            {{__('private_policy.breadcrumbs.payment_delivery')}}
+        </a>
     </div>
 
     <div class="content_wrapper">
