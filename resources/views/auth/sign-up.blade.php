@@ -21,13 +21,13 @@
             <div class="nav">
                 <div class="nav__links">
                     <a href="{{ route('login', ['locale' => App::currentLocale() ])  }}" class="nav__link">
-                        <span class="nav__text">Вхід</span>
+                        <span class="nav__text">{{__('auth.sign_up.title')}}</span>
                     </a>
 
                     <hr class="vertical_line">
 
                     <a href="{{ route('register', ['locale' => App::currentLocale() ])  }}" class="nav__link active">
-                        <span class="nav__text">Реєстрація</span>
+                        <span class="nav__text">{{__('auth.sign_up.registration')}}</span>
                     </a>
                 </div>
 
@@ -38,7 +38,7 @@
             </div>
 
             <div class="sign_in_social registration">
-                <span class="sign_in_social__text">Зареєструватись за допомогою:</span>
+                <span class="sign_in_social__text">{{__('auth.sign_up.register_using')}}&#58;</span>
                 <div class="sign_in_social__icons">
                     <a href="#" class="sign_in_social__icon">
                         <img src="{{ asset('/storage/images/google.svg') }}" alt="google">
@@ -56,22 +56,22 @@
             </div>
 
             <form action="#" class="form" method="POST">
-                <h1 class="form_title">Реєстрація</h1>
-                <input type="text" class="form_input" placeholder="Ваш Email або номер телефону">
-                <input type="text" class="form_input" placeholder="ПІБ">
+                <h1 class="form_title">{{__('auth.sign_up.registration')}}</h1>
+                <input type="text" class="form_input" placeholder="{{__('auth.sign_up.email')}}">
+                <input type="text" class="form_input" placeholder="{{__('auth.sign_up.name')}}">
 
                 <div x-data="{ showPassword: false }" class="password_field">
-                    <input :type="showPassword ? 'text' : 'password'" class="form_input" placeholder="Придумайте пароль">
+                    <input :type="showPassword ? 'text' : 'password'" class="form_input" placeholder="{{__('auth.sign_up.password')}}">
                     <img src="{{ asset('/storage/images/icons/eye.svg') }}" alt="show password" class="eye_icon" @click="showPassword = !showPassword">
                 </div>
 
                 <div x-data="{ showPassword: false }" class="password_field">
-                    <input :type="showPassword ? 'text' : 'password'" class="form_input" placeholder="Продублюйте пароль">
+                    <input :type="showPassword ? 'text' : 'password'" class="form_input" placeholder="{{__('auth.sign_up.confirm_password')}}">
                     <img src="{{ asset('/storage/images/icons/eye.svg') }}" alt="show password" class="eye_icon" @click="showPassword = !showPassword">
                 </div>
 
                 <div x-data="{ showDays: false, showMonths: false, showYears: false }" class="date_of_birth_wrapper">
-                    <span class="date_of_birth_text">Дата народження</span>
+                    <span class="date_of_birth_text">{{__('auth.sign_up.date_of_birth')}}</span>
                     <div class="date_of_birth" x-data="{
     showDays: false,
     showMonths: false,
@@ -81,12 +81,11 @@
     yearInput: ''
 }">
 
-                        <!-- Поле выбора для дня -->
                         <div class="date_of_birth_field" x-on:click.away="showDays = false">
                             <input
                                 type="text"
                                 class="date_of_birth_input"
-                                placeholder="День"
+                                placeholder="{{__('auth.sign_up.day')}}"
                                 x-model="dayInput"
                                 @focus="showDays = true"
                                 @input="showDays = true"
@@ -112,12 +111,12 @@
                             </div>
                         </div>
 
-                        <!-- Поле выбора для месяца -->
+
                         <div class="date_of_birth_field" x-on:click.away="showMonths = false">
                             <input
                                 type="text"
                                 class="date_of_birth_input"
-                                placeholder="Місяць"
+                                placeholder="{{__('auth.sign_up.month')}}"
                                 x-model="monthInput"
                                 @focus="showMonths = true"
                                 @input="showMonths = true"
@@ -143,12 +142,12 @@
                             </div>
                         </div>
 
-                        <!-- Поле выбора для года -->
+
                         <div class="date_of_birth_field" x-on:click.away="showYears = false">
                             <input
                                 type="text"
                                 class="date_of_birth_input"
-                                placeholder="Рік"
+                                placeholder="{{__('auth.sign_up.year')}}"
                                 x-model="yearInput"
                                 @focus="showYears = true"
                                 @input="showYears = true"
@@ -177,7 +176,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="form_button">ПРИЄДНАТИСЬ ДО SLIFE</button>
+                <button type="submit" class="form_button">{{__('auth.sign_up.join')}} SLIFE</button>
             </form>
         </div>
     </div>

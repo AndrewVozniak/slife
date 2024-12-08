@@ -20,13 +20,13 @@
             <div class="nav">
                 <div class="nav__links">
                     <a href="{{ route('login', ['locale' => App::currentLocale() ])  }}" class="nav__link active">
-                        <span class="nav__text">Вхід</span>
+                        <span class="nav__text">{{__('auth.forgot_password.title')}}</span>
                     </a>
 
                     <hr class="vertical_line">
 
                     <a href="{{ route('register', ['locale' => App::currentLocale() ])  }}" class="nav__link">
-                        <span class="nav__text">Реєстрація</span>
+                        <span class="nav__text">{{__('auth.forgot_password.registration')}}</span>
                     </a>
                 </div>
 
@@ -37,12 +37,12 @@
             </div>
 
             <form action="#" class="form" method="POST">
-                <h1 class="form_title">Скинути пароль</h1>
-                <p class="form_text">Введіть свою електронну адресу або номер телефону нижче, і ми надішлемо вам електронний лист з інструкціями щодо створення нового пароля</p>
+                <h1 class="form_title">{{__('auth.forgot_password.reset_password')}}</h1>
+                <p class="form_text">{{__('auth.forgot_password.email')}}</p>
 
-                <input type="text" class="form_input" placeholder="Ваш Email або номер телефону">
+                <input type="text" class="form_input" placeholder="{{__('auth.forgot_password.your_email')}}">
 
-                <button type="submit" class="form_button">Надіслати</button>
+                <button type="submit" class="form_button">{{__('auth.forgot_password.send')}}</button>
             </form>
         </div>
     </div>

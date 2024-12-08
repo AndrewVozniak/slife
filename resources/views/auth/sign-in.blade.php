@@ -21,13 +21,13 @@
             <div class="nav">
                 <div class="nav__links">
                     <a href="{{ route('login', ['locale' => App::currentLocale() ])  }}" class="nav__link active">
-                        <span class="nav__text">Вхід</span>
+                        <span class="nav__text">{{__('auth.sign_in.title')}}</span>
                     </a>
 
                     <hr class="vertical_line">
 
                     <a href="{{ route('register', ['locale' => App::currentLocale() ])  }}" class="nav__link">
-                        <span class="nav__text">Реєстрація</span>
+                        <span class="nav__text">{{__('auth.sign_in.registration')}}</span>
                     </a>
                 </div>
 
@@ -38,19 +38,21 @@
             </div>
 
             <form action="#" class="form" method="POST">
-                <input type="text" class="form_input" placeholder="Ваш Email або номер телефону">
+                <input type="text" class="form_input" placeholder="{{__('auth.sign_in.email')}}">
 
                 <div x-data="{ showPassword: false }" class="password_field">
-                    <input :type="showPassword ? 'text' : 'password'" class="form_input" placeholder="Ваш пароль">
+                    <input :type="showPassword ? 'text' : 'password'" class="form_input" placeholder="{{__('auth.sign_in.password')}}">
                     <img src="{{ asset('/storage/images/icons/eye.svg') }}" alt="show password" class="eye_icon" @click="showPassword = !showPassword">
                 </div>
 
-                <button type="submit" class="form_button">Увійти</button>
-                <a href="{{ route('forgotPassword', ['locale' => App::currentLocale()])  }}" class="form_link">Забули пароль?</a>
+                <button type="submit" class="form_button">{{__('auth.sign_in.log_in')}}</button>
+                <a href="{{ route('forgotPassword', ['locale' => App::currentLocale()])  }}" class="form_link">
+                    {{__('auth.sign_in.forgot_password')}}&#63;
+                </a>
             </form>
 
             <div class="sign_in_social">
-                <span class="sign_in_social__text">Увійти за допомогою:</span>
+                <span class="sign_in_social__text">{{__('auth.sign_in.log_in_using')}}&#58;</span>
                 <div class="sign_in_social__icons">
                     <a href="#" class="sign_in_social__icon">
                         <img src="{{ asset('/storage/images/google.svg') }}" alt="google">
