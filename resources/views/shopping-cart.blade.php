@@ -278,7 +278,7 @@
                 </div>
 
                 <div class="group__inputs row">
-                    <label for="city" class="input__label">{{ __('shopping_cart.on_your_account') }} <span class="red">346</span> {{ __('shopping_cart.bonuses') }}</label>
+                    <label for="city" class="input__label not_bold">{{ __('shopping_cart.on_your_account') }} <span class="red">346</span> {{ __('shopping_cart.bonuses') }}</label>
                     <input type="text" placeholder="{{ __('shopping_cart.enter_bonus') }}" class="group__input half">
                 </div>
             </div>
@@ -294,7 +294,7 @@
 
             <aside class="cart mobile_only">
                 <div class="cart_header">
-                    <h2 class="cart__title">Ваш кошик</h2>
+                    <h2 class="cart__title">{{ __('shopping_cart.your_basket') }}</h2>
                 </div>
 
                 <div class="cart_content">
@@ -392,17 +392,17 @@
 
                     <div class="cart_summary">
                         <div class="summary__item">
-                            <span class="summary__text">Вартість</span>
+                            <span class="summary__text">{{ __('shopping_cart.price') }}</span>
                             <span class="summary__value">4200 ₴</span>
                         </div>
 
                         <div class="summary__item">
-                            <span class="summary__text">Доставка</span>
-                            <span class="summary__value thin">Нова пошта <span class="bold">(приблизно 70₴) </span></span>
+                            <span class="summary__text">{{ __('shopping_cart.delivery') }}</span>
+                            <span class="summary__value thin">{{ __('shopping_cart.nova_poshta') }} <span class="bold">({{ __('shopping_cart.about') }} 70₴) </span></span>
                         </div>
 
                         <div class="summary__item">
-                            <span class="summary__text bold">Загальна вартість</span>
+                            <span class="summary__text bold">{{ __('shopping_cart.total') }}</span>
                             <span class="summary__value bold">4270 ₴</span>
                         </div>
                     </div>
@@ -410,21 +410,21 @@
             </aside>
 
             <div class="form_group payment_methods__wrapper">
-                <h1 class="group__title">Інформація оплати</h1>
+                <h1 class="group__title">{{ __('shopping_cart.information_of_payment') }}</h1>
 
                 <div class="group__radios payment_methods">
                     <div class="group__radio">
                         <div class="radio__wrapper">
                             <input type="radio" id="pay_when_receive" class="radio__input" name="delivery_method" checked>
                             <label for="pay_when_receive" class="radio__label">
-                                <span class="radio__text">Оплата при отриманні</span>
+                                <span class="radio__text">{{ __('shopping_cart.information_of_payment') }}</span>
                                 <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="payment" class="radio__icon">
                             </label>
                         </div>
-                        <span class="radio__description">За мінімальної передоплати 150грн</span>
+                        <span class="radio__description">{{ __('shopping_cart.with_minimum_prepayment') }}</span>
 
                         <div class="radio__help_text">
-                            <span class="text">Дані для передоплати Вам надішле менеджер в приватні повідомлення у Telegram або Viber</span>
+                            <span class="text">{{ __('shopping_cart.info_msg') }}</span>
                         </div>
                     </div>
 
@@ -433,7 +433,7 @@
                             <input type="radio" id="privat" class="radio__input" name="delivery_method">
                             <label for="privat" class="radio__label">
                                 <img src="{{ asset('/storage/images/icons/privat.svg') }}" alt="privat" class="radio__icon">
-                                <span class="radio__text">Приват24</span>
+                                <span class="radio__text">{{ __('shopping_cart.privat24') }}</span>
                             </label>
                         </div>
                     </div>
@@ -498,13 +498,13 @@
                     </div>
                 </div>
 
-                <button class="btn-primary" type="submit">Підтвердити замовлення</button>
+                <button class="btn-primary" type="submit">{{ __('shopping_cart.confirm_order') }}</button>
             </div>
         </form>
 
         <aside class="cart">
             <div class="cart_header">
-                <h2 class="cart__title">Ваш кошик</h2>
+                <h2 class="cart__title">{{ __('shopping_cart.your_basket') }}</h2>
             </div>
 
             <div class="cart_content">
@@ -602,17 +602,17 @@
 
                 <div class="cart_summary">
                     <div class="summary__item">
-                        <span class="summary__text">Вартість</span>
+                        <span class="summary__text">{{ __('shopping_cart.price') }}</span>
                         <span class="summary__value">4200 ₴</span>
                     </div>
 
                     <div class="summary__item">
-                        <span class="summary__text">Доставка</span>
-                        <span class="summary__value thin">Нова пошта <span class="bold">(приблизно 70₴) </span></span>
+                        <span class="summary__text">{{ __('shopping_cart.delivery') }}</span>
+                        <span class="summary__value thin">{{ __('shopping_cart.nova_poshta') }} <span class="bold">({{ __('shopping_cart.about') }} 70₴) </span></span>
                     </div>
 
                     <div class="summary__item">
-                        <span class="summary__text bold">Загальна вартість</span>
+                        <span class="summary__text bold">{{ __('shopping_cart.total') }}</span>
                         <span class="summary__value bold">4270 ₴</span>
                     </div>
                 </div>

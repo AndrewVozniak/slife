@@ -34,7 +34,7 @@ return [
     'country_for_delivery' => 'Країна доставки',
 
     'bonus' => 'Бонуси',
-    'on_your_account' => 'на вашому рахунку',
+    'on_your_account' => 'На вашому рахунку',
     'bonuses' => 'бонусів',
 
     'login' => 'Увійти',
@@ -43,4 +43,18 @@ return [
     'enter_bonus' => 'Введіть к-сть бонусів',
 
     'dont_call_me_to_confirm_order' => 'Не телефонувати мені для підтвердження замовлення',
+
+
+    'information_of_payment' => 'Інформація оплати',
+    'payment_when_receiving' => 'Оплата при отриманні',
+    'with_minimum_prepayment' => 'За мінімальної передоплати 150 грн',
+    'info_msg' => 'Дані для передоплати Вам надішле менеджер в приватні повідомлення у Telegram або Viber',
+    'privat24' => 'Приват24',
+
+    'your_basket' => 'Ваш кошик',
+    'about' => "приблизно",
+    'total' => 'Загальна вартість',
+    'price' => 'Вартість',
+
+    'confirm_order' => 'Підтвердити замовлення',
 ];
