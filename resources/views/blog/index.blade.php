@@ -10,11 +10,11 @@
         <div class="breadcrumbs">
             <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">Головна</a>
             <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right.svg')}}" alt="filter" class="param_image">
-            <a href="{{ route('blog', ['locale' => App::currentLocale()]) }}" class="breadcrumb active">Новини</a>
+            <a href="{{ route('blog', ['locale' => App::currentLocale()]) }}" class="breadcrumb active">{{ __('blog.news') }}</a>
         </div>
 
         <section class="content">
-            <h1 class="content_title">Новини</h1>
+            <h1 class="content_title">{{ __('blog.news') }}</h1>
             <div class="cards_wrapper">
                 <div class="card">
                     <div class="card_image">
@@ -29,7 +29,7 @@
                             Finibus diam penatibus scelerisque nisl interdum diam aptent posuere. Accumsan adipiscing porttitor mauris tortor nullam per</p>
                         <hr class="vertical-line">
                         <div class="card_link_wrapper">
-                            <a href="#" class="card_link">Читати повністю</a>
+                            <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => 'test']) }}" class="card_link">{{ __('blog.read_more') }}</a>
                             <img src="{{ asset('storage/images/icons/arrow-right-red.svg') }}" alt="" class="arrow">
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                             Finibus diam penatibus scelerisque nisl interdum diam aptent posuere. Accumsan adipiscing porttitor mauris tortor nullam per</p>
                         <hr class="vertical-line">
                         <div class="card_link_wrapper">
-                            <a href="#" class="card_link">Читати повністю</a>
+                            <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => 'test']) }}" class="card_link">{{ __('blog.read_more') }}</a>
                             <img src="{{ asset('storage/images/icons/arrow-right-red.svg') }}" alt="" class="arrow">
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                             Finibus diam penatibus scelerisque nisl interdum diam aptent posuere. Accumsan adipiscing porttitor mauris tortor nullam per</p>
                         <hr class="vertical-line">
                         <div class="card_link_wrapper">
-                            <a href="#" class="card_link">Читати повністю</a>
+                            <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => 'test']) }}" class="card_link">{{ __('blog.read_more') }}</a>
                             <img src="{{ asset('storage/images/icons/arrow-right-red.svg') }}" alt="" class="arrow">
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                             Finibus diam penatibus scelerisque nisl interdum diam aptent posuere. Accumsan adipiscing porttitor mauris tortor nullam per</p>
                         <hr class="vertical-line">
                         <div class="card_link_wrapper">
-                            <a href="#" class="card_link">Читати повністю</a>
+                            <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => 'test']) }}" class="card_link">{{ __('blog.read_more') }}</a>
                             <img src="{{ asset('storage/images/icons/arrow-right-red.svg') }}" alt="" class="arrow">
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                             Finibus diam penatibus scelerisque nisl interdum diam aptent posuere. Accumsan adipiscing porttitor mauris tortor nullam per</p>
                         <hr class="vertical-line">
                         <div class="card_link_wrapper">
-                            <a href="#" class="card_link">Читати повністю</a>
+                            <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => 'test']) }}" class="card_link">{{ __('blog.read_more') }}</a>
                             <img src="{{ asset('storage/images/icons/arrow-right-red.svg') }}" alt="" class="arrow">
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                             Finibus diam penatibus scelerisque nisl interdum diam aptent posuere. Accumsan adipiscing porttitor mauris tortor nullam per</p>
                         <hr class="vertical-line">
                         <div class="card_link_wrapper">
-                            <a href="#" class="card_link">Читати повністю</a>
+                            <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => 'test']) }}" class="card_link">{{ __('blog.read_more') }}</a>
                             <img src="{{ asset('storage/images/icons/arrow-right-red.svg') }}" alt="" class="arrow">
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                             Finibus diam penatibus scelerisque nisl interdum diam aptent posuere. Accumsan adipiscing porttitor mauris tortor nullam per</p>
                         <hr class="vertical-line">
                         <div class="card_link_wrapper">
-                            <a href="#" class="card_link">Читати повністю</a>
+                            <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => 'test']) }}" class="card_link">{{ __('blog.read_more') }}</a>
                             <img src="{{ asset('storage/images/icons/arrow-right-red.svg') }}" alt="" class="arrow">
                         </div>
                     </div>
@@ -156,7 +156,7 @@
                             Finibus diam penatibus scelerisque nisl interdum diam aptent posuere. Accumsan adipiscing porttitor mauris tortor nullam per</p>
                         <hr class="vertical-line">
                         <div class="card_link_wrapper">
-                            <a href="#" class="card_link">Читати повністю</a>
+                            <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => 'test']) }}" class="card_link">{{ __('blog.read_more') }}</a>
                             <img src="{{ asset('storage/images/icons/arrow-right-red.svg') }}" alt="" class="arrow">
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                             Finibus diam penatibus scelerisque nisl interdum diam aptent posuere. Accumsan adipiscing porttitor mauris tortor nullam per</p>
                         <hr class="vertical-line">
                         <div class="card_link_wrapper">
-                            <a href="#" class="card_link">Читати повністю</a>
+                            <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => 'test']) }}" class="card_link">{{ __('blog.read_more') }}</a>
                             <img src="{{ asset('storage/images/icons/arrow-right-red.svg') }}" alt="" class="arrow">
                         </div>
                     </div>
@@ -193,7 +193,7 @@
                             Finibus diam penatibus scelerisque nisl interdum diam aptent posuere. Accumsan adipiscing porttitor mauris tortor nullam per</p>
                         <hr class="vertical-line">
                         <div class="card_link_wrapper">
-                            <a href="#" class="card_link">Читати повністю</a>
+                            <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => 'test']) }}" class="card_link">{{ __('blog.read_more') }}</a>
                             <img src="{{ asset('storage/images/icons/arrow-right-red.svg') }}" alt="" class="arrow">
                         </div>
                     </div>

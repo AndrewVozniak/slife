@@ -13,7 +13,7 @@
             <a href="{{ route('favorite', ['locale' => App::currentLocale()]) }}" class="breadcrumb active">Улюблені товари</a>
         </div>
 
-        @include('components.new_products', ['products' => $products, 'title' => 'Улюблені товари', 'isFavorite' => true])
+        @include('components.new_products', ['products' => $products, 'title' => __("favorite.favorite"), 'isFavorite' => true])
     </div>
 
     @include('components.footer')

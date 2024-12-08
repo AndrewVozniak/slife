@@ -16,10 +16,10 @@
 
             <div class="container content">
                 <div class="main">
-                    <h1 class="title_404">Йой! Щось <br> пішло не так</h1>
-                    <p class="desc">Сторінку, яку ви шукали, не знайдено. <br> Перевірте правильність адреси сторінки</p>
+                    <h1 class="title_404">{{ __('errors.title') }} <br> {{ __('errors.title_2') }}</h1>
+                    <p class="desc">{{ __('errors.not_found') }} <br> {{ __('errors.not_found_2') }} </p>
 
-                    <a href="{{ route('home', ['locale' => App::currentLocale()]) }}" class="btn">На головну</a>
+                    <a href="{{ route('home', ['locale' => App::currentLocale()]) }}" class="btn">{{ __('errors.to_home') }} </a>
                 </div>
 
                 <span class="error_code">404</span>

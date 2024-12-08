@@ -12,7 +12,7 @@
                 <div class="breadcrumbs">
                     <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">Головна</a>
                     <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right_post.svg')}}" alt="filter" class="param_image">
-                    <a href="{{ route('blog', ['locale' => App::currentLocale()]) }}" class="breadcrumb">Новини</a>
+                    <a href="{{ route('blog', ['locale' => App::currentLocale()]) }}" class="breadcrumb">{{ __('blog.news') }}</a>
                     <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right_post.svg')}}" alt="filter" class="param_image last">
                     <a href="{{ route('post', ['locale' => App::currentLocale(), 'slug' => $slug]) }}" class="breadcrumb active">
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
@@ -38,12 +38,12 @@
                     <div class="section__data">
                         <div class="item">
                             <img src="{{ asset('/storage/images/icons/calendar.svg') }}" alt="calendar">
-                            <span>05 вересня</span>
+                            <span>05 {{ __('blog.september') }}</span>
                         </div>
 
                         <div class="item">
                             <img src="{{ asset('/storage/images/icons/time.svg') }}" alt="eye">
-                            <span>7 хв.</span>
+                            <span>7 {{ __('blog.minutes') }}</span>
                         </div>
 
                         <div class="item">
@@ -53,7 +53,7 @@
                     </div>
 
                     <button class="share__section">
-                        <h1 class="share__title">Поділитись</h1>
+                        <h1 class="share__title">{{ __('blog.share') }}</h1>
                         <img src="{{ asset('/storage/images/icons/share_icon.svg') }}" alt="share">
                     </button>
                 </div>
