@@ -1,43 +1,30 @@
 <?php
 
 return [
-    'return_and_exchange' => 'Повернення та обмін товару',
-    'product_did_not_fit' => 'Якщо з якихось причин придбаний вами товар не підійшов - не проблема.
-        В нашому інтернет-магазині клієнт має повне право обміняти продукцію в рамках Закону ',
-    'protection_of_consumer_rights' => 'Про захист прав споживачів',
-    'general_warranty' => 'Загальна гарантія. Терміни обміну',
-    'exchange_is_carried_out' => 'Обмін здійснюється протягом 14 днів з моменту отримання замовлення.
-        Загальна гарантія на придбану продукцію 30 днів',
+    'return_and_exchange' => 'Return and exchange of goods',
+    'product_did_not_fit' => 'If for any reason the purchased product did not fit — no problem. In our online store, the customer has the full right to exchange the product under the Consumer Rights Protection Law.',
+    'protection_of_consumer_rights' => 'Consumer Rights Protection',
+    'general_warranty' => 'General warranty. Exchange terms',
+    'exchange_is_carried_out' => 'Exchange is carried out within 14 days from the date of order receipt. The general warranty for the purchased product is 30 days.',
 
-    'return_of_goods' => 'Умови повернення для товарів належної якості',
-    'client_has_the_right' => 'Клієнт має право повернути замовлення за такими умовами',
-    'product_was_not_used' => 'товар не був вживаний, відсутні ознаки його використання: подряпини,
-        забруднення, потертості та інші дефекти',
-    'original_packaging' => 'на одязі (взутті, аксесуарах) збережені маркування, ярлики та оригінальне пакування',
-    'products_kept' => 'продукція зберегла свої споживчі характеристики',
-    'order_is_complete' => 'замовлення комплектне',
+    'return_of_goods' => 'Conditions for return of goods of appropriate quality',
+    'client_has_the_right' => 'The customer has the right to return the order under the following conditions:',
+    'product_was_not_used' => 'the product was not used, no signs of usage such as scratches, dirt, wear, and other defects are present',
+    'original_packaging' => 'on clothing (footwear, accessories) the tags, labels, and original packaging are intact',
+    'products_kept' => 'the product retains its consumer characteristics',
+    'order_is_complete' => 'the order is complete',
 
-    'refuse_to_exchange' => 'Інтернет-магазин має право відмовити в обміні для певних категорій покупок.
-     Вони зазначені у чинному Переліку згідно з Законом',
-    'customer_can_refuse' => 'Додатково замовник може відмовитись від раніше оформленого замовлення.
-        Дана опція доступна в будь-який момент до або під час його фактичного отримання.
-        Якщо клієнт вирішив повернути товар, придбаний по умовах безкоштовної доставки,
-        витрати на зворотне транспортування бере на себе замовник',
-    'product_quality' =>'Наш інтернет-магазин завжди уважно відноситься до якості своїх пропозицій.
-        Якщо з якихось причин товар прибув до замовника в неналежній якості, всі витрати на зворотню
-        доставку ми беремо на себе. Обов\'язково перевіряйте замовлення під час отримання!
-        Продукція застрахована і у випадку, якщо під час транспортування посилка зіпсувалась,
-        компанія-перевізник зобов\'язана компенсувати його вартість',
+    'refuse_to_exchange' => 'The online store has the right to refuse exchange for certain categories of purchases. They are listed in the current list according to the law',
+    'customer_can_refuse' => 'Additionally, the customer may refuse a previously placed order. This option is available at any time before or during its actual receipt. If the customer decides to return the product purchased under free delivery terms, the cost of reverse transportation is borne by the customer',
+    'product_quality' => 'Our online store always pays careful attention to the quality of its offerings. If for any reason the product arrives at the customer in inadequate quality, all costs for reverse delivery will be borne by us. Make sure to check the order upon receipt! The product is insured, and if the package is damaged during transport, the courier company is obliged to compensate its value',
 
-    'exchange_with_recalculation_of_value' => 'Обмін з перерахунком вартості',
-    'no_similar_product' => 'Якщо під час обміну аналогічний товар відсутній в інтернет-магазині, клієнт має право',
-    'choose_another_position' => 'вибрати іншу позицію з перерахунком ціни (залишкової і нової)',
-    'reserve_product' => 'забронювати товар: в такому випадку клієнт отримує продукцію
-        як тільки вона дійде на склад магазину',
-    'get_money' => 'отримати гроші за оплачене замовлення',
-    'cash_back' => 'Грошове повернення виконується по вказаній в чеку ціні на момент придбання позиції.
-        Переказ коштів здійснюється нами протягом 1-3 днів після того, як ми отримаємо обміняний товар.
-        Транспортування замовлення виконується оператором «Нова Пошта»',
-    'refund_is_required' =>'Для грошового повернення необхідно, щоб були дотримані вся описані вище пункти з розділу ',
-    'return_conditions' => 'Умови повернення',
+    'exchange_with_recalculation_of_value' => 'Exchange with recalculation of value',
+    'no_similar_product' => 'If a similar product is unavailable in the online store during exchange, the customer has the right to',
+    'choose_another_position' => 'select another position with recalculated price (remaining and new)',
+    'reserve_product' => 'reserve the product: in this case, the customer receives the product as soon as it arrives at the store’s warehouse',
+    'get_money' => 'receive money for the paid order',
+    'cash_back' => 'Money return is made at the price indicated on the receipt at the time of purchase. The transfer is made by us within 1-3 days after we receive the exchanged product. The order transportation is performed by the “Nova Poshta” courier service',
+    'refund_is_required' => 'For a money refund, it is necessary that all the above points from the “Return Conditions” section are complied with',
+    'return_conditions' => 'Return conditions',
 ];
+

@@ -37,6 +37,8 @@ return [
         "by_name_desc" => "Назва (від Я до А)",
     ],
 
+    'no_products' => 'Товари не знайдені',
+
     'side_panel' => [
         "categories" => "Категорія товару",
         "brand" => "Бренд",

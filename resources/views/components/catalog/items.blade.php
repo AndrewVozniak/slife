@@ -16,18 +16,26 @@
                 </div>
             </div>
 
-            <div class="filter_and_sort_by_box">
-                @include('elements.sidepanel')
+            @if(count($products) !== 0)
+                <div class="filter_and_sort_by_box">
+                    @include('elements.sidepanel')
 
-                <div class="sort_by_box">
-                    <span class="sort_by_text">{{ __('catalog.sort_by.sort_text') }}</span>
+                    <div class="sort_by_box">
+                        <span class="sort_by_text">{{ __('catalog.sort_by.sort_text') }}</span>
 
-                    @include('elements.dropdown_menu')
+                        @include('elements.dropdown_menu')
+                    </div>
                 </div>
-            </div>
+            @endif
         </div>
 
         <div class="products_item_container">
+            @if(count($products) === 0)
+                <div class="no_products">
+                    <span class="no_products_text">{{ __('catalog.no_products') }}</span>
+                </div>
+            @endif
+
             @foreach($products as $product)
                 <x-product-card
                     :id="$product['id']"
@@ -41,6 +49,7 @@
             @endforeach
         </div>
 
+        @if(count($products) !== 0)
         <div class="pagination_box">
             <div class="pagination_controller disabled">
                 <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="pagination_arrow">
@@ -63,6 +72,7 @@
                 </svg>
             </div>
         </div>
+        @endif
     </div>
 </section>
 

@@ -39,6 +39,8 @@ return [
         "by_name_desc" => "Name (Z to A)",
     ],
 
+    'no_products' => 'No products found',
+
     'side_panel' => [
         "categories" => "Product Category",
         "brand" => "Brand",

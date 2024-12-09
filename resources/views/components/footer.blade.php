@@ -39,25 +39,25 @@
                 <div class="item4">
                     <a href="#" class="footer__item_title"> {{ __('footer.main.about') }}</a>
                     <div class="footer_item_category_box">
-                        <a href="#"> {{ __('footer.main.blog') }}</a>
-                        <a href="#"> {{ __('footer.main.about_us') }}</a>
-                        <a href="#"> {{ __('footer.main.contacts') }}</a>
+                        <a href="{{ route('blog', ['locale' => App::currentLocale()]) }}"> {{ __('footer.main.blog') }}</a>
+                        <a href="{{ route('about', ['locale' => App::currentLocale()]) }}#"> {{ __('footer.main.about_us') }}</a>
+                        <a href="{{ route('contacts', ['locale' => App::currentLocale()]) }}"> {{ __('footer.main.contacts') }}</a>
                     </div>
                 </div>
                 <div class="item5">
                     <span class="footer__item_title"> {{ __('footer.main.info') }}</span>
                     <div class="footer_item_category_box">
-                        <a href="#"> {{ __('footer.main.payment') }}</a>
-                        <a href="#"> {{ __('footer.main.exchange') }}</a>
-                        <a href="#"> {{ __('footer.main.register') }}</a>
+                        <a href="{{ route('delivery', ['locale' => App::currentLocale()]) }}"> {{ __('footer.main.payment') }}</a>
+                        <a href="{{ route('return_policy', ['locale' => App::currentLocale()]) }}"> {{ __('footer.main.exchange') }}</a>
+                        <a href="{{ route('login', ['locale' => App::currentLocale()]) }}"> {{ __('footer.main.register') }}</a>
                     </div>
                 </div>
                 <div class="item6">
                     <span class="footer__item_title"> {{ __('footer.main.categories') }}</span>
                     <div class="footer_item_category_box">
-                        <a href="#"> {{ __('footer.main.men') }}</a>
-                        <a href="#"> {{ __('footer.main.women') }}</a>
-                        <a href="#"> {{ __('footer.main.kids') }}</a>
+                        <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'men']) }}"> {{ __('footer.main.men') }}</a>
+                        <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'women']) }}"> {{ __('footer.main.women') }}</a>
+                        <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'kids']) }}"> {{ __('footer.main.kids') }}</a>
                     </div>
                 </div>
                 <div class="item7">

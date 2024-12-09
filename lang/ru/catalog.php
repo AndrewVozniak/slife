@@ -39,6 +39,8 @@ return [
         "by_name_desc" => "Название (от Я до А)",
     ],
 
+    'no_products' => 'Товары не найдены',
+
     'side_panel' => [
         "categories" => "Категория товара",
         "brand" => "Бренд",
