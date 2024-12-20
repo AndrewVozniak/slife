@@ -44,8 +44,15 @@
 
         const updateThumbSize = () => {
             const ratio = gallery.clientHeight / gallery.scrollHeight;
-            thumb.style.height = `${Math.max(ratio * scrollbar.clientHeight, 30)}px`; // Мінімальна висота 30px
+            const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent); // Проверяем Safari
+            const thumbHeight = isSafari
+                ? Math.max(ratio * scrollbar.clientHeight, 30) * window.devicePixelRatio
+                : Math.max(ratio * scrollbar.clientHeight, 30);
+
+            thumb.style.height = `${thumbHeight}px`;
         };
+
+
 
         const updateButtons = () => {
             const upIcon = upButton.querySelector('img');

@@ -82,17 +82,44 @@
         <li class="category_item">
             <a href="#" class="category_link">{{ __('header.categories.new') }}</a>
         </li>
-        <li class="category_item">
-            <a href="#" class="category_link">{{ __('header.categories.clothes') }}</a>
-            <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down">
+        <li class="category_item" x-data="{ open: false }">
+            <div @click="open = !open">
+                <a href="#" class="category_link">
+                    {{ __('header.categories.clothes') }}
+                </a>
+                <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': open }">
+            </div>
+            <ul x-show="open" class="dropdown_menu" @click.outside="open = false" style="display: none;">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
         </li>
-        <li class="category_item">
-            <a href="#" class="category_link">{{ __('header.categories.shoes') }}</a>
-            <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down">
+        <li class="category_item" x-data="{ open: false }">
+            <div @click="open = !open">
+                <a href="#" class="category_link">
+                    {{ __('header.categories.shoes') }}
+                </a>
+                <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': open }">
+            </div>
+            <ul x-show="open" class="dropdown_menu" @click.outside="open = false" style="display: none;">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
         </li>
-        <li class="category_item">
-            <a href="#" class="category_link">{{ __('header.categories.accessories') }}</a>
-            <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down">
+        <li class="category_item" x-data="{ open: false }">
+            <div @click="open = !open">
+                <a href="#" class="category_link">
+                    {{ __('header.categories.accessories') }}
+                </a>
+                <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': open }">
+            </div>
+            <ul x-show="open" class="dropdown_menu" @click.outside="open = false" style="display: none;">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
         </li>
         <li class="category_item">
             <a href="{{ route('catalog', ['category' => 'popular_items', 'locale' => App::currentLocale()]) }}" class="category_link">{{ __('header.categories.popular') }}</a>

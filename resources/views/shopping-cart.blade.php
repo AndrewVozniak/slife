@@ -414,17 +414,25 @@
 
                 <div class="group__radios payment_methods">
                     <div class="group__radio">
-                        <div class="radio__wrapper">
+                        <div class="radio__wrapper for_info_msg">
                             <input type="radio" id="pay_when_receive" class="radio__input" name="delivery_method" checked>
-                            <label for="pay_when_receive" class="radio__label">
+                            <label for="pay_when_receive" class="radio__label for_info_msg">
                                 <span class="radio__text">{{ __('shopping_cart.information_of_payment') }}</span>
                                 <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="payment" class="radio__icon">
                             </label>
-                        </div>
-                        <span class="radio__description">{{ __('shopping_cart.with_minimum_prepayment') }}</span>
 
-                        <div class="radio__help_text">
-                            <span class="text">{{ __('shopping_cart.info_msg') }}</span>
+
+                            <div class="radio__help_text">
+                                <span class="text">{{ __('shopping_cart.info_msg') }}</span>
+                            </div>
+                        </div>
+                        <div class="description_group for_info_msg_2">
+                            <span class="radio__description">{{ __('shopping_cart.with_minimum_prepayment') }}</span>
+                            <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="payment" class="radio__icon small">
+
+                            <div class="radio__help_text_2">
+                                <span class="text">{{ __('shopping_cart.info_msg_2') }}</span>
+                            </div>
                         </div>
                     </div>
 
@@ -454,7 +462,7 @@
                             <label for="visa" class="radio__label">
                                 <img src="{{ asset('/storage/images/icons/visa.svg') }}" alt="visa" class="radio__icon">
                                 <img src="{{ asset('/storage/images/icons/mastercard.svg') }}" alt="visa" class="radio__icon">
-                                <span class="radio__text">Visa/Mastercard</span>
+                                <span class="radio__text" id="visamastercard">Visa/Mastercard</span>
                             </label>
                         </div>
                     </div>
@@ -483,7 +491,7 @@
                         <div class="radio__wrapper">
                             <input type="radio" id="apple_pay" class="radio__input" name="delivery_method">
                             <label for="apple_pay" class="radio__label">
-                                <img src="{{ asset('/storage/images/icons/apple_pay.svg') }}" alt="apple pay" class="radio__icon">
+                                <img src="{{ asset('/storage/images/icons/apple_pay.svg') }}" alt="apple pay" class="radio__icon smaller">
                             </label>
                         </div>
                     </div>
@@ -492,7 +500,7 @@
                         <div class="radio__wrapper">
                             <input type="radio" id="google_pay" class="radio__input" name="delivery_method">
                             <label for="google_pay" class="radio__label">
-                                <img src="{{ asset('/storage/images/icons/google_pay.svg') }}" alt="google pay" class="radio__icon">
+                                <img src="{{ asset('/storage/images/icons/google_pay.svg') }}" alt="google pay" class="radio__icon smaller">
                             </label>
                         </div>
                     </div>

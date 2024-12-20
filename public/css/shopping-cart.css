@@ -403,18 +403,32 @@
                         }
                     }
 
-                    &:hover {
-                        .radio__help_text {
-                            display: block;
-                        }
-                    }
-
                     .radio__description {
                         font-weight: 300;
                         font-size: 14px;
 
                         @media screen and (max-width: 850px) {
                             font-size: 12px;
+                        }
+                    }
+
+                    .description_group {
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+
+                        .small {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 0;
+                            height: 15px;
+                        }
+
+                        &:hover {
+                            .radio__help_text_2 {
+                                display: block !important;
+                            }
                         }
                     }
 
@@ -441,6 +455,32 @@
                         }
                     }
 
+
+                    .radio__help_text_2 {
+                        display: none;
+                        padding: 16px 24px;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+                        position: absolute;
+                        bottom: calc(100% + 6px);
+                        left: 80%;
+                        width: 100%;
+                        background-color: #fff;
+                        border: 1px solid rgba(0, 0, 0, 0.15);
+
+                        z-index: 1000;
+
+                        @media screen and (min-width: 900px) {
+                            width: 320px;
+                        }
+
+                        @media screen and (max-width: 530px) {
+                            left: 15px;
+                            width: 100%;
+                            font-size: 14px;
+                        }
+                    }
+
                     .radio__wrapper {
                         display: flex;
                         flex-direction: row;
@@ -455,15 +495,42 @@
                             gap: 10px;
                         }
 
+
+                        &.for_info_msg {
+                            &:hover {
+                                .radio__help_text {
+                                    display: block;
+                                }
+                            }
+                        }
+
                         .radio__label {
                             display: flex;
                             flex-direction: row;
                             gap: 12px;
                             cursor: pointer;
 
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+
                             @media screen and (max-width: 500px) {
                                 gap: 8px;
                             }
+
+                            .small {
+                                height: 10px;
+                            }
+
+                            /*#visamastercard {*/
+                                /*@media screen and (max-width: 1320px) {*/
+                                /*    display: none;*/
+                                /*}*/
+
+                                /*@media screen and (max-width: 1080px) {*/
+                                /*    display: block;*/
+                                /*}*/
+                            /*}*/
 
                             .radio__text {
                                 font-weight: 300;
@@ -472,6 +539,14 @@
 
                                 @media screen and (max-width: 850px) {
                                     font-size: 14px;
+                                }
+                            }
+
+                            .smaller {
+                                height: 18px;
+
+                                @media screen and (max-width: 850px) {
+                                    height: 16px;
                                 }
                             }
                         }

@@ -40,6 +40,12 @@ body {
     color: var(--black);
 }
 
+img {
+    transform: unset;
+    image-rendering: crisp-edges !important;
+}
+
+
 @media screen and (max-width: 930px) {
     body {
         font-size: 14px;
@@ -645,6 +651,14 @@ textarea:active {
         flex-direction: row;
         justify-content: space-between;
 
+        .arrow_down {
+            transition: transform 0.3s ease !important;
+        }
+
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+
         .category_item {
             display: flex;
             flex-direction: row;
@@ -655,6 +669,63 @@ textarea:active {
             font-weight: 300;
             font-size: 16px;
             line-height: 19px;
+
+            position: relative;
+
+            div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px;
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+
+                width: 100%;
+            }
+
+            .dropdown_menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 10000;
+
+                background-color: var(--white);
+
+                padding: 16px;
+                border-radius: 7px;
+                box-shadow: 0 0 30px 0 rgba(60, 80, 114, 0.2);
+
+                width: 300px;
+
+
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                transition: 0.3s ease;
+
+                a {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 19px;
+                    text-decoration: none;
+                    color: var(--black);
+                    transition: all 0.3s;
+
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+
+                    &:hover {
+                        color: var(--red);
+                        text-decoration: underline;
+                    }
+                }
+            }
+
 
             &.main {
                 display: flex;
