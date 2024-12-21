@@ -71,8 +71,15 @@
             }
         };
 
+        setTimeout(() => {
+            updateThumbSize();
+            updateThumbPosition();
+        }, 1000); // Чекаємо 1 секунду після завантаження сторінки, щоб відобразити ползунок
+
+
         gallery.addEventListener("scroll", updateThumbPosition);
-        gallery.addEventListener("resize", updateThumbSize); // Оновлюємо висоту thumb при зміні розміру контейнера
+        gallery.addEventListener("resize", updateThumbSize); // Обновляем высоту ползунка при изменении размера контейнера
+        window.addEventListener("resize", updateThumbSize); // Обновляем высоту ползунка при изменении размера окна
 
         thumb.addEventListener("mousedown", (e) => {
             const startY = e.clientY;
