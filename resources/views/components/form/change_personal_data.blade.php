@@ -1,16 +1,16 @@
 <form name="change_personal_data" action="" method="POST" class="form_change_personal_data">
-    <span class="text_800_32_black">{{__('personal_date.personal_date')}}</span>
+    <span class="change_personal_data_title">{{__('personal_date.personal_date')}}</span>
 
     <div class="form_change_personal_data_box">
         <div class="input_change_data_wrapper">
             <div class="input_box_50">
-                <label for="change_name" class="text_500_14_black">{{__('personal_date.your_name')}}</label>
+                <label for="change_name" class="label_change_data">{{__('personal_date.your_name')}}</label>
                 <input type="text" name="change_name" id="change_name"  class="input_change_data"
                        placeholder="{{__('personal_date.name')}}">
             </div>
 
             <div class="input_box_50">
-                <label for="change_last_name" class="text_500_14_black">{{__('personal_date.your_last_name')}}</label>
+                <label for="change_last_name" class="label_change_data">{{__('personal_date.your_last_name')}}</label>
                 <input type="text" name="change_last_name" id="change_last_name"  class="input_change_data"
                        placeholder="{{__('personal_date.last_name')}}">
             </div>
@@ -18,14 +18,14 @@
 
         <div class="input_change_data_wrapper">
             <div class="input_box_50">
-                <label for="change_email" class="text_500_14_black">{{__('personal_date.email')}}</label>
+                <label for="change_email" class="label_change_data">{{__('personal_date.email')}}</label>
                 <input type="email" name="change_email" id="change_email" pattern=".+@example\.com"
                        class="input_change_data"
                        placeholder="taran.oleksanddra@gmail.com" size="30"/>
             </div>
 
             <div class="input_box_50">
-                <label for="day" class="text_500_14_black">{{__('personal_date.date_of_birth')}}</label>
+                <label for="day" class="label_change_data">{{__('personal_date.date_of_birth')}}</label>
                 <div class="birthdate_wrapper">
                     <select id="day" name="day" class="input_change_data select_change">
                         <option value="" disabled selected>22</option>

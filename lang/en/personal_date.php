@@ -23,4 +23,6 @@ return [
     'october' => 'October',
     'november' => 'November',
     'december' => 'December',
+    'exit' => 'Log out',
+    'menu' => 'Personal Account Menu',
 ];
