@@ -21,4 +21,23 @@
             </div>
         </div>
     </div>
+
+    {{--mobile version--}}
+    <div class="order_description_box_mobile">
+        <div class="order_description_title_box_mobile">
+            <p class="order_description_title_mobile">{{__('bonuses_and_order_history.order_history.windbreaker')}}
+                New Balance Jacket NB Athletics
+            </p>
+        </div>
+
+        <div class="number_and_price_box_wrapper_mobile">
+            <div class="number_and_price_box_mobile">
+                <span class="number_and_price_text_mobile">&#215; 1</span>
+            </div>
+
+            <div class="number_and_price_box_mobile">
+                <span class="number_and_price_text_mobile">1550 &#8372;</span>
+            </div>
+        </div>
+    </div>
 </div>
