@@ -2913,6 +2913,12 @@ textarea:active {
     font-weight: 700;
 }
 
+@media screen and (max-width: 1100px) {
+    .text_700_16_black {
+        font-size: 14px;
+    }
+}
+
 .text_700_16_red {
     font-weight: 700;
     color: var(--red);
@@ -2973,6 +2979,12 @@ textarea:active {
     font-weight: 400;
 }
 
+@media screen and (max-width: 770px) {
+    .text_400_16_black {
+        font-size: 14px;
+    }
+}
+
 .text_300_14_black {
     font-size: 14px;
     font-weight: 300;
@@ -2984,7 +2996,6 @@ textarea:active {
         font-size: 12px;
     }
 }
-
 
 .btn_product_quantity {
     display: flex;
