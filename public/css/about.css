@@ -98,7 +98,7 @@
 
     box-sizing: border-box;
 
-    display: unset;
+    display: flex;
     position: relative;
 
     width: 100%;
@@ -108,8 +108,6 @@
         width: 100%;
         height: 682px;
 
-        overflow: hidden;
-        position: relative;
         object-position: center;
 
         border-radius: 56px 56px 0 0;
@@ -122,6 +120,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 56px 56px 0 0;
         }
 
         .gradient_global {
@@ -132,6 +131,7 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.1);
+            border-radius: 56px 56px 0 0;
         }
 
         .gradient_left {
@@ -143,6 +143,7 @@
             min-height: 100%;
 
             background: linear-gradient(270deg, rgba(4, 9, 39, 0) 30%, rgba(4, 9, 39, 1) 100%);
+            border-radius: 56px 56px 0 0;
         }
 
         .gradient_right {
@@ -154,22 +155,22 @@
             min-height: 100%;
 
             background: linear-gradient(90deg, rgba(4, 9, 39, 0) 30%, rgba(4, 9, 39, 1) 100%);
+            border-radius: 56px 56px 0 0;
         }
     }
 
     .text_content {
         position: absolute;
         z-index: 100;
-        bottom: 0;
+        bottom: 0%;
         left: 0;
 
         width: 100%;
         height: 215px;
 
         background: rgba(5, 13, 56, 0.4);
-        backdrop-filter: blur(32px);
         -webkit-backdrop-filter: blur(32px); /* Safari */
-
+        backdrop-filter: blur(32px);
 
         color: var(--white);
 
@@ -244,7 +245,7 @@
 
         .text_content {
             width: 100%;
-            height: fit-content;
+            height: 280px;
             margin: 0 auto;
 
             .about_box_bg_wrapper {

@@ -132,6 +132,7 @@
     <div class="personal_data_menu_options_mobile">
         <div class="personal_data_button_mobile" onclick="toggleButtonMenu()">
             <img src="{{asset('storage/images/icons/hugeicons_menu-02_white.svg')}}" alt="icon" class="icon_button_img_mobile">
+            <hr class="vertical_line">
             <span class="personal_data_button_text_mobile">{{ __('personal_date.menu') }}</span>
         </div>
 

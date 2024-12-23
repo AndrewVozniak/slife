@@ -537,6 +537,11 @@ textarea:active {
             }
         }
 
+        .logo {
+            width: 197px;
+            height: 43px;
+        }
+
         @media screen and (max-width: 930px) {
             .logo {
                 width: 132px;

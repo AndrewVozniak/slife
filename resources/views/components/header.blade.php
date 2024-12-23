@@ -3,7 +3,7 @@
 
     <main class="header__main container">
         <a href="{{ route('home', ['locale' => App::currentLocale()]) }}">
-            <img src="{{asset('storage/images/logo.svg')}}" alt="logo" class="logo">
+            <img src="{{asset('storage/images/logo.png')}}" alt="logo" class="logo">
         </a>
 
         <form class="search_bar">
@@ -24,6 +24,8 @@
         </form>
 
         <ul class="user_navigation">
+            <li class="hr_menu"></li>
+
             <li class="user_navigation__item">
                 <a href="{{ route('login', ['locale' => App::currentLocale()])  }}" class="user_navigation__link">
                     <img src="{{asset('storage/images/icons/user.svg')}}" alt="user">
@@ -57,8 +59,6 @@
                 </a>
             </li>
 
-            <li class="hr_menu"></li>
-
             <li  class="user_navigation__item">
                 <button class="menu-toggle" onclick="toggleMenu()">
                     <img src="{{asset('storage/images/icons/hugeicons_menu-02.svg')}}" alt="open menu">
@@ -69,7 +69,7 @@
 
     <ul class="categories container" id="menu">
         <li class="category_item main">
-            <div class="main_item active">
+            <div class="main_item">
                 <a href="#" class="category_link_main">{{ __('header.categories.men') }}</a>
             </div>
             <div class="main_item">
