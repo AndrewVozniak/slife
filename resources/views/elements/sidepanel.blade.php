@@ -78,7 +78,7 @@
 
                     <div class="side_panel_range_wrapper">
                         <span class="side_panel_range min-tooltip">
-                        {{__('catalog.side_panel.from')}} 129
+                        {{__('catalog.side_panel.from')}} 0
                     </span>
                         <span class="side_panel_range max-tooltip">
                         {{__('catalog.side_panel.to')}} 1400
@@ -91,16 +91,16 @@
                     <input type="range"
                            name="min_price"
                            id="min_price"
-                           min="129"
+                           min="0"
                            max="3000"
-                           value="129"
+                           value="0"
                            oninput="sliderMin()"
                            class="slider_price_min range_slider_input" >
 
                     <input type="range"
                            name="max_price"
                            id="max_price"
-                           min="129"
+                           min="0"
                            max="3000"
                            value="1400"
                            oninput="sliderMax()"
@@ -113,8 +113,8 @@
                            id="min_price_input"
                            class="range_price_input min_input"
                            onchange="setMinInput()"
-                           value="129"
-                           placeholder="{{__('catalog.side_panel.from')}} 129"
+                           value="0"
+                           placeholder="{{__('catalog.side_panel.from')}} 0"
                     >
 
                     <input type="text"
@@ -260,8 +260,11 @@
     }
 
     function setArea() {
-        range.style.left = (minVal.value / sliderMaxValue) * 100 + "%";
-        range.style.right = 100 - (maxVal.value / sliderMaxValue) * 100 + "%";
+        let rangeWidth = Math.max(0, ((maxVal.value - minVal.value) / (sliderMaxValue - sliderMinValue)) * 100 - 2);
+        let rangeLeft = ((minVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue)) * 100 + 0.5;
+
+        range.style.left = rangeLeft + "%";
+        range.style.width = rangeWidth + "%";
     }
 
     function setMinInput() {

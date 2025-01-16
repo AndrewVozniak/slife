@@ -7,11 +7,11 @@
     @include('components.header_top')
     <div class="content_wrapper container-2">
         <div class="nav">
-            <a href="{{ route('home', ['locale' => App::currentLocale() ])  }}" class="nav__link">
+            <a href="{{ route('home', ['locale' => App::currentLocale() ]) }}" class="nav__link">
                 <img src="{{ asset('/storage/images/logo.svg') }}" alt="logo" class="nav_img">
             </a>
 
-            <a href="{{ url()->previous() }}" class="close_btn__wrapper">
+            <a href="{{ route('home', ['locale' => App::currentLocale() ]) }}" class="close_btn__wrapper">
                 <span class="close_btn">x</span>
             </a>
         </div>

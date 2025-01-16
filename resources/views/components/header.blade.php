@@ -46,7 +46,7 @@
             <li class="user_navigation__item">
                 <a href="{{ route('favorite', ['locale' => App::currentLocale()]) }}" class="user_navigation__link">
                     <p class="count">0</p>
-                    <img src="{{asset('storage/images/icons/favorite.png')}}" alt="favorite items">
+                    <img src="{{asset('storage/images/icons/solar_heart-outline.svg')}}" alt="favorite items" class="custom_image_1">
                 </a>
             </li>
 
@@ -55,7 +55,7 @@
             <li class="user_navigation__item">
                 <a href="{{ route('shoppingCart', ['locale' => App::currentLocale()]) }}" class="user_navigation__link">
                     <p class="count">0</p>
-                    <img src="{{asset('storage/images/icons/shopping_cart.png')}}" alt="shopping cart">
+                    <img src="{{asset('storage/images/icons/solar_cart-3-outline.svg')}}" alt="shopping cart" class="custom_image_2">
                 </a>
             </li>
 
@@ -69,18 +69,18 @@
 
     <ul class="categories container" id="menu">
         <li class="category_item main">
-            <div class="main_item">
-                <a href="#" class="category_link_main">{{ __('header.categories.men') }}</a>
-            </div>
-            <div class="main_item">
-                <a href="#" class="category_link_main">{{ __('header.categories.women') }}</a>
-            </div>
-            <div class="main_item">
-                <a href="#" class="category_link_main">{{ __('header.categories.children') }}</a>
-            </div>
+            <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'men']) }}" class="main_item">
+                <span class="category_link_main">{{ __('header.categories.men') }}</span>
+            </a>
+            <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'women']) }}" class="main_item">
+                <span class="category_link_main">{{ __('header.categories.women') }}</span>
+            </a>
+            <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'children']) }}" class="main_item">
+                <span class="category_link_main">{{ __('header.categories.children') }}</span>
+            </a>
         </li>
         <li class="category_item">
-            <a href="#" class="category_link">{{ __('header.categories.new') }}</a>
+            <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'new']) }}" class="category_link">{{ __('header.categories.new') }}</a>
         </li>
         <li class="category_item" x-data="{ open: false }">
             <div @click="open = !open">

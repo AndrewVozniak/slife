@@ -13,6 +13,13 @@
             </template>
         </div>
     </div>
+
+    <template x-if="currentIndex === videoIndex">
+        <video playsinline loop x-ref="video" preload="auto" x-init="$refs.video.muted = true; $refs.video.play();" class="product_slider_video">
+            <source src="{{ asset('/storage/videos/goods/11MB__No_logos__16x9_Running_Final_30secs_.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </template>
 </div>
 
 
@@ -21,12 +28,13 @@
         return {
             images: [
                 "{{ asset('storage/images/product/1.png') }}",
-                "{{ asset('storage/images/product/2.png') }}",
+                "video",
                 "{{ asset('storage/images/product/3.png') }}",
                 "{{ asset('storage/images/product/4.png') }}",
                 "{{ asset('storage/images/product/5.png') }}",
                 "{{ asset('storage/images/product/6.png') }}"
             ],
+            videoIndex: 1,
             currentIndex: 0,
 
             goToSmallSlide(index) {
@@ -45,7 +53,7 @@
 
             init() {
                 this.currentIndex = 0;
-                this.startAutoSlide();
+                // this.startAutoSlide();
             }
         }
     }

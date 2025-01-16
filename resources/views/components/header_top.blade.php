@@ -2,7 +2,7 @@
     <div class="container">
         <div class="shipping_text_wrapper">
             <span class="shipping_text">{{ __('header.free_shipping') }}
-                <a href="#" class="underlined">{{ __('header.detailed_information') }}
+                <a href="{{ route('delivery', ['locale' => App::currentLocale()]) }}" class="underlined">{{ __('header.detailed_information') }}
                 </a>
             </span>
         </div>

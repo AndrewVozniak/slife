@@ -58,4 +58,5 @@ return [
     'price' => 'Price',
 
     'confirm_order' => 'Confirm order',
+    'max_quantity' => 'Maximum quantity',
 ];

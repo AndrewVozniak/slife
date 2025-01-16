@@ -20,7 +20,7 @@
                 <div class="group__inputs" >
                     <input type="text" placeholder="{{ __('shopping_cart.name') }} *" class="group__input half" required>
                     <input type="text" placeholder="{{ __('shopping_cart.surname') }} *" class="group__input half" required>
-                    <input type="tel" placeholder="+38(_ _)-_ _ _-_ _-_ _ *" pattern="\+38\(\d{2}\)-\d{3}-\d{2}-\d{2}" class="group__input half" required>
+                    <input type="tel" oninput="this.value = this.value.replace(/[^0-9.+()]/g, '').replace(/(\..*)\./g, '$1');" placeholder="{{ __('shopping_cart.phone') }} *" class="group__input half" required>
                     <input type="email" placeholder="Email *" class="group__input half" required>
                 </div>
             </div>
@@ -35,6 +35,7 @@
                     showCities: false,
                     deliveryBranch: '',
                     showBranches: false,
+                    selfDelivery: false
                 }">
                 <h1 class="group__title">{{ __('shopping_cart.delivery') }}</h1>
 
@@ -112,7 +113,7 @@
 
                     <div class="group__radio">
                         <div class="radio__wrapper">
-                            <input type="radio" id="self_pickup" class="radio__input" name="delivery_method">
+                            <input type="radio" id="self_pickup" class="radio__input" name="delivery_method" x-on:click="selfDelivery = true" x-on:click.away="selfDelivery = false">
                             <label for="self_pickup" class="radio__label">
                                 <span class="radio__text">{{ __('shopping_cart.self_delivery') }}</span>
                             </label>
@@ -120,7 +121,7 @@
                     </div>
                 </div>
 
-                <div class="group__inputs row" x-show="deliveryCountry == 'Україна'">
+                <div class="group__inputs row" x-show="deliveryCountry == 'Україна' && !selfDelivery">
                     <div class="group__select triple" x-on:click.away="showOnBranch = false">
                         <div class="select_input__wrapper">
                             <input
@@ -279,7 +280,19 @@
 
                 <div class="group__inputs row">
                     <label for="city" class="input__label not_bold">{{ __('shopping_cart.on_your_account') }} <span class="red">346</span> {{ __('shopping_cart.bonuses') }}</label>
-                    <input type="text" placeholder="{{ __('shopping_cart.enter_bonus') }}" class="group__input half">
+                    <style>
+                        input::-webkit-outer-spin-button,
+                        input::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+
+                        /* Firefox */
+                        input[type=number] {
+                            -moz-appearance: textfield;
+                        }
+                    </style>
+                    <input type="number" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" placeholder="{{ __('shopping_cart.enter_bonus') }}" class="group__input half">
                 </div>
             </div>
 
@@ -321,7 +334,13 @@
                                             <hr class="vertical_line">
                                             <img src="{{ asset('/storage/images/icons/plus.svg') }}" alt="plus" class="counter_item disabled">
                                         </div>
-                                        <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="attention" class="attention">
+
+                                        <div class="attention_wrapper">
+                                            <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="attention" class="attention">
+                                            <div class="placeholder">
+                                                <span class="placeholder__text">{{ __('shopping_cart.max_quantity') }}</span>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <img src="{{ asset('/storage/images/icons/trash.svg') }}" alt="trash" class="trash">
@@ -417,7 +436,7 @@
                         <div class="radio__wrapper for_info_msg">
                             <input type="radio" id="pay_when_receive" class="radio__input" name="delivery_method" checked>
                             <label for="pay_when_receive" class="radio__label for_info_msg">
-                                <span class="radio__text">{{ __('shopping_cart.information_of_payment') }}</span>
+                                <span class="radio__text">{{ __('shopping_cart.payment_when_receiving') }}</span>
                                 <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="payment" class="radio__icon">
                             </label>
 
@@ -539,7 +558,12 @@
                                         <hr class="vertical_line">
                                         <img src="{{ asset('/storage/images/icons/plus.svg') }}" alt="plus" class="counter_item disabled">
                                     </div>
-                                    <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="attention" class="attention">
+                                    <div class="attention_wrapper">
+                                        <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="attention" class="attention">
+                                        <div class="placeholder">
+                                            <span class="placeholder__text">{{ __('shopping_cart.max_quantity') }}</span>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <img src="{{ asset('/storage/images/icons/trash.svg') }}" alt="trash" class="trash">

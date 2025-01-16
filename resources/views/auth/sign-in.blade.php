@@ -11,7 +11,7 @@
                 <img src="{{ asset('/storage/images/logo.svg') }}" alt="logo" class="nav_img">
             </a>
 
-            <a href="{{ url()->previous() }}" class="close_btn__wrapper">
+            <a href="{{ route('home', ['locale' => App::currentLocale() ]) }}" class="close_btn__wrapper">
                 <span class="close_btn">x</span>
             </a>
         </div>

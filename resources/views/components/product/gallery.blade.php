@@ -18,7 +18,10 @@
         <img src="{{ asset('/storage/images/product/2.png') }}" alt="" class="img half">
         <img src="{{ asset('/storage/images/product/3.png') }}" alt="" class="img">
         <img src="{{ asset('/storage/images/product/4.png') }}" alt="" class="img half">
-        <img src="{{ asset('/storage/images/product/5.png') }}" alt="" class="img half">
+        <video playsinline loop preload="auto" class="img half video" width="640">
+            <source src="{{ asset('/storage/videos/goods/11MB__No_logos__16x9_Running_Final_30secs_.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <img src="{{ asset('/storage/images/product/6.png') }}" alt="" class="img">
     </section>
 </div>
@@ -35,6 +38,13 @@
         const upButton = document.querySelector(".scroll-trigger.up");
         const downButton = document.querySelector(".scroll-trigger.down");
         const describe_product_wrapper = document.querySelector('.describe_product_wrapper');
+
+        const videos = document.querySelectorAll('.video');
+
+        videos.forEach(video => {
+            video.muted = true;
+            video.play();
+        });
 
         const updateThumbPosition = () => {
             const scrollRatio = gallery.scrollTop / (gallery.scrollHeight - gallery.clientHeight);

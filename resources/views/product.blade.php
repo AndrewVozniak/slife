@@ -11,9 +11,7 @@
         <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right.svg')}}" alt="filter" class="param_image">
         <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">Жіночий одяг</a>
         <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right.svg')}}" alt="filter" class="param_image">
-        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">Куртки</a>
-        <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right.svg')}}" alt="filter" class="param_image">
-        <a href="{{ route('blog', ['locale' => App::currentLocale()]) }}" class="breadcrumb active">Новини</a>
+        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb active">Куртки</a>
     </div>
 
     <div class="product_container">

@@ -18,7 +18,7 @@
                 <div class="title__big">{{__('return_policy.return_and_exchange')}}</div>
                 <div class="info_text">
                     <p style="margin-bottom: 32px">{{__('return_policy.product_did_not_fit')}}
-                        <a href="#" class="red_small">&#34;{{__('return_policy.protection_of_consumer_rights')}}&#34;&#46;
+                        <a href="https://zakon.rada.gov.ua/laws/show/1023-12#Text" target="_blank" class="red_small">&#34;{{__('return_policy.protection_of_consumer_rights')}}&#34;&#46;
                         </a>
                     </p>
 
@@ -35,7 +35,7 @@
                     </ul>
 
                     <p>{{__('return_policy.refuse_to_exchange')}}
-                        <a href="#" class="red_small">&#34;{{__('return_policy.protection_of_consumer_rights')}}&#34;&#46;
+                        <a href="https://zakon.rada.gov.ua/laws/show/1023-12#Text" target="_blank" class="red_small">&#34;{{__('return_policy.protection_of_consumer_rights')}}&#34;&#46;
                         </a>
                     </p>
 
@@ -55,7 +55,7 @@
 
                     <p>{{__('return_policy.cash_back')}}&#46;</p>
                     <p>{{__('return_policy.refund_is_required')}}
-                        <span class="red_small">&#34;{{__('return_policy.return_conditions')}}&#34;&#46;</span></p>
+                        <a href="{{ route('return_policy', ['locale' => App::currentLocale()]) }}" class="red_small">&#34;{{__('return_policy.return_conditions')}}&#34;&#46;</a></p>
                 </div>
             </div>
         </div>
