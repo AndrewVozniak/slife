@@ -20,5 +20,43 @@ return [
         'accessories' => 'Аксесуари',
         'popular' => 'Популярне',
         'sale' => 'Розпродаж',
+    ],
+
+    'dropdown' => [
+        'novelty' => 'Новинки',
+        'clothes' => [
+            'clothes' => 'Одяг',
+            'jackets' => 'Куртки',
+            'cardigans' => 'Кофти',
+            'trousers' => 'Штани',
+            'sports_suits' => 'Спортивні костюми',
+            't-shirts' => 'Футболки',
+            'shorts' => 'Шорти',
+            'thermal_washers' => 'Термобілизна',
+            'underwear' => 'Спідня білизна',
+            'socks' => 'Шкарпетки',
+        ],
+
+        'shoes' => [
+            'shoes' => 'Взуття',
+            'sneakers'  => 'Кросівки',
+            'slippers' => 'Тапочки',
+            'sandals' => 'Сандалі',
+            'training_shoes' => 'Тренувальне взуття',
+        ],
+
+        'accessories' => [
+            'accessories' => 'Аксесуари',
+            'headwears' => 'Головні убори',
+            'bags' => 'Сумки',
+            'backpacks' => 'Рюкзаки',
+            'gloves' => 'Рукавички',
+            'scarves' => 'Шарфи (Баффи)',
+            'sports_accessories' => 'Спортивні аксесуари',
+        ],
+
+        'popular_products' => 'Популярні товари',
+
+        'sales' => 'Розпродаж',
     ]
 ];

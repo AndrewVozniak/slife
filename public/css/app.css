@@ -386,11 +386,14 @@ textarea:active {
     }
 }
 
+
+
 /*********************************   HEADER   *********************************/
 
 .header {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     .header__main {
         display: flex;
@@ -398,7 +401,6 @@ textarea:active {
         justify-content: space-between;
         align-items: center;
         padding-bottom: 20px;
-        border-bottom: 1px solid #1D25571A;
 
         .search_bar {
             display: flex;
@@ -665,6 +667,16 @@ textarea:active {
         }
     }
 
+    .gray_line {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(29, 37, 87, 0.1);
+
+        @media screen and (max-width: 730px) {
+            display: none;
+        }
+    }
+
     .categories {
         display: flex;
         flex-direction: row;
@@ -745,7 +757,6 @@ textarea:active {
                 }
             }
 
-
             &.main {
                 display: flex;
                 flex-direction: row;
@@ -784,6 +795,121 @@ textarea:active {
                 }
             }
         }
+    }
+
+    .dropdown_subMenu {
+        position: absolute;
+        z-index: 1000;
+        top: 100%;
+
+        width: 100vw;
+        height: 350px;
+
+        background-color: var(--white);
+        border-top: 1px solid rgba(29, 37, 87, 0.1);
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: calc(100% - calc((100vw - 1280px) / 2));
+            margin-left: calc((100vw - 1280px) / 2);
+            margin-right: 0;
+        }
+
+        .box_wrapper {
+            padding-left: 20px;
+
+            &:nth-child(1) {
+                padding-left: 0;
+                background-color: #fff;
+
+                .subMenu_item {
+                    &:hover {
+                        background-color: rgba(232, 233, 238, 1);
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                background-color: rgba(232, 233, 238, 1);
+
+                .subMenu_item {
+                    &:hover {
+                        background-color: rgba(225, 226, 232, 1);
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &:last-child {
+                width: 100%;
+                background-color: rgba(225, 226, 232, 1);
+
+                .subMenu_item {
+                    &:hover {
+                        text-decoration: underline;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        .subMenu_box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            min-width: 305px;
+
+            .subMenu_item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+                gap: 15px;
+                padding: 16px 12px;
+
+                border-bottom: 1px solid var(--gray-mobile-line);
+
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                .img_arrow {
+                    width: 12px;
+                }
+            }
+        }
+    }
+
+    .dropdown_subMenu.active {
+        display: block;
+    }
+
+    .dropdown_subSubMenu {
+        display: none;
+        position: absolute;
+        z-index: 1100;
+        top: 100%;
+        left: 505px;
+
+        width: 305px;
+        height: 350px;
+        padding-top: 24px;
+        padding-left: 20px;
+
+        background-color: lightblue;
+        border-top: 1px solid rgba(29, 37, 87, 0.1);
+    }
+
+    .dropdown_subSubMenu.active {
+        display: block;
     }
 
     .menu-toggle {
@@ -894,7 +1020,6 @@ textarea:active {
         }
     }
 
-
     @media screen and (max-width: 930px) {
         .header__main {
             padding: 16px 32px;
@@ -996,7 +1121,6 @@ textarea:active {
         }
     }
 }
-
 
 .header__navbar {
     display: flex;

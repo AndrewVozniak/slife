@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" x-data="{ submenuOpened: false, currentTab: 0 }">
     @include('components.header_top')
 
     <main class="header__main container">
@@ -67,59 +67,58 @@
         </ul>
     </main>
 
+    <div class="gray_line"></div>
+
     <ul class="categories container" id="menu">
-        <li class="category_item main">
-            <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'men']) }}" class="main_item">
+        <li class="category_item main" >
+
+            {{--            *********************************   Men   ************************************--}}
+            <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'men']) }}"
+               class="main_item">
                 <span class="category_link_main">{{ __('header.categories.men') }}</span>
             </a>
-            <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'women']) }}" class="main_item">
+
+            {{--            *********************************   Women   ************************************-- --}}
+            <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'women']) }}"
+               class="main_item"
+            >
                 <span class="category_link_main">{{ __('header.categories.women') }}</span>
             </a>
-            <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'children']) }}" class="main_item">
+
+            {{--            *********************************   Children   ************************************--}}
+            <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'children']) }}"
+               class="main_item">
                 <span class="category_link_main">{{ __('header.categories.children') }}</span>
             </a>
         </li>
+
+
         <li class="category_item">
             <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'new']) }}" class="category_link">{{ __('header.categories.new') }}</a>
         </li>
-        <li class="category_item" x-data="{ open: false }">
-            <div @click="open = !open">
+        <li class="category_item">
+            <div @click="submenuOpened = !submenuOpened; currentTab = 1">
                 <a href="#" class="category_link">
                     {{ __('header.categories.clothes') }}
                 </a>
-                <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': open }">
+                <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': submenuOpened && currentTab === 1 }">
             </div>
-            <ul x-show="open" class="dropdown_menu" @click.outside="open = false" style="display: none;">
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
-                <li><a href="#">Item 3</a></li>
-            </ul>
         </li>
-        <li class="category_item" x-data="{ open: false }">
-            <div @click="open = !open">
+        <li class="category_item">
+            <div @click="submenuOpened = !submenuOpened; currentTab = 2">
                 <a href="#" class="category_link">
                     {{ __('header.categories.shoes') }}
                 </a>
-                <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': open }">
+                <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': submenuOpened && currentTab === 2 }">
             </div>
-            <ul x-show="open" class="dropdown_menu" @click.outside="open = false" style="display: none;">
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
-                <li><a href="#">Item 3</a></li>
-            </ul>
         </li>
-        <li class="category_item" x-data="{ open: false }">
-            <div @click="open = !open">
+        <li class="category_item">
+            <div @click="submenuOpened = !submenuOpened; currentTab = 3">
                 <a href="#" class="category_link">
                     {{ __('header.categories.accessories') }}
                 </a>
-                <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': open }">
+                <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': submenuOpened && currentTab === 3 }">
             </div>
-            <ul x-show="open" class="dropdown_menu" @click.outside="open = false" style="display: none;">
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
-                <li><a href="#">Item 3</a></li>
-            </ul>
         </li>
         <li class="category_item">
             <a href="{{ route('catalog', ['category' => 'popular_items', 'locale' => App::currentLocale()]) }}" class="category_link">{{ __('header.categories.popular') }}</a>
@@ -128,6 +127,113 @@
             <a href="{{ route('catalog', ['category' => 'sale', 'locale' => App::currentLocale()]) }}" class="category_link">{{ __('header.categories.sale') }}</a>
         </li>
     </ul >
+
+    <div class="dropdown_subMenu" id="popup1" x-show="submenuOpened" @click.outside="submenuOpened = false" x-data="{ step2: 0, step3: 0 }">
+        <div class="container">
+            <div class="box_wrapper">
+                <ul class="subMenu_box">
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }}</a></li>
+                    <li class="subMenu_item" @click="step2 = step2 !== 1 ? 1 : 0">
+                        <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.clothes.clothes') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item" @click="step2 = step2 !== 2 ? 2 : 0">
+                        <a href="#"  class="subMenuPopup" data-window="window2">{{ __('header.dropdown.shoes.shoes') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item" @click="step2 = step2 !== 3 ? 3 : 0">
+                        <a href="#" class="subMenuPopup" data-window="window3">{{ __('header.dropdown.accessories.accessories') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                </ul>
+            </div>
+            <div class="box_wrapper" x-show="step2 !== 0">
+                <ul class="subMenu_box" x-show="step2 === 1">
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 1</a></li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                </ul>
+                <ul class="subMenu_box" x-show="step2 === 2">
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 2</a></li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                </ul>
+                <ul class="subMenu_box" x-show="step2 === 3">
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 3</a></li>
+                    <li class="subMenu_item" @click="step3 = step3 !== '3_1' ? '3_1' : 0">
+                        <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.clothes.clothes') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item"  @click="step3 = step3 !== '3_2' ? '3_2' : 0">
+                        <a href="#"  class="subMenuPopup" data-window="window2">{{ __('header.dropdown.shoes.shoes') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item" @click="step3 = step3 !== '3_3' ? '3_3' : 0">
+                        <a href="#" class="subMenuPopup" data-window="window3">{{ __('header.dropdown.accessories.accessories') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                </ul>
+            </div>
+            <div class="box_wrapper" x-show="step3 !== 0">
+                <ul class="subMenu_box" x-show="step3 === '3_1'">
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 3_1</a></li>
+                    <li class="subMenu_item" >
+                        <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.clothes.clothes') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item">
+                        <a href="#"  class="subMenuPopup" data-window="window2">{{ __('header.dropdown.shoes.shoes') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item">
+                        <a href="#" class="subMenuPopup" data-window="window3">{{ __('header.dropdown.accessories.accessories') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                </ul>
+                <ul class="subMenu_box" x-show="step3 === '3_2'">
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 3_2</a></li>
+                    <li class="subMenu_item" >
+                        <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.clothes.clothes') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item">
+                        <a href="#"  class="subMenuPopup" data-window="window2">{{ __('header.dropdown.shoes.shoes') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item">
+                        <a href="#" class="subMenuPopup" data-window="window3">{{ __('header.dropdown.accessories.accessories') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                </ul>
+                <ul class="subMenu_box" x-show="step3 === '3_3'">
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 3_3</a></li>
+                    <li class="subMenu_item" >
+                        <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.clothes.clothes') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item">
+                        <a href="#"  class="subMenuPopup" data-window="window2">{{ __('header.dropdown.shoes.shoes') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item">
+                        <a href="#" class="subMenuPopup" data-window="window3">{{ __('header.dropdown.accessories.accessories') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    </li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </header>
 
 <script>
@@ -135,4 +241,62 @@
         const menu = document.getElementById('menu');
         menu.classList.toggle('hidden');
     }
+
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     const buttons = document.querySelectorAll('.main_item');
+    //     const subMenu = document.querySelectorAll('.dropdown_subMenu');
+    //
+    //     buttons.forEach((button) => {
+    //         const switchover = document.querySelectorAll('.subMenuPopup');
+    //         const subSubMenu = document.querySelectorAll('.dropdown_subSubMenu');
+    //
+    //         button.addEventListener('mouseenter', () => {
+    //             const popupId = button.dataset.popup;
+    //             const popup = document.getElementById(popupId);
+    //
+    //             subMenu.forEach((p) => (p.style.display = 'none'));
+    //
+    //             if (popup) {
+    //                 popup.style.display = 'block';
+    //
+    //                 switchover.forEach((button) => {
+    //                     button.addEventListener('mouseenter', () => {
+    //                         const windowId = button.dataset.window;
+    //                         const currentWindow = document.getElementById(windowId);
+    //
+    //                         subSubMenu.forEach((p) => (p.style.display = 'none'));
+    //
+    //                         if (currentWindow) {
+    //                             currentWindow.style.display = 'block';
+    //                         }
+    //                     });
+    //
+    //                     button.addEventListener('mouseleave', () => {
+    //                         const windowId = button.dataset.window;
+    //                         const currentWindow = document.getElementById(windowId);
+    //
+    //                         if (popup || currentWindow) {
+    //                             currentWindow.style.display = 'none';
+    //                         }
+    //                     });
+    //                 });
+    //             }
+    //         });
+    //
+    //         button.addEventListener('mouseleave', () => {
+    //             const popupId = button.dataset.popup;
+    //             const popup = document.getElementById(popupId);
+    //
+    //             const windowId = button.dataset.window;
+    //             const currentWindow = document.getElementById(windowId);
+    //
+    //             if (popup || currentWindow) {
+    //                 setTimeout(() => {
+    //                     popup.style.display = 'none';
+    //                 }, 4000);
+    //             }
+    //         });
+    //     });
+    // });
+
 </script>
