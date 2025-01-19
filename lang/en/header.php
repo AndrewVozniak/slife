@@ -55,6 +55,15 @@ return [
             'sports_accessories' => 'Sports Accessories',
         ],
 
+        'sports_accessories' => [
+            'socks' => 'Socks',
+            'football_gaiters' => 'Football gaiters',
+            'football_shields' => 'Football shields',
+            'balls' => 'Balls',
+            'goalkeeper_gloves' => 'Goalkeeper gloves',
+            'other_accessories' => 'Other accessories',
+        ],
+
         'popular_products' => 'Popular Products',
 
         'sales' => 'Sale',

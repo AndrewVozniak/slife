@@ -12,7 +12,7 @@ return [
     'clothes' => [
         'clothes' => 'Одежда',
         'jackets' => 'Куртки',
-        'cardigans' => 'Кардиганы',
+        'cardigans' => 'Кофты',
         'trousers' => 'Штаны',
         'sports_suits' => 'Спортивные костюмы',
         't-shirts' => 'Футболки',

@@ -91,8 +91,6 @@
                 <span class="category_link_main">{{ __('header.categories.children') }}</span>
             </a>
         </li>
-
-
         <li class="category_item">
             <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'new']) }}" class="category_link">{{ __('header.categories.new') }}</a>
         </li>
@@ -132,7 +130,7 @@
         <div class="container">
             <div class="box_wrapper">
                 <ul class="subMenu_box">
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }}</a></li>
+                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} </a></li>
                     <li class="subMenu_item" @click="step2 = step2 !== 1 ? 1 : 0">
                         <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.clothes.clothes') }}</a>
                         <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
@@ -151,89 +149,65 @@
             </div>
             <div class="box_wrapper" x-show="step2 !== 0">
                 <ul class="subMenu_box" x-show="step2 === 1">
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 1</a></li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.clothes.jackets') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.clothes.cardigans') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.clothes.trousers') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.clothes.sports_suits') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.clothes.t-shirts') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.clothes.shorts') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.clothes.thermal_washers') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.clothes.underwear') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.clothes.socks') }}</a></li>
                 </ul>
                 <ul class="subMenu_box" x-show="step2 === 2">
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 2</a></li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.shoes.sneakers') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.shoes.slippers') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.shoes.sandals') }}</a></li>
+                    <li class="subMenu_item step2"><a href="#">{{ __('header.dropdown.shoes.training_shoes') }}</a></li>
                 </ul>
                 <ul class="subMenu_box" x-show="step2 === 3">
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 3</a></li>
-                    <li class="subMenu_item" @click="step3 = step3 !== '3_1' ? '3_1' : 0">
-                        <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.clothes.clothes') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    <li class="subMenu_item step2" @click="step3 = step3 !== '3_1' ? '3_1' : 0">
+                        <a href="#">{{ __('header.dropdown.accessories.headwears') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_2.svg')}}" alt="arrow" class="img_arrow2">
                     </li>
-                    <li class="subMenu_item"  @click="step3 = step3 !== '3_2' ? '3_2' : 0">
-                        <a href="#"  class="subMenuPopup" data-window="window2">{{ __('header.dropdown.shoes.shoes') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    <li class="subMenu_item step2" @click="step3 = step3 !== '3_2' ? '3_2' : 0">
+                        <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.accessories.bags') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_2.svg')}}" alt="arrow" class="img_arrow2">
                     </li>
-                    <li class="subMenu_item" @click="step3 = step3 !== '3_3' ? '3_3' : 0">
-                        <a href="#" class="subMenuPopup" data-window="window3">{{ __('header.dropdown.accessories.accessories') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
+                    <li class="subMenu_item step2">
+                        <a href="#"  class="subMenuPopup" data-window="window2">{{ __('header.dropdown.accessories.backpacks') }}</a>
                     </li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                    <li class="subMenu_item step2" >
+                        <a href="#" class="subMenuPopup" data-window="window3">{{ __('header.dropdown.accessories.scarves') }}</a>
+                    </li>
+                    <li class="subMenu_item step2" @click="step3 = step3 !== '3_3' ? '3_3' : 0">
+                        <a href="#">{{ __('header.dropdown.accessories.sports_accessories') }}</a>
+                        <img src="{{asset('storage/images/icons/arrow_2.svg')}}" alt="arrow" class="img_arrow2">
+                    </li>
                 </ul>
             </div>
             <div class="box_wrapper" x-show="step3 !== 0">
                 <ul class="subMenu_box" x-show="step3 === '3_1'">
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 3_1</a></li>
-                    <li class="subMenu_item" >
-                        <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.clothes.clothes') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
-                    </li>
-                    <li class="subMenu_item">
-                        <a href="#"  class="subMenuPopup" data-window="window2">{{ __('header.dropdown.shoes.shoes') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
-                    </li>
-                    <li class="subMenu_item">
-                        <a href="#" class="subMenuPopup" data-window="window3">{{ __('header.dropdown.accessories.accessories') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
-                    </li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                    <li class="subMenu_item step3"><a href="#"></a></li>
+                    <li class="subMenu_item step3"><a href="#"></a></li>
+                    <li class="subMenu_item step3"><a href="#"></a></li>
                 </ul>
                 <ul class="subMenu_box" x-show="step3 === '3_2'">
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 3_2</a></li>
-                    <li class="subMenu_item" >
-                        <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.clothes.clothes') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
-                    </li>
-                    <li class="subMenu_item">
-                        <a href="#"  class="subMenuPopup" data-window="window2">{{ __('header.dropdown.shoes.shoes') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
-                    </li>
-                    <li class="subMenu_item">
-                        <a href="#" class="subMenuPopup" data-window="window3">{{ __('header.dropdown.accessories.accessories') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
-                    </li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                    <li class="subMenu_item step3"><a href="#"></a></li>
+                    <li class="subMenu_item step3"><a href="#"></a></li>
+                    <li class="subMenu_item step3"><a href="#"></a></li>
                 </ul>
                 <ul class="subMenu_box" x-show="step3 === '3_3'">
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.novelty') }} 3_3</a></li>
-                    <li class="subMenu_item" >
-                        <a href="#" class="subMenuPopup" data-window="window1">{{ __('header.dropdown.clothes.clothes') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
-                    </li>
-                    <li class="subMenu_item">
-                        <a href="#"  class="subMenuPopup" data-window="window2">{{ __('header.dropdown.shoes.shoes') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
-                    </li>
-                    <li class="subMenu_item">
-                        <a href="#" class="subMenuPopup" data-window="window3">{{ __('header.dropdown.accessories.accessories') }}</a>
-                        <img src="{{asset('storage/images/icons/arrow_right_blue.svg')}}" alt="arrow" class="img_arrow">
-                    </li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.popular_products') }}</a></li>
-                    <li class="subMenu_item"><a href="#">{{ __('header.dropdown.sales') }}</a></li>
+                    <li class="subMenu_item step3"><a href="#">{{ __('header.dropdown.sports_accessories.socks') }}</a></li>
+                    <li class="subMenu_item step3"><a href="#">{{ __('header.dropdown.sports_accessories.football_gaiters') }}</a></li>
+                    <li class="subMenu_item step3"><a href="#">{{ __('header.dropdown.sports_accessories.football_shields') }}</a></li>
+                    <li class="subMenu_item step3"><a href="#">{{ __('header.dropdown.sports_accessories.balls') }}</a></li>
+                    <li class="subMenu_item step3"><a href="#">{{ __('header.dropdown.sports_accessories.goalkeeper_gloves') }}</a></li>
+                    <li class="subMenu_item step3"><a href="#">{{ __('header.dropdown.sports_accessories.other_accessories') }}</a></li>
                 </ul>
             </div>
         </div>
     </div>
-
 </header>
 
 <script>

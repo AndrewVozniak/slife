@@ -27,7 +27,7 @@ return [
         'clothes' => [
             'clothes' => 'Одежда',
             'jackets' => 'Куртки',
-            'cardigans' => 'Кардиганы',
+            'cardigans' => 'Кофты',
             'trousers' => 'Штаны',
             'sports_suits' => 'Спортивные костюмы',
             't-shirts' => 'Футболки',
@@ -53,6 +53,15 @@ return [
             'gloves' => 'Перчатки',
             'scarves' => 'Шарфы (Баффы)',
             'sports_accessories' => 'Спортивные аксессуары',
+        ],
+
+        'sports_accessories' => [
+            'socks' => 'Носки',
+            'football_gaiters' => 'Гетры футбольные',
+            'football_shields' => 'Щитки футбольные',
+            'balls' => 'Мячи',
+            'goalkeeper_gloves' => 'Вратарские перчатки',
+            'other_accessories' => 'Другие аксессуары',
         ],
 
         'popular_products' => 'Популярные товары',

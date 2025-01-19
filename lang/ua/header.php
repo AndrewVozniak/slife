@@ -55,6 +55,15 @@ return [
             'sports_accessories' => 'Спортивні аксесуари',
         ],
 
+        'sports_accessories' => [
+            'socks' => 'Шкарпетки',
+            'football_gaiters' => 'Гетри футбольні',
+            'football_shields' => 'Щитки футбольні',
+            'balls' => 'М\'ячі',
+            'goalkeeper_gloves' => 'Воротарські рукавиці',
+            'other_accessories' => 'Інші аксесуари',
+        ],
+
         'popular_products' => 'Популярні товари',
 
         'sales' => 'Розпродаж',
