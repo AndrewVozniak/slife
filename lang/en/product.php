@@ -46,6 +46,15 @@ return [
         'product_quality' => 'The quality of our products is confirmed by a conclusion from the State Sanitary and Epidemiological Service of Ukraine.',
         'obtaining_certificate' => 'To obtain a certificate for any product, please send a request to our email, our managers will gladly provide all necessary information.',
         'popup_cashback_title' => 'Get cashback on purchases',
+        'popup_cashback_main_info' => 'For registered users only: for each purchase you receive cashback in the form of points that can be used for discounts on subsequent purchases',
+        'popup_cashback_how' =>'How it works',
+        'popup_cashback_text1' => 'For every 5000 UAH of order, 1% cashback in the form of points is accrued',
+        'popup_cashback_text2' => 'For example, when purchasing for UAH 10,000, cashback is 2%, for UAH 15,000, cashback is 3%, and so on',
+        'popup_cashback_text3' => 'Maximum cashback — 5%',
+        'popup_cashback_text4' => 'Points are deducted immediately after they are used',
+        'popup_cashback_info' =>'Register and receive bonuses for purchases',
+
+
     ],
 
     'reviews' => 'Reviews',

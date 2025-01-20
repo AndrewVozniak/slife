@@ -112,11 +112,26 @@
                              class="img_24">
                     </div>
 
-{{--                    <div class="popup_cashback" x-show="popupCashback">--}}
-{{--                        <div class="popup_cashback_title">--}}
-{{--                            <span><b>{{__('product.details.popup_cashback_title')}}&excl;<b></b></span>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    <div class="popup_cashback" x-show="popupCashback">
+                        <div class="popup_cashback_title">
+                            <p>{{__('product.details.popup_cashback_title')}}&excl;</p>
+                        </div>
+                        <div class="popup_cashback_text">
+                            <span>{{__('product.details.popup_cashback_main_info')}}&#46;</span>
+                        </div>
+                        <div class="popup_cashback_title" style="margin-top: 8px">
+                            <span>{{__('product.details.popup_cashback_how')}}&#58;</span>
+                        </div>
+                        <ul>
+                            <li>{{__('product.details.popup_cashback_text1')}}&#46;</li>
+                            <li>{{__('product.details.popup_cashback_text2')}}&#46;</li>
+                            <li>{{__('product.details.popup_cashback_text3')}}&#46;</li>
+                            <li>{{__('product.details.popup_cashback_text4')}}&#46;</li>
+                        </ul>
+                        <div class="popup_cashback_text">
+                            <span>{{__('product.details.popup_cashback_info')}}&excl;</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
