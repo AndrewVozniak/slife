@@ -91,10 +91,12 @@
                 <span class="category_link_main">{{ __('header.categories.children') }}</span>
             </a>
         </li>
-        <li class="category_item">
+
+        <li class="category_item category_item_desktop">
             <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'new']) }}" class="category_link">{{ __('header.categories.new') }}</a>
         </li>
-        <li class="category_item">
+
+        <li class="category_item category_item_desktop">
             <div @click="submenuOpened = !submenuOpened; currentTab = 1">
                 <a href="#" class="category_link">
                     {{ __('header.categories.clothes') }}
@@ -102,7 +104,8 @@
                 <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': submenuOpened && currentTab === 1 }">
             </div>
         </li>
-        <li class="category_item">
+
+        <li class="category_item category_item_desktop">
             <div @click="submenuOpened = !submenuOpened; currentTab = 2">
                 <a href="#" class="category_link">
                     {{ __('header.categories.shoes') }}
@@ -110,7 +113,8 @@
                 <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': submenuOpened && currentTab === 2 }">
             </div>
         </li>
-        <li class="category_item">
+
+        <li class="category_item category_item_desktop">
             <div @click="submenuOpened = !submenuOpened; currentTab = 3">
                 <a href="#" class="category_link">
                     {{ __('header.categories.accessories') }}
@@ -118,11 +122,214 @@
                 <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': submenuOpened && currentTab === 3 }">
             </div>
         </li>
-        <li class="category_item">
+        <li class="category_item category_item_desktop">
             <a href="{{ route('catalog', ['category' => 'popular_items', 'locale' => App::currentLocale()]) }}" class="category_link">{{ __('header.categories.popular') }}</a>
         </li>
-        <li class="category_item">
+        <li class="category_item category_item_desktop">
             <a href="{{ route('catalog', ['category' => 'sale', 'locale' => App::currentLocale()]) }}" class="category_link">{{ __('header.categories.sale') }}</a>
+        </li>
+
+        <li class="main_mobile_container">
+           <div class="category_mob_wrapper">
+               <div class="category_mob_item_step1">
+                   <a href="{{ route('catalog', ['locale' => App::currentLocale(), 'category' => 'new']) }}" class="mob_link">
+                       {{ __('header.categories.new') }}
+                   </a>
+               </div>
+           </div>
+
+           <div class="category_mob_wrapper" x-data="{ openClothes: false }">
+               <div class="category_mob_item_step1" x-on:click="openClothes = ! openClothes">
+                   <a href="#" class="mob_link">
+                        {{ __('header.dropdown.clothes.clothes') }}
+                   </a>
+                   <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': openClothes }">
+                </div>
+
+               <div class="category_mob_wrapper" x-show="openClothes">
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                            {{ __('header.dropdown.clothes.jackets') }}
+                       </a>
+                   </div>
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                            {{ __('header.dropdown.clothes.cardigans') }}
+                       </a>
+                    </div>
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                            {{ __('header.dropdown.clothes.trousers') }}
+                       </a>
+                   </div>
+
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                            {{ __('header.dropdown.clothes.sports_suits') }}
+                       </a>
+                   </div>
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                            {{ __('header.dropdown.clothes.t-shirts') }}
+                       </a>
+                   </div>
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                            {{ __('header.dropdown.clothes.shorts') }}
+                       </a>
+                   </div>
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                            {{ __('header.dropdown.clothes.thermal_washers') }}
+                       </a>
+                   </div>
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                            {{ __('header.dropdown.clothes.underwear') }}
+                       </a>
+                   </div>
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                            {{ __('header.dropdown.clothes.socks') }}
+                       </a>
+                   </div>
+               </div>
+           </div>
+
+           <div class="category_mob_wrapper" x-data="{ openShoes: false }">
+               <div class="category_mob_item_step1" x-on:click="openShoes = ! openShoes">
+                   <a href="#" class="mob_link">
+                       {{ __('header.dropdown.shoes.shoes') }}
+                   </a>
+                   <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': openShoes }">
+               </div>
+
+               <div class="category_mob_wrapper" x-show="openShoes">
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                           {{ __('header.dropdown.shoes.sneakers') }}
+                       </a>
+                    </div>
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                           {{ __('header.dropdown.shoes.slippers') }}
+                       </a>
+                   </div>
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                           {{ __('header.dropdown.shoes.sandals') }}
+                       </a>
+                   </div>
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                           {{ __('header.dropdown.shoes.training_shoes') }}
+                       </a>
+                   </div>
+               </div>
+            </div>
+
+           <div class="category_mob_wrapper" x-data="{ openAccessories: false }">
+               <div class="category_mob_item_step1" x-on:click="openAccessories = ! openAccessories">
+                   <a href="#" class="mob_link">
+                       {{ __('header.categories.accessories') }}
+                   </a>
+                   <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180': openAccessories }">
+               </div>
+
+               <div class="category_mob_wrapper" x-show="openAccessories" x-data="{ openSubMenu: false }">
+                   <div class="category_mob_item_step2" x-on:click="openSubMenu = ! openSubMenu">
+                       <a href="#" class="mob_link">
+                           {{ __('header.dropdown.accessories.headwears') }}
+                       </a>
+                       <img src="{{asset('storage/images/icons/arrow_down_blue.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180':  openSubMenu}">
+                   </div>
+
+                   <div class="category_mob_wrapper" x-show="openSubMenu">
+                       <ul>
+                           <li class="category_mob_item_step3"></li>
+                       </ul>
+                   </div>
+               </div>
+
+               <div class="category_mob_wrapper" x-show="openAccessories" x-data="{ openSubMenu: false }">
+                   <div class="category_mob_item_step2" x-on:click="openSubMenu = ! openSubMenu">
+                       <a href="#" class="mob_link">
+                           {{ __('header.dropdown.accessories.bags') }}
+                       </a>
+                       <img src="{{asset('storage/images/icons/arrow_down_blue.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180':  openSubMenu}">
+                   </div>
+
+                   <div class="category_mob_wrapper" x-show="openSubMenu">
+                       <ul>
+                           <li class="category_mob_item_step3"></li>
+                       </ul>
+                   </div>
+               </div>
+
+               <div class="category_mob_wrapper" x-show="openAccessories">
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                           {{ __('header.dropdown.accessories.backpacks') }}
+                       </a>
+                   </div>
+               </div>
+
+               <div class="category_mob_wrapper" x-show="openAccessories">
+                   <div class="category_mob_item_step2">
+                       <a href="#" class="mob_link">
+                           {{ __('header.dropdown.accessories.scarves') }}
+                       </a>
+                   </div>
+               </div>
+
+               <div class="category_mob_wrapper" x-show="openAccessories" x-data="{ openSubMenu: false }">
+                   <div class="category_mob_item_step2" x-on:click="openSubMenu = ! openSubMenu">
+                       <a href="#" class="mob_link">
+                           {{ __('header.dropdown.accessories.sports_accessories') }}
+                       </a>
+                       <img src="{{asset('storage/images/icons/arrow_down_blue.svg')}}" alt="arrow_down" class="arrow_down" :class="{ 'rotate-180':  openSubMenu}">
+                   </div>
+
+                   <div class="category_mob_wrapper" x-show="openSubMenu">
+                       <ul>
+                           <li class="category_mob_item_step3">
+                               <a href="#">{{ __('header.dropdown.sports_accessories.socks') }}</a>
+                           </li>
+                           <li class="category_mob_item_step3">
+                               <a href="#">{{ __('header.dropdown.sports_accessories.football_gaiters') }}</a>
+                           </li>
+                           <li class="category_mob_item_step3">
+                               <a href="#">{{ __('header.dropdown.sports_accessories.football_shields') }}</a>
+                           </li>
+                           <li class="category_mob_item_step3">
+                               <a href="#">{{ __('header.dropdown.sports_accessories.balls') }}</a>
+                           </li>
+                           <li class="category_mob_item_step3">
+                               <a href="#">{{ __('header.dropdown.sports_accessories.goalkeeper_gloves') }}</a>
+                           </li>
+                           <li class="category_mob_item_step3">
+                               <a href="#">{{ __('header.dropdown.sports_accessories.other_accessories') }}</a>
+                           </li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+
+            <div class="category_mob_wrapper">
+                <div class="category_mob_item_step1">
+                    <a href="{{ route('catalog', ['category' => 'popular_items', 'locale' => App::currentLocale()]) }}" class="category_link">
+                        {{ __('header.categories.popular') }}
+                    </a>
+                </div>
+            </div>
+
+            <div class="category_mob_wrapper">
+                <div class="category_mob_item_step1">
+                    <a href="{{ route('catalog', ['category' => 'sale', 'locale' => App::currentLocale()]) }}" class="category_link">
+                        {{ __('header.categories.sale') }}
+                    </a>
+                </div>
+            </div>
         </li>
     </ul >
 

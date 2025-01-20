@@ -672,7 +672,7 @@ textarea:active {
         height: 1px;
         background-color: rgba(29, 37, 87, 0.1);
 
-        @media screen and (max-width: 730px) {
+        @media screen and (max-width: 1320px) {
             display: none;
         }
     }
@@ -773,6 +773,7 @@ textarea:active {
                     width: 100%;
                     background-color: #E8E9EE;
                     border: 1px solid rgba(29, 37, 87, 0.1);
+                    border-radius: 0;
                     transition: background-color 0.3s;
 
                     &:nth-child(1) {
@@ -792,10 +793,23 @@ textarea:active {
                         background-color: #040927;
                         color: var(--white);
                     }
+
+                    @media screen and (max-width: 768px) {
+                        &:nth-child(1) {
+                            border-radius: 0;
+                        }
+
+                        &:nth-child(3) {
+                            border-radius: 0;
+                        }
+                    }
                 }
             }
         }
 
+        .main_mobile_container {
+            display: none;
+        }
     }
 
     .dropdown_subMenu {
@@ -965,13 +979,14 @@ textarea:active {
                 align-items: center;
 
                 width: 100%;
-                padding: 15px 0;
+                padding: 0;
 
                 border-bottom: 1px solid var(--gray-mobile-line);
 
                 font-size: 16px;
                 font-weight: 400;
                 cursor: pointer;
+
 
                 &:nth-child(1) {
                    border: none;
@@ -984,9 +999,9 @@ textarea:active {
 
                 .main {
                     display: flex;
-                    gap: 0;
-                    width: calc(100% / 3);
 
+                    width: calc(100% / 3);
+                    gap: 0;
 
                     .main_item {
                         display: flex;
@@ -1017,6 +1032,90 @@ textarea:active {
                 .category_link_main {
                     font-size: 14px;
                     font-weight: 700;
+                }
+            }
+
+            .category_item_desktop {
+                display: none;
+            }
+
+            .main_mobile_container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                width: 100%;
+
+                .category_mob_wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    width: 100%;
+
+                    font-family: Roboto, sans-serif;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 19px;
+
+                    color: var(--black);
+                    text-decoration: none;
+
+                    .category_mob_item_step1 {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 8px;
+
+                        width: 100%;
+                        padding: 20px 15px;
+                        border-bottom: 1px solid #EEEFF2;
+
+                        cursor: pointer;
+
+                        &:hover {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .category_mob_item_step2 {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 8px;
+
+                        width: 100%;
+                        padding: 16px 15px;
+                        border-bottom: 1px solid #EEEFF2;
+
+                        cursor: pointer;
+
+                        &:hover {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .category_mob_item_step3 {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 8px;
+
+                        width: 100%;
+                        padding: 16px 15px;
+                        border-bottom: none;
+
+                        cursor: pointer;
+
+                        &:hover {
+                            font-weight: 600;
+                        }
+                    }
                 }
             }
         }
