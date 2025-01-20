@@ -17,7 +17,7 @@ return [
         'cashback2' => 'Cashback Percentage',
         'pay_with_bonus' => 'pay with bonuses',
         'login' => 'Login',
-        'currency' => 'UAH',
+        'money' => 'UAH',
         'on_account' => 'on bonus account',
         'bonus' => 'bonuses',
         'hurry_up' => 'Hurry Up',
@@ -45,6 +45,7 @@ return [
         'we_care' => 'We care about our customers, so only original products from leading manufacturers such as Nike, Puma, New Balance, etc., with appropriate certificates, are presented in our stores and on the website.',
         'product_quality' => 'The quality of our products is confirmed by a conclusion from the State Sanitary and Epidemiological Service of Ukraine.',
         'obtaining_certificate' => 'To obtain a certificate for any product, please send a request to our email, our managers will gladly provide all necessary information.',
+        'popup_cashback_title' => 'Get cashback on purchases',
     ],
 
     'reviews' => 'Reviews',

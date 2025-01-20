@@ -1,10 +1,10 @@
 <section class="new_products_wrapper">
     <div class="container breadcrumbs">
-        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">Головна</a>
+        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">{{__('catalog.breadcrumbs.home')}}</a>
         <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right.svg')}}" alt="filter" class="param_image">
-        <a href="{{ route('catalog', ['category' => 'women', 'locale' => App::currentLocale()]) }}" class="breadcrumb">Жіночий одяг</a>
+        <a href="{{ route('catalog', ['category' => 'women', 'locale' => App::currentLocale()]) }}" class="breadcrumb">{{__('catalog.breadcrumbs.women')}}</a>
         <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right.svg')}}" alt="filter" class="param_image">
-        <a href="{{ route('catalog', ['category' => 'women', 'subcategory' => 'jackets', 'locale' => App::currentLocale()]) }}" class="breadcrumb active">Куртки</a>
+        <a href="{{ route('catalog', ['category' => 'women', 'subcategory' => 'jackets', 'locale' => App::currentLocale()]) }}" class="breadcrumb active">{{__('catalog.breadcrumbs.jackets')}}</a>
     </div>
 
 

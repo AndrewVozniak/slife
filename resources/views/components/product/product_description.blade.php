@@ -94,7 +94,7 @@
 
         <div class="gray_line line_hidden"></div>
 
-        <div class="product_info_box price_box">
+        <div class="product_info_box price_box" >
             <div class="product_title_options_box">
                 <span>{{__('product.product_describe.price')}}</span>
             </div>
@@ -105,12 +105,18 @@
                     <span class="new_price">1 750 &#8372;</span>
                 </div>
 
-                <div class="cashback">
+                <div class="cashback" x-data="{ popupCashback: false }">
                     <span class="cashback_text">{{__('product.product_describe.cashback')}}</span>
-                    <div class="img_24_box">
+                    <div class="img_24_box" x-on:click="popupCashback = ! popupCashback">
                         <img src="{{asset('storage/images/icons/iconamoon_attention-circle-fill.svg')}}" alt="icon"
                              class="img_24">
                     </div>
+
+{{--                    <div class="popup_cashback" x-show="popupCashback">--}}
+{{--                        <div class="popup_cashback_title">--}}
+{{--                            <span><b>{{__('product.details.popup_cashback_title')}}&excl;<b></b></span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -131,7 +137,7 @@
                     </div>
 
                     <div class="pay_with_bonus_box">
-                        <span class="bonus_red_text">0 {{__('product.product_describe.currency')}}</span>
+                        <span class="bonus_red_text">0 {{__('product.product_describe.money')}}</span>
                         <span class="pay_with_bonus_text_small">{{__('product.product_describe.on_account')}}</span>
                     </div>
                 </div>

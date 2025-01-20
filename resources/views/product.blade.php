@@ -7,11 +7,11 @@
     @include('components.header')
 
     <div class="breadcrumbs container">
-        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">Головна</a>
+        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">{{__('catalog.breadcrumbs.home')}}</a>
         <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right.svg')}}" alt="filter" class="param_image">
-        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">Жіночий одяг</a>
+        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb">{{__('catalog.breadcrumbs.women')}}</a>
         <img src="{{asset('storage/images/icons/breadcrumbs_arrow_right.svg')}}" alt="filter" class="param_image">
-        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb active">Куртки</a>
+        <a href="{{ route('home', ['locale' => App::currentLocale()])}}" class="breadcrumb active">{{__('catalog.breadcrumbs.jackets')}}</a>
     </div>
 
     <div class="product_container">

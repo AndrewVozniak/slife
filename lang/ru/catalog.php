@@ -55,4 +55,10 @@ return [
         'apply_filter' => 'Применить фильтры',
         'reset_filter' => 'Сбросить фильтры',
     ],
+
+    'breadcrumbs' => [
+        'home' => 'Главная',
+        'women' => 'Женская одежда',
+        'jackets' => 'Куртки',
+    ],
 ];

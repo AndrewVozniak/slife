@@ -55,4 +55,10 @@ return [
         'apply_filter' => 'Apply Filters',
         'reset_filter' => 'Reset Filters',
     ],
+
+    'breadcrumbs' => [
+        'home' => 'Home',
+        'women' => 'Women\'s clothing',
+        'jackets' => 'Jackets',
+    ],
 ];
