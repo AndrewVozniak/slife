@@ -2479,7 +2479,7 @@ textarea:active {
                         background-color: var(--red);
 
                         .product_card_button_img {
-                            path {
+                            & path {
                                 fill: var(--white);
                             }
                         }
@@ -2508,7 +2508,7 @@ textarea:active {
                     transition: 0.5s ease;
 
                     .product_card_button_img {
-                        path {
+                        & path {
                             fill: rgba(0, 0, 0, 1);
                             transition: 0.5s ease;
                         }
