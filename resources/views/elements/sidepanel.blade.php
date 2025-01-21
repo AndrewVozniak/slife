@@ -17,7 +17,6 @@
                     <a href="#"  class="side_panel_form_title">{{__('catalog.side_panel.categories')}}</a>
                     <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" alt="arrow_down" class="param_dropdown_arrow">
                 </div>
-                <br>
                 <div class="side_panel_checkbox_box"  id="filterCategory" style="display: none;">
                     <label  class="checkbox-container">{{__('catalog.side_panel.t-shirts')}}
                         <input type="checkbox" name="category_of_product1" id="category_of_product1" value="t-shirts">
@@ -47,7 +46,6 @@
                     <a href="#"  class="side_panel_form_title">{{__('catalog.side_panel.brand')}}</a>
                     <img src="{{asset('storage/images/icons/sort_by_dropdown_arrow.svg')}}" alt="arrow_down" class="param_dropdown_arrow">
                 </div>
-                <br>
                 <div class="side_panel_checkbox_box" id="filterBrand" style="display: none;">
                     <label  class="checkbox-container">The North Face
                         <input type="checkbox" name="brand1" id="brand1" value="the_North_Face">

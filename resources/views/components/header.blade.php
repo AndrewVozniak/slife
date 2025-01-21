@@ -10,12 +10,12 @@
             <input type="text" class="search_bar__input" placeholder="{{ __('header.search_goods') }}">
 
             <div class="search_bar__elems">
-                <div class="dropdown_menu">
+               <!-- <div class="dropdown_menu">
                     <div class="trigger">
                         <p class="trigger__text">{{ __('header.choose_category') }}</p>
                         <img src="{{asset('storage/images/icons/arrow_down.svg')}}" alt="arrow_down" class="arrow_down">
                     </div>
-                </div>
+                </div> -->
 
                 <button type="submit" class="search_bar__button">
                     <img src="{{asset('storage/images/icons/search.svg')}}" alt="search">

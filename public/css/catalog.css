@@ -298,7 +298,6 @@
         align-items: flex-start;
 
         width: 50%;
-        gap: 25px;
 
         @media (min-width: 1025px) {
             width: 50%;
@@ -360,7 +359,6 @@
 
             width: 100%;
             padding: 0 0 24px 0;
-            gap: 25px;
 
             .side_panel_form_box {
                 display: flex;
@@ -370,8 +368,8 @@
                 position: relative;
 
                 width: 100%;
+                padding: 0 20px;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-                padding: 0 20px 0 0;
 
                 .side_panel_form_title_wrapper {
                     display: flex;
@@ -380,6 +378,7 @@
 
                     width: 100%;
                     gap: 12px;
+                    padding: 24px 0;
 
                     cursor: pointer;
 
