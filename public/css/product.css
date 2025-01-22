@@ -105,6 +105,12 @@
             .img {
                 width: calc(100% - 8px);
                 object-fit: cover;
+                cursor: pointer;
+                overflow: hidden;
+            }
+
+            .zoomable {
+                transition: transform 0.3s ease;
             }
 
             .half {
@@ -380,16 +386,24 @@
                             color: var(--gray-text);
                         }
 
-                        .popup_cashback {
+                        .img_24_box {
+                            cursor: pointer;
+                        }
+
+                        .img_24_box:hover .popup_cashback {
                             display: flex;
+                        }
+
+                        .popup_cashback {
+                            display: none;
                             flex-direction: column;
 
                             justify-content: flex-start;
                             align-items: center;
                             position: absolute;
                             z-index: 100;
-                            top: 100%;
-                            right: -5px;
+                            top: calc(100% - 30px);
+                            right: 0;
 
                             width: 610px;
                             padding: 15px;

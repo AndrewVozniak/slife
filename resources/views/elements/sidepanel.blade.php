@@ -205,7 +205,7 @@
             document.getElementById("sidePanel").style.width = "100%";
         }
         else if (width < 768) {
-            document.getElementById("sidePanel").style.width = "40%";
+            document.getElementById("sidePanel").style.width = "50%";
         } else if (width < 1024) {
             document.getElementById("sidePanel").style.width = "50%";
         } else if (width < 1440) {

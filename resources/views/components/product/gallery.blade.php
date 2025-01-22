@@ -14,15 +14,25 @@
     </div>
 
     <section class="gallery">
-        <img src="{{ asset('/storage/images/product/1.png') }}" alt="" class="img half">
-        <img src="{{ asset('/storage/images/product/2.png') }}" alt="" class="img half">
-        <img src="{{ asset('/storage/images/product/3.png') }}" alt="" class="img">
-        <img src="{{ asset('/storage/images/product/4.png') }}" alt="" class="img half">
+        <div class="img half">
+            <img src="{{ asset('/storage/images/product/1.png') }}" alt="" class="zoomable">
+        </div>
+        <div class="img half">
+            <img src="{{ asset('/storage/images/product/2.png') }}" alt="" class="zoomable">
+        </div>
+        <div class="img">
+            <img src="{{ asset('/storage/images/product/3.png') }}" alt="" class="zoomable">
+        </div>
+        <div class="img half">
+            <img src="{{ asset('/storage/images/product/4.png') }}" alt="" class="zoomable">
+        </div>
         <video playsinline loop preload="auto" class="img half video" width="640">
             <source src="{{ asset('/storage/videos/goods/11MB__No_logos__16x9_Running_Final_30secs_.mp4') }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <img src="{{ asset('/storage/images/product/6.png') }}" alt="" class="img">
+        <div class="img">
+            <img src="{{ asset('/storage/images/product/6.png') }}" alt="" class="zoomable">
+        </div>
     </section>
 </div>
 
@@ -38,6 +48,36 @@
         const upButton = document.querySelector(".scroll-trigger.up");
         const downButton = document.querySelector(".scroll-trigger.down");
         const describe_product_wrapper = document.querySelector('.describe_product_wrapper');
+        const zoomables = document.querySelectorAll('.zoomable');
+
+        zoomables.forEach(image => {
+            image.addEventListener('click', () => {
+                // Если изображение увеличено, возвращаем его к исходному состоянию
+                if (image.style.transform === 'scale(1.5)') {
+                    image.style.transform = 'scale(1)';  // Возвращаем в исходное состояние
+                    image.style.zIndex = '';  // Сбрасываем z-index
+                } else {
+                    // Если изображение не увеличено, увеличиваем его
+                    image.style.transform = 'scale(1.5)';
+                    image.style.zIndex = '10';  // Поднимаем изображение на передний план
+                }
+            });
+
+            // логика для перемещения изображения при наведении
+            image.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = image.getBoundingClientRect();
+                const x = (e.clientX - left) / width * 100;
+                const y = (e.clientY - top) / height * 100;
+                image.style.transformOrigin = `${x}% ${y}%`;
+            });
+
+            // Сбрасываем трансформацию при уходе курсора с изображения
+            image.addEventListener('mouseleave', () => {
+                image.style.transformOrigin = '';
+                image.style.transform = '';
+            });
+        });
+
 
         const videos = document.querySelectorAll('.video');
 

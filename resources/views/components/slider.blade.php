@@ -1,6 +1,10 @@
 <div class="slider"
      x-data="sliderComponent()"
      x-init="init()"
+     @touchstart="startTouch($event)"
+     @touchmove="moveTouch($event)"
+     @touchend="endTouch($event)"
+     @touchcancel="endTouch($event)"
      :style="`background-image: url('${images[currentIndex]}')`">
     <div class="slider_content">
         <div class="slider_text_wrapper">
@@ -35,7 +39,6 @@
             </svg>
         </button>
 
-
         <!-- right arrow -->
         <button class="slider_arrow slider_arrow_right" @click="nextSlide">
             <svg width="17"
@@ -61,7 +64,6 @@
     </div>
 </div>
 
-
 <script>
     function sliderComponent() {
         return {
@@ -71,28 +73,56 @@
                 "{{ asset('storage/images/models/gym_suit.png') }}"
             ],
             currentIndex: 0,
+            touchStartX: 0,
+            touchEndX: 0,
 
+            // Переход на следующий слайд
             nextSlide() {
                 this.currentIndex = (this.currentIndex + 1) % this.images.length;
             },
 
+            // Переход на предыдущий слайд
             prevSlide() {
                 this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
             },
 
+            // Перейти к слайду по индексу
             goToSlide(index) {
                 this.currentIndex = index;
             },
 
+            // Старт авто переключения слайдов
             startAutoSlide() {
                 setInterval(() => {
                     this.nextSlide();
                 }, 10000);
             },
 
+            // Инициализация слайдера
             init() {
                 this.currentIndex = 0;
                 this.startAutoSlide();
+            },
+
+            // Начало свайпа
+            startTouch(event) {
+                this.touchStartX = event.touches[0].clientX;
+            },
+
+            // Движение свайпа
+            moveTouch(event) {
+                this.touchEndX = event.touches[0].clientX;
+            },
+
+            // Завершение свайпа
+            endTouch(event) {
+                if (this.touchStartX - this.touchEndX > 50) {
+                    // Свайп влево
+                    this.nextSlide();
+                } else if (this.touchEndX - this.touchStartX > 50) {
+                    // Свайп вправо
+                    this.prevSlide();
+                }
             }
         }
     }
