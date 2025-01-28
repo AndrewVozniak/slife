@@ -9,7 +9,7 @@
                 </div>
                 <div class="item2">
                     <p class="mailing_list__title"> {{ __('footer.subscribe') }}</p>
-                    <p class="mailing_list__title"> {{ __('footer.newsletter') }}</p>
+                    <p class="mailing_list__title"> {{ __('footer.newsletter') }}&#33;</p>
                 </div>
                 <div class="item3">
                     <form action="#" method="post" class="mailing_list__form">

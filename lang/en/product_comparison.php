@@ -1,17 +1,17 @@
 <?php
 
 return [
-    'product_comparison' => 'Product Comparison',
+    'product_comparison' => 'Items on the list',
     'products_in_the_list' => 'Products in the list',
     'windbreaker' => 'Windbreaker',
     't-shirt' => 'T-shirt',
     'shorts' => 'Shorts',
-    'photo' => 'Product Photo',
+    'photo' => 'Item Photo',
     'price' => 'Price',
     'article' => 'Article',
     'description' => 'Short Description',
     'description_text' => 'The Puma Fit Move Woven Jacket creates a stylish sporty look for workouts. It is made from a high-tech fabric that wicks sweat away from the skin for quick evaporation...',
-    'producer' => 'Producer',
+    'producer' => 'Manufacturer',
     'rating' => 'Rating',
     'reviews' => 'reviews',
     'reviews_2' => 'review',
@@ -19,4 +19,5 @@ return [
     'nylon' => 'nylon',
     'polyester' => 'polyester',
     'add_to_cart' => 'Add to Cart',
+    'home' => 'Home',
 ];

@@ -5,10 +5,10 @@ return [
     'product_did_not_fit' => 'If for any reason the purchased product did not fit — no problem. In our online store, the customer has the full right to exchange the product under the Consumer Rights Protection Law.',
     'protection_of_consumer_rights' => 'Consumer Rights Protection',
     'general_warranty' => 'General warranty. Exchange terms',
-    'exchange_is_carried_out' => 'Exchange is carried out within 14 days from the date of order receipt. The general warranty for the purchased product is 30 days.',
+    'exchange_is_carried_out' => 'Exchange is carried out within 14 days from the date of order receipt. The general warranty for the purchased product is 30 days',
 
     'return_of_goods' => 'Conditions for return of goods of appropriate quality',
-    'client_has_the_right' => 'The customer has the right to return the order under the following conditions:',
+    'client_has_the_right' => 'The customer has the right to return the order under the following conditions',
     'product_was_not_used' => 'the product was not used, no signs of usage such as scratches, dirt, wear, and other defects are present',
     'original_packaging' => 'on clothing (footwear, accessories) the tags, labels, and original packaging are intact',
     'products_kept' => 'the product retains its consumer characteristics',

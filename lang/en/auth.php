@@ -18,30 +18,29 @@ return [
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
     'sign_in' => [
-        'title' => 'Sign in',
-        'registration' => 'Registration',
+        'title' => 'Log in',
+        'registration' => 'New customer?',
         'email' => 'Your Email or phone number',
         'password' => 'Your password',
         'log_in' => 'Log in',
         'forgot_password' => 'Forgot password',
-        'log_in_using' => 'Log in using',
+        'log_in_using' => 'Log in with',
     ],
 
     'forgot_password' => [
-        'title' => 'Sign in',
-        'registration' => 'Registration',
+        'title' => 'Log in',
+        'registration' => 'New customer?',
         'reset_password' => 'Reset password',
-        'email' => 'Enter your email address or phone number below and we will send you an email with instructions on
-            how to create a new password',
+        'email' => 'Enter your email address below and we will email you a link to reset your password',
         'your_email' => 'Your Email or phone number',
     ],
 
     'sign_up' => [
-        'title' => 'Sign in',
-        'registration' => 'Registration',
-        'register_using' => 'Register using',
+        'title' => 'Log in',
+        'registration' => 'Create An Account',
+        'register_using' => 'Sign up',
         'email' => 'Your Email or phone number',
-        'name' => 'Your surname, name',
+        'name' => 'Last name, First name',
         'password' => 'Create a password',
         'confirm_password' => 'Confirm your password',
         'date_of_birth' => 'Date of birth',

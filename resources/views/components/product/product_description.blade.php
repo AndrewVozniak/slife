@@ -169,7 +169,7 @@
         <div class="btn_wrapper">
             @include('elements.btn_product_quantity')
 
-            <button class="add_to_cart_button">Додати в кошик</button>
+            <button class="add_to_cart_button">{{__('product.product_describe.add_to_cart')}}</button>
         </div>
 
         <p>&#42; {{__('product.product_describe.quantity')}}</p>

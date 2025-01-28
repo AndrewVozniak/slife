@@ -3,8 +3,8 @@
 // lang/ru/footer.php
 
 return [
-    'subscribe' => 'Подписаться на',
-    'newsletter' => 'новостную рассылку',
+    'subscribe' => 'Подпишитесь на',
+    'newsletter' => 'новинки и акции',
     'email' => 'Ваш Email',
 
     'main' => [

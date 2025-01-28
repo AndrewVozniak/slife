@@ -30,8 +30,8 @@ return [
 
     'sort_by' => [
         "sort_text" => "Sort By",
-        "recommended" => "Recommended",
-        "by_rating" => "By Rating",
+        "recommended" => "Relevance",
+        "by_rating" => "Top-Rated",
         "by_reviews_count" => "By Number of Reviews",
         "by_price_asc" => "Price (Low to High)",
         "by_price_desc" => "Price (High to Low)",

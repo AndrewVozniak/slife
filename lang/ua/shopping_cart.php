@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'home' => 'Головна',
+    'basket' => 'Кошик',
     'receiver' => 'Отримувач',
     'name' => 'Ім\'я',
     'surname' => 'Прізвище',

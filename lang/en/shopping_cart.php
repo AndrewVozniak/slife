@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'home' => 'Home',
+    'basket' => 'Your bag',
     'receiver' => 'Receiver',
     'name' => 'Name',
     'surname' => 'Surname',
@@ -30,17 +32,17 @@ return [
     'to' => 'to',
     'days' => 'days',
 
-    'delivery' => 'Delivery',
-    'country_for_delivery' => 'Country for delivery',
+    'delivery' => 'Total Delivery',
+    'country_for_delivery' => 'Country',
 
-    'bonus' => 'Bonuses',
+    'bonus' => 'Points',
     'on_your_account' => 'On your account',
-    'bonuses' => 'bonuses',
+    'bonuses' => 'points',
 
     'login' => 'Login',
-    'to_pay_bonus' => 'to pay with bonuses',
+    'to_pay_bonus' => 'to pay with points',
 
-    'enter_bonus' => 'Enter number of bonuses',
+    'enter_bonus' => 'Enter number of points',
 
     'dont_call_me_to_confirm_order' => 'Do not call me to confirm order',
 
@@ -52,9 +54,9 @@ return [
     'info_msg' => 'Nova Poshta commission: 20 UAH + 2% of the amount',
     'privat24' => 'Privat24',
 
-    'your_basket' => 'Your basket',
+    'your_basket' => 'Your bag',
     'about' => "approximately",
-    'total' => 'Total cost',
+    'total' => 'Total',
     'price' => 'Price',
 
     'confirm_order' => 'Confirm order',

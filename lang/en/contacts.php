@@ -8,7 +8,7 @@ return [
 
     'from' => 'from',
     'to' => 'to',
-    'sunday_day_off' => 'Sunday: day off',
+    'sunday_day_off' => 'Sunday: off',
 
     'mark_description_text' => 'Ternopil region, Kopychyntsi, Chortkivska str., 64, 48-260.',
     'view_on_map' => 'View on map',

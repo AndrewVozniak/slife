@@ -3,8 +3,8 @@
 // lang/ua/footer.php
 
 return [
-    'subscribe' => 'Підписатись на',
-    'newsletter' => 'новинну розсилку',
+    'subscribe' => 'Підпишіться на',
+    'newsletter' => 'новинки та акції',
     'email' => 'Ваш Email',
 
     'main' => [

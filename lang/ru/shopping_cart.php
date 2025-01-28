@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'home' => 'Главная',
+    'basket' => 'Корзина',
     'receiver' => 'Получатель',
     'name' => 'Имя',
     'surname' => 'Фамилия',

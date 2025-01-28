@@ -51,7 +51,7 @@
                     <p>{{__('delivery.for_customers_abroad')}}&#46;</p>
                     <p class="delivery_importantly">
                         <span class="text_700_16_red">{{__('delivery.importantly')}}&#58;</span>
-                        {{__('delivery.free delivery')}}&#46;
+                        {{__('delivery.free_delivery')}}&#46;
                     </p>
 
                     <p class="text_500_16_black">{{__('delivery.self_pickup_conditions')}}&#58;</p>

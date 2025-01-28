@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'favorite' => 'Favorite products',
+    'favorite' => 'Favorites',
 ];
