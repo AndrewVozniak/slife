@@ -2256,18 +2256,7 @@ textarea:active {
             }
 
             .slider_arrow, .slider_arrow_left, .slider_arrow_right {
-                /*display: none;*/
-                opacity: 0;
-                height: 100%;
-                width: 50%;
-            }
-
-            .slider_arrow_left {
-                left: 0;
-            }
-
-            .slider_arrow_right {
-                right: 0;
+                display: none;
             }
         }
 

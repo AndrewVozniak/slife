@@ -26,7 +26,7 @@
 
     <!-- Изображения, только если не видео -->
     <template x-if="currentIndex !== videoIndex">
-        <img :src="images[currentIndex]" class="product_slider_image" style="position: absolute"/>
+        <img :src="images[currentIndex]" class="product_slider_image" style="position: absolute; height: 100%; width: 100%; object-fit: cover"/>
     </template>
 </div>
 
