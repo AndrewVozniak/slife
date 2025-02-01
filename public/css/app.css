@@ -618,10 +618,13 @@ textarea:active {
             }
 
             .search_bar {
-                width: 55%;
-                min-width: 250px;
+                display: flex;
+
+                width: calc(100% - 30px);
                 padding: 10px 12px;
                 margin-bottom: 16px;
+                margin-left: auto;
+                margin-right: auto;
 
                 .search_bar__input {
                     font-size: 14px;
@@ -631,7 +634,7 @@ textarea:active {
 
             .user_navigation {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
 
                 width: 100%;

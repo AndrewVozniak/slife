@@ -57,7 +57,7 @@ return [
     'your_basket' => 'Your bag',
     'about' => "approximately",
     'total' => 'Total',
-    'price' => 'Price',
+    'price' => 'Total Item',
 
     'confirm_order' => 'Confirm order',
     'max_quantity' => 'Maximum quantity',
