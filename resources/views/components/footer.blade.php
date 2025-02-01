@@ -129,7 +129,7 @@
                     </div>
                 </div>
                 <div class="item8">
-                    <span> {{ __('footer.main.join') }} &#33;</span>
+                    <span class="item8_text"> {{ __('footer.main.join') }} &#33;</span>
                 </div>
                 <div class="item9">
                     <div class="footer_img_messenger_box">

@@ -162,6 +162,7 @@
 
                 .form_change_personal_data_box {
                     gap: 12px;
+                    margin-bottom: 75px;
 
                     .input_change_data_wrapper {
                         gap: 12px;
@@ -291,6 +292,7 @@
 
                         font-size: 14px;
                         text-transform: uppercase;
+
 
                         @media screen and (max-width: 560px) {
                             max-width: 100%;

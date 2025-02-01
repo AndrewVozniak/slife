@@ -43,8 +43,12 @@
 
 .new_products_wrapper {
     flex-direction: column;
-    padding-top: 48px;
+    padding-top: 32px;
     gap: 48px;
+
+    @media screen and (max-width: 1320px) {
+        padding-top: 16px;
+    }
 }
 
 .heading {

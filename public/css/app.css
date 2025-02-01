@@ -400,7 +400,17 @@ textarea:active {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
         padding-bottom: 20px;
+        gap: 90px;
+
+        @media screen and (max-width: 1320px) {
+            gap: 45px;
+        }
+
+        @media screen and (max-width: 760px) {
+            gap: 20px;
+        }
 
         .search_bar {
             display: flex;
@@ -538,7 +548,7 @@ textarea:active {
 
         @media screen and (max-width: 1090px) {
             .search_bar {
-                width: 386px;
+                width: calc(100% - 550px);
 
                 .search_bar__input {
                     font-size: 12px;
@@ -565,7 +575,8 @@ textarea:active {
             }
 
             .search_bar {
-                width: 286px;
+                width: calc(100% - 500px);
+                min-width: 286px;
                 height: 45px;
                 padding: 10px 16px;
                 border-radius: 8px;
@@ -674,10 +685,6 @@ textarea:active {
         width: 100%;
         height: 1px;
         background-color: rgba(29, 37, 87, 0.1);
-
-        @media screen and (max-width: 1320px) {
-            display: none;
-        }
     }
 
     .categories {
@@ -1758,6 +1765,14 @@ textarea:active {
             font-weight: 500;
             line-height: 34px;
             text-align: left;
+
+            .item8_text {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                height: 55px;
+            }
         }
         .item9 {grid-area: join_in_networks;
             justify-content: end;
