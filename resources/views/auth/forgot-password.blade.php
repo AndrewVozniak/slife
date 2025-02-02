@@ -12,7 +12,9 @@
             </a>
 
             <a href="{{ route('home', ['locale' => App::currentLocale() ]) }}" class="close_btn__wrapper">
-                <span class="close_btn">x</span>
+                <div class="close_btn">
+                    <img src="{{ asset('/storage/images/icons/iconoir_plus1.svg') }}" alt="close" class="close_img">
+                </div>
             </a>
         </div>
 

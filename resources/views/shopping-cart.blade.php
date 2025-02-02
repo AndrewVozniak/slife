@@ -305,6 +305,7 @@
                 </div>
             </div>
 
+{{--            Mobile       --}}
             <aside class="cart mobile_only">
                 <div class="cart_header">
                     <h2 class="cart__title">{{ __('shopping_cart.your_basket') }}</h2>
@@ -319,7 +320,18 @@
 
                             <div class="item__info">
                                 <div class="basic_info">
-                                    <span class="item__title">Вітровка New Balance Jacket NB Athletics</span>
+                                    <div class="item__title_box">
+                                        <div class="item__title_mobile">
+                                            <span>Вітровка New Balance Jacket NB Athletics </span>
+                                        </div>
+
+                                        <div class="attention_wrapper_mobile">
+                                            <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="attention" class="attention">
+                                            <div class="open_box">
+                                                <span class="placeholder__text">{{ __('shopping_cart.max_quantity') }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="price">
                                         <span class="item__new_price">1550 ₴</span>
                                     </div>
@@ -333,13 +345,6 @@
                                             <span class="counter_item max">2</span>
                                             <hr class="vertical_line">
                                             <img src="{{ asset('/storage/images/icons/plus.svg') }}" alt="plus" class="counter_item disabled">
-                                        </div>
-
-                                        <div class="attention_wrapper">
-                                            <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="attention" class="attention">
-                                            <div class="placeholder">
-                                                <span class="placeholder__text">{{ __('shopping_cart.max_quantity') }}</span>
-                                            </div>
                                         </div>
                                     </div>
 
@@ -355,7 +360,12 @@
 
                             <div class="item__info">
                                 <div class="basic_info">
-                                    <span class="item__title">Вітровка New Balance Jacket NB Athletics</span>
+                                    <div class="item__title_box">
+                                        <div class="item__title_mobile">
+                                            <span>Вітровка New Balance Jacket NB Athletics </span>
+                                        </div>
+                                    </div>
+
                                     <div class="price">
                                         <span class="item__old_price">1750 ₴</span>
                                         <span class="item__new_price">1550 ₴</span>
@@ -385,7 +395,12 @@
 
                             <div class="item__info">
                                 <div class="basic_info">
-                                    <span class="item__title">Вітровка New Balance Jacket NB Athletics</span>
+                                    <div class="item__title_box">
+                                        <div class="item__title_mobile">
+                                            <span>Вітровка New Balance Jacket NB Athletics </span>
+                                        </div>
+                                    </div>
+
                                     <div class="price">
                                         <span class="item__old_price">1750 ₴</span>
                                         <span class="item__new_price">1550 ₴</span>
@@ -529,6 +544,7 @@
             </div>
         </form>
 
+{{--        Desktop   --}}
         <aside class="cart">
             <div class="cart_header">
                 <h2 class="cart__title">{{ __('shopping_cart.your_basket') }}</h2>

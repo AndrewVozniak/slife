@@ -13,7 +13,7 @@
 
         <div class="number_and_price_box_wrapper">
             <div class="number_and_price_box">
-                <span class="text_700_16_black">&#215; 1</span>
+                <span class="text_700_16_black">x1</span>
             </div>
 
             <div class="number_and_price_box">
@@ -32,7 +32,7 @@
 
         <div class="number_and_price_box_wrapper_mobile">
             <div class="number_and_price_box_mobile">
-                <span class="number_and_price_text_mobile">&#215; 1</span>
+                <span class="number_and_price_text_mobile">x1</span>
             </div>
 
             <div class="number_and_price_box_mobile">
