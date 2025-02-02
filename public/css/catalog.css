@@ -294,6 +294,7 @@
     color: var(--black);
     overflow-x: hidden;
     transition: 0.5s;
+    box-shadow: 0 16px 32px -8px rgba(12, 12, 13, 0.4);
 
     .side_panel_box {
         display: flex;
@@ -321,7 +322,7 @@
 
         @media (max-width: 576px) {
             width: 100%;
-            padding: 0 15px;
+            padding: 0;
         }
 
         .filter_and_close_btn_box {
@@ -376,8 +377,16 @@
                 position: relative;
 
                 width: 100%;
-                padding: 0 20px;
+                padding: 0 20px 0 0;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+                @media screen and (max-width: 768px) {
+                    padding: 0 20px;
+                }
+
+                @media screen and (max-width: 576px) {
+                    padding: 0 15px;
+                }
 
                 .side_panel_form_title_wrapper {
                     display: flex;
@@ -478,10 +487,12 @@
                     margin-bottom: 12px;
 
                     background-color: var(--slider-gray);
+                    border-radius: 100px;
 
                     .slider_track {
                         height: 100%;
                         position: absolute;
+                        border-radius: 100px;
 
                         background-color: var(--red);
                     }
@@ -495,6 +506,8 @@
                         background: none;
                         pointer-events: none;
                         appearance: none;
+                        outline: none;
+                        border-color: transparent;
                     }
 
                     & input[type="range"]::-webkit-slider-thumb {
@@ -627,13 +640,13 @@
 
             .apply_filter_btn {
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
 
                 width: 99.9%;
                 height: 70px;
                 padding: 24px 28px;
-                gap: 5px;
+                gap: 16px;
 
                 background-color: var(--slider-gray);
                 color: var(--black);
@@ -665,7 +678,7 @@
             }
 
             .apply_filter_btn:hover {
-                outline: solid 1px var(--dark-blue) ;
+                color: var(--red);
             }
 
             .white_filter_btn {

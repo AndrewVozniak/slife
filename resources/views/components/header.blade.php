@@ -28,7 +28,12 @@
 
             <li class="user_navigation__item">
                 <a href="{{ route('login', ['locale' => App::currentLocale()])  }}" class="user_navigation__link">
-                    <img src="{{asset('storage/images/icons/user.svg')}}" alt="user">
+{{--                    <img src="{{asset('storage/images/icons/user.svg')}}" alt="user">--}}
+                    @if(Route::currentRouteName() === 'myBonuses' || Route::currentRouteName() === 'orderHistory' || Route::currentRouteName() === 'personalData')
+                        <img src="{{asset('storage/images/icons/user-active.svg')}}" alt="user">
+                    @else
+                        <img src="{{asset('storage/images/icons/user.svg')}}" alt="user">
+                    @endif
                 </a>
             </li>
 
@@ -37,7 +42,12 @@
             <li class="user_navigation__item">
                 <a href="{{ route('compareProduct', ['locale' => App::currentLocale()])  }}" class="user_navigation__link">
                     <p class="count">0</p>
-                    <img src="{{asset('storage/images/icons/pajamas_comparison.svg')}}" alt="comparison">
+{{--                    <img src="{{asset('storage/images/icons/pajamas_comparison.svg')}}" alt="comparison">--}}
+                    @if(Route::currentRouteName() === 'compareProduct')
+                        <img src="{{asset('storage/images/icons/pajamas_comparison-active.svg')}}" alt="comparison">
+                    @else
+                        <img src="{{asset('storage/images/icons/pajamas_comparison.svg')}}" alt="comparison">
+                    @endif
                 </a>
             </li>
 
@@ -46,7 +56,12 @@
             <li class="user_navigation__item">
                 <a href="{{ route('favorite', ['locale' => App::currentLocale()]) }}" class="user_navigation__link">
                     <p class="count">0</p>
-                    <img src="{{asset('storage/images/icons/solar_heart-outline.svg')}}" alt="favorite items" class="custom_image_1">
+{{--                    <img src="{{asset('storage/images/icons/solar_heart-outline.svg')}}" alt="favorite items" class="custom_image_1">--}}
+                    @if(Route::currentRouteName() === 'favorite')
+                        <img src="{{asset('storage/images/icons/solar_heart-outline-active.svg')}}" alt="favorite items" class="custom_image_1">
+                    @else
+                        <img src="{{asset('storage/images/icons/solar_heart-outline.svg')}}" alt="favorite items" class="custom_image_1">
+                    @endif
                 </a>
             </li>
 
@@ -55,7 +70,11 @@
             <li class="user_navigation__item">
                 <a href="{{ route('shoppingCart', ['locale' => App::currentLocale()]) }}" class="user_navigation__link">
                     <p class="count">0</p>
-                    <img src="{{asset('storage/images/icons/solar_cart-3-outline.svg')}}" alt="shopping cart" class="custom_image_2">
+                    @if(Route::currentRouteName() === 'shoppingCart')
+                        <img src="{{asset('storage/images/icons/solar_cart-3-outline-active.svg')}}" alt="shopping cart" class="custom_image_2">
+                    @else
+                        <img src="{{asset('storage/images/icons/solar_cart-3-outline.svg')}}" alt="shopping cart" class="custom_image_2">
+                    @endif
                 </a>
             </li>
 

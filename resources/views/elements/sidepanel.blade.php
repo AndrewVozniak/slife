@@ -258,11 +258,20 @@
     }
 
     function setArea() {
-        let rangeWidth = Math.max(0, ((maxVal.value - minVal.value) / (sliderMaxValue - sliderMinValue)) * 100 - 2);
-        let rangeLeft = ((minVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue)) * 100 + 0.5;
+        // let rangeWidth = Math.max(0, ((maxVal.value - minVal.value) / (sliderMaxValue - sliderMinValue)) * 100 - 2);
+        // let rangeLeft = ((minVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue)) * 100 + 0.5;
+        //
+        // range.style.left = rangeLeft + "%";
+        // range.style.width = rangeWidth + "%";
 
-        range.style.left = rangeLeft + "%";
-        range.style.width = rangeWidth + "%";
+        let leftPositionOfMinPrice = ((minVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue)) * 100;
+        let rightPositionOfMaxPrice = 100 - ((maxVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue)) * 100;
+
+        leftPositionOfMinPrice = leftPositionOfMinPrice - 0.2;
+        rightPositionOfMaxPrice = rightPositionOfMaxPrice - 0.2;
+
+        range.style.left = leftPositionOfMinPrice + "%";
+        range.style.right = rightPositionOfMaxPrice + "%";
     }
 
     function setMinInput() {
