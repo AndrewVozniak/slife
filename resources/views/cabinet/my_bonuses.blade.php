@@ -13,21 +13,25 @@
         <a href="{{ url()->current() }}" class="breadcrumb active">Користувач</a>
     </div>
 
-    <div class="container">
-        <div class="content_wrapper">
-            @include('components.cabinet.menu', ['activeTab' => 'my_bonuses'])
+    <div class="content_wrapper personal_date_ext_wrapper">
+        <div class="container personal_date_ext_wrapper">
+            <div class="container cabinet-mb">
+                <div class="personal_data_wrapper">
+                    @include('components.cabinet.menu', ['activeTab' => 'my_bonuses'])
 
-            <div class="content">
-                <h1 class="heading">{{ __('bonuses_and_order_history.bonuses.bonuses') }}</h1>
+                    <div class="content">
+                        <h1 class="heading">{{ __('bonuses_and_order_history.bonuses.bonuses') }}</h1>
 
-                <div class="bonuses__wrapper">
-                    <span class="bonuses__title">{{ __('bonuses_and_order_history.bonuses.on_your_account') }}&#58;</span>
-                    <span class="bonuses__value"><span class="red">256</span> {{ __('bonuses_and_order_history.bonuses.bonuses_amount') }}</span>
-                </div>
+                        <div class="bonuses__wrapper">
+                            <span class="bonuses__title">{{ __('bonuses_and_order_history.bonuses.on_your_account') }}&#58;</span>
+                            <span class="bonuses__value"><span class="red">256</span> {{ __('bonuses_and_order_history.bonuses.bonuses_amount') }}</span>
+                        </div>
 
-                <div class="description">
-                    <p class="desc__title">{{ __('bonuses_and_order_history.bonuses.bonuses_calculated') }}&#63;</p>
-                    <p class="desc__text">{{ __('bonuses_and_order_history.bonuses.bonuses_calculated_text') }}&#46;</p>
+                        <div class="description">
+                            <p class="desc__title">{{ __('bonuses_and_order_history.bonuses.bonuses_calculated') }}&#63;</p>
+                            <p class="desc__text">{{ __('bonuses_and_order_history.bonuses.bonuses_calculated_text') }}&#46;</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

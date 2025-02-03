@@ -20,7 +20,6 @@
     width: 100%;
     gap: 20px;
     margin-top: 50px;
-    margin-bottom: 120px;
 
     .personal_data_change_box {
         display: flex;
@@ -171,7 +170,7 @@
 
                 .form_change_personal_data_box {
                     gap: 12px;
-                    margin-bottom: 75px;
+                    margin-bottom: 75px !important;
 
                     .input_change_data_wrapper {
                         gap: 12px;
@@ -984,5 +983,12 @@
                 }
             }
         }
+    }
+}
+
+
+.cabinet-mb {
+    @media screen and (max-width: 1320px) {
+        margin-bottom: 80px !important;
     }
 }

@@ -581,6 +581,11 @@ textarea:active {
                 padding: 10px 16px;
                 border-radius: 8px;
 
+                @media screen and (max-width: 320px) {
+                    min-width: unset;
+                    max-width: 250px !important;
+                }
+
                 .search_bar__elems {
                     .search_bar__button {
                         width: 24px;
@@ -636,6 +641,10 @@ textarea:active {
                 margin-bottom: 16px;
                 margin-left: auto;
                 margin-right: auto;
+
+                @media screen and (max-width: 320px) {
+                    max-width: 250px !important;
+                }
 
                 .search_bar__input {
                     font-size: 14px;
@@ -3379,5 +3388,15 @@ textarea:active {
     }
 }
 
+.desktop_only {
+    @media screen and (max-width: 1080px) {
+        display: none !important;
+    }
+}
 
+.tablet_only {
+    @media screen and (min-width: 1081px) {
+        display: none !important;
+    }
+}
 

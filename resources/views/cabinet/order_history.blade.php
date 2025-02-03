@@ -13,9 +13,9 @@
         <a href="{{ url()->current() }}" class="breadcrumb active">Користувач</a>
     </div>
 
-    <div class="content_wrapper">
+    <div class="content_wrapper personal_date_ext_wrapper">
         <div class="container">
-            <div class="personal_data_wrapper">
+            <div class="personal_data_wrapper cabinet-mb">
 
                 @include('components.cabinet.menu', ['activeTab' => 'order_history'])
 
