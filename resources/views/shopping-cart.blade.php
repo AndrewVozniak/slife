@@ -321,9 +321,7 @@
                             <div class="item__info">
                                 <div class="basic_info">
                                     <div class="item__title_box">
-                                        <div class="item__title_mobile">
-                                            <span>Вітровка New Balance Jacket NB Athletics </span>
-                                        </div>
+                                        <div class="item__title_mobile">Вітровка New Balance Jacket NB Athletics </div>
 
                                         <div class="attention_wrapper_mobile">
                                             <img src="{{ asset('/storage/images/icons/attention.svg') }}" alt="attention" class="attention">
@@ -361,9 +359,7 @@
                             <div class="item__info">
                                 <div class="basic_info">
                                     <div class="item__title_box">
-                                        <div class="item__title_mobile">
-                                            <span>Вітровка New Balance Jacket NB Athletics </span>
-                                        </div>
+                                        <span class="item__title_mobile">Вітровка New Balance Jacket NB Athletics </span>
                                     </div>
 
                                     <div class="price">
@@ -396,9 +392,7 @@
                             <div class="item__info">
                                 <div class="basic_info">
                                     <div class="item__title_box">
-                                        <div class="item__title_mobile">
-                                            <span>Вітровка New Balance Jacket NB Athletics </span>
-                                        </div>
+                                        <span class="item__title_mobile">Вітровка New Balance Jacket NB Athletics </span>
                                     </div>
 
                                     <div class="price">
@@ -439,6 +433,18 @@
                             <span class="summary__text bold">{{ __('shopping_cart.total') }}</span>
                             <span class="summary__value bold">4270 ₴</span>
                         </div>
+                    </div>
+
+                    <div class="delivery_text_wrapper">
+                        <p class="delivery_text">
+                            {{ __('shopping_cart.delivery_text_message') }}
+
+                            <span class="delivery_text_inside">
+                                {{ __('shopping_cart.delivery_text_about') }}
+                            </span>
+
+                            {{ __('shopping_cart.delivery_text_you_pay') }}
+                        </p>
                     </div>
                 </div>
             </aside>
@@ -663,6 +669,18 @@
                         <span class="summary__text bold">{{ __('shopping_cart.total') }}</span>
                         <span class="summary__value bold">4270 ₴</span>
                     </div>
+                </div>
+
+                <div class="delivery_text_wrapper">
+                    <p class="delivery_text">
+                        {{ __('shopping_cart.delivery_text_message') }}
+
+                        <span class="delivery_text_inside">
+                            {{ __('shopping_cart.delivery_text_about') }}
+                        </span>
+
+                        {{ __('shopping_cart.delivery_text_you_pay') }}
+                    </p>
                 </div>
             </div>
         </aside>

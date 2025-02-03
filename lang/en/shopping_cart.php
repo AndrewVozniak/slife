@@ -61,4 +61,8 @@ return [
 
     'confirm_order' => 'Confirm order',
     'max_quantity' => 'Maximum quantity',
+
+    'delivery_text_message' => 'We are pleased to announce that when ordering goods for an amount of',
+    'delivery_text_about' => 'over 2000 hryvnias, delivery will be absolutely free for you!',
+    'delivery_text_you_pay' => 'You only pay for the cost of the goods, and you receive delivery as a gift from us.',
 ];

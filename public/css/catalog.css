@@ -112,12 +112,12 @@
                     .param_dropdown_menu {
                         border-radius: 12px;
 
-                        li:first-child {
+                        & li:first-child {
                             border-top-left-radius: 12px;
                             border-top-right-radius: 12px;
                         }
 
-                        li:last-child {
+                        & li:last-child {
                             border-bottom-left-radius: 12px;
                             border-bottom-right-radius: 12px;
                         }
@@ -662,6 +662,20 @@
 
                     @media screen and (max-width: 300px) {
                         font-size: 13px;
+                    }
+                }
+
+                .reset_filter_text {
+                    font-family: Roboto, sans-serif;
+                    font-size: 16px;
+                    font-weight: 200;
+                    line-height: 23px;
+                    text-transform: uppercase;
+                    color: var(--black);
+
+                    @media screen and (max-width: 780px) {
+                        font-size: 14px;
+                        line-height: 20px;
                     }
                 }
 

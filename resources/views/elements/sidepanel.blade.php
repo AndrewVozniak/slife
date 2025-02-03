@@ -156,7 +156,7 @@
             </button>
 
             <button class="apply_filter_btn white_filter_btn">
-                <span class="apply_filter_text">
+                <span class="reset_filter_text ">
                      {{__('catalog.side_panel.reset_filter')}}
                 </span>
                 <hr class="vertical_line">
