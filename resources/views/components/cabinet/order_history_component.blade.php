@@ -349,7 +349,7 @@
 
                 <div class="img_24_box">
                     <img
-                        :class="{ 'rotate-180': openedTab === 1 }"
+                        :class="{ 'rotate-180': openedTab === 2 }"
                         src="{{asset('storage/images/icons/material-symbols-light_keyboard-arrow-up.svg')}}"
                         alt="icon"
                         class="img_24 transition-transform duration-200"
@@ -363,13 +363,13 @@
                 </div>
 
                 <div>
-                    <span class="order_history_sent sent_active" :class="openedTab === 1 ? 'active' : ''">1795 &#8372;</span>
+                    <span class="order_history_sent sent_active" :class="openedTab === 2 ? 'active' : ''">1795 &#8372;</span>
                 </div>
             </div>
 
             <!-- Delivery Opened Content mobile version-->
 
-            <template x-if="openedTab === 1">
+            <template x-if="openedTab === 2">
                 <div class="order_details_mobile">
                     <div class="delivery_box_mobile">
                         <div class="order_history_line" >
@@ -574,7 +574,7 @@
 
                 <div class="img_24_box">
                     <img
-                        :class="{ 'rotate-180': openedTab === 1 }"
+                        :class="{ 'rotate-180': openedTab === 3 }"
                         src="{{asset('storage/images/icons/material-symbols-light_keyboard-arrow-up.svg')}}"
                         alt="icon"
                         class="img_24 transition-transform duration-200"
@@ -588,13 +588,13 @@
                 </div>
 
                 <div>
-                    <span class="order_history_sent sent_active" :class="openedTab === 1 ? 'active' : ''">1795 &#8372;</span>
+                    <span class="order_history_sent sent_active" :class="openedTab === 3 ? 'active' : ''">1795 &#8372;</span>
                 </div>
             </div>
 
             <!-- Delivery Opened Content mobile version-->
 
-            <template x-if="openedTab === 1">
+            <template x-if="openedTab === 3">
                 <div class="order_details_mobile">
                     <div class="delivery_box_mobile">
                         <div class="order_history_line" >

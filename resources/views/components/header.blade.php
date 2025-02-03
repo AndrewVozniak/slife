@@ -58,7 +58,7 @@
                     <p class="count">0</p>
 {{--                    <img src="{{asset('storage/images/icons/solar_heart-outline.svg')}}" alt="favorite items" class="custom_image_1">--}}
                     @if(Route::currentRouteName() === 'favorite')
-                        <img src="{{asset('storage/images/icons/solar_heart-outline-active.svg')}}" alt="favorite items" class="custom_image_1">
+                        <img src="{{asset('storage/images/icons/solar_heart-outline-red.svg')}}" alt="favorite items" class="custom_image_1">
                     @else
                         <img src="{{asset('storage/images/icons/solar_heart-outline.svg')}}" alt="favorite items" class="custom_image_1">
                     @endif
@@ -71,7 +71,7 @@
                 <a href="{{ route('shoppingCart', ['locale' => App::currentLocale()]) }}" class="user_navigation__link">
                     <p class="count">0</p>
                     @if(Route::currentRouteName() === 'shoppingCart')
-                        <img src="{{asset('storage/images/icons/solar_cart-3-outline-active.svg')}}" alt="shopping cart" class="custom_image_2">
+                        <img src="{{asset('storage/images/icons/solar_cart-3-outline-red.svg')}}" alt="shopping cart" class="custom_image_2">
                     @else
                         <img src="{{asset('storage/images/icons/solar_cart-3-outline.svg')}}" alt="shopping cart" class="custom_image_2">
                     @endif
