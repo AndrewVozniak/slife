@@ -368,43 +368,91 @@
     let arrowMonth = document.getElementById('arrow_month');
     let arrowYear = document.getElementById('arrow_year');
 
-    day.onclick = function () {
+    // Функция для скрытия всех списков
+    function hideAllLists() {
+        listDay.classList.add('hide_day');
+        arrowDay.classList.remove('rotate_arrow');
+        listMonth.classList.add('hide_month');
+        arrowMonth.classList.remove('rotate_arrow');
+        listYear.classList.add('hide_year');
+        arrowYear.classList.remove('rotate_arrow');
+    }
+
+    day.onclick = function (e) {
+        e.stopPropagation();
+        // скрываем остальные дропдауны
+        listMonth.classList.add('hide_month');
+        arrowMonth.classList.remove('rotate_arrow');
+        listYear.classList.add('hide_year');
+        arrowYear.classList.remove('rotate_arrow');
+        // переключаем текущий
         listDay.classList.toggle('hide_day');
         arrowDay.classList.toggle('rotate_arrow');
     }
 
-    month.onclick = function () {
+    month.onclick = function (e) {
+        e.stopPropagation();
+        listDay.classList.add('hide_day');
+        arrowDay.classList.remove('rotate_arrow');
+        listYear.classList.add('hide_year');
+        arrowYear.classList.remove('rotate_arrow');
         listMonth.classList.toggle('hide_month');
         arrowMonth.classList.toggle('rotate_arrow');
     }
 
-    year.onclick = function () {
+    year.onclick = function (e) {
+        e.stopPropagation();
+        listDay.classList.add('hide_day');
+        arrowDay.classList.remove('rotate_arrow');
+        listMonth.classList.add('hide_month');
+        arrowMonth.classList.remove('rotate_arrow');
         listYear.classList.toggle('hide_year');
         arrowYear.classList.toggle('rotate_arrow');
     }
 
-    for (optionDay of optionsDataDay) {
-        optionDay.onclick = function (){
+    for (let optionDay of optionsDataDay) {
+        optionDay.onclick = function (e) {
+            e.stopPropagation();
             selectedDay.innerHTML = this.textContent;
-            listDay.classList.toggle('hide_day');
-            arrowDay.classList.toggle('rotate_arrow');
+            listDay.classList.add('hide_day');
+            arrowDay.classList.remove('rotate_arrow');
         }
     }
 
-    for (optionMonth of optionsDataMonth) {
-        optionMonth.onclick = function (){
+    for (let optionMonth of optionsDataMonth) {
+        optionMonth.onclick = function (e) {
+            e.stopPropagation();
             selectedMonth.innerHTML = this.textContent;
-            listMonth.classList.toggle('hide_month');
-            arrowMonth.classList.toggle('rotate_arrow');
+            listMonth.classList.add('hide_month');
+            arrowMonth.classList.remove('rotate_arrow');
         }
     }
 
-    for (optionYear of optionsDataYear) {
-        optionYear.onclick = function (){
+    for (let optionYear of optionsDataYear) {
+        optionYear.onclick = function (e) {
+            e.stopPropagation();
             selectedYear.innerHTML = this.textContent;
-            listYear.classList.toggle('hide_year');
-            arrowYear.classList.toggle('rotate_arrow');
+            listYear.classList.add('hide_year');
+            arrowYear.classList.remove('rotate_arrow');
         }
     }
+
+    // Клик вне дропдаунов – скрываем все
+    document.addEventListener('click', function(e) {
+        // если клик не внутри day, month или year, скрываем все
+        if (!day.contains(e.target) && !listDay.contains(e.target)) {
+            listDay.classList.add('hide_day');
+            arrowDay.classList.remove('rotate_arrow');
+        }
+        if (!month.contains(e.target) && !listMonth.contains(e.target)) {
+            listMonth.classList.add('hide_month');
+            arrowMonth.classList.remove('rotate_arrow');
+        }
+        if (!year.contains(e.target) && !listYear.contains(e.target)) {
+            listYear.classList.add('hide_year');
+            arrowYear.classList.remove('rotate_arrow');
+        }
+    });
 </script>
+
 
