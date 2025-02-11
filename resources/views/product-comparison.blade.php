@@ -19,10 +19,10 @@
 
                 <div class="comparison-grid">
                     <!-- Header Row -->
-                    <div class="header th1" id="products">{{__('product_comparison.products_in_the_list')}}</div>
-                    <div class="header" id="product1">{{__('product_comparison.windbreaker')}} New Balance Jacket NB Athletics</div>
-                    <div class="header" id="product2">{{__('product_comparison.t-shirt')}}  Nike W NSW ESSNTL RIB CRP TANK</div>
-                    <div class="header" id="product3">{{__('product_comparison.shorts')}} New Balance Short NB Small Logo</div>
+                    <div class="header th1" id="products"><span class="text">{{__('product_comparison.products_in_the_list')}}</span></div>
+                    <div class="header" id="product1"><span class="text">{{__('product_comparison.windbreaker')}} New Balance Jacket NB Athletics</span></div>
+                    <div class="header" id="product2"><span class="text">{{__('product_comparison.t-shirt')}}  Nike W NSW ESSNTL RIB CRP TANK</span></div>
+                    <div class="header" id="product3"><span class="text">{{__('product_comparison.shorts')}} New Balance Short NB Small Logo</span></div>
 
 
                     <!-- Image Row -->

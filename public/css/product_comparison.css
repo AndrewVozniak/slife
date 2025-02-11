@@ -136,7 +136,7 @@
 
             border: 1px solid rgba(212, 213, 223, 1);
             width: 124px;
-            padding: 16px;
+            padding: 16px 8px;
 
             .rating {
                 display: flex;
@@ -299,10 +299,22 @@
         }
 
         .comparison-grid > div.header {
-            padding: 34px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             background-color: var(--gray);
             grid-column: span 1;
+            height: 87px;
+
+            span {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
 
         .product_photo {
