@@ -4,13 +4,13 @@
 
 return [
     'bonuses' => [
-        'bonuses' => 'My Bonuses',
+        'bonuses' => 'My points',
         'on_your_account' => 'On your account',
-        'bonuses_amount' => 'bonuses',
-        'bonuses_calculated' => 'How bonuses are calculated',
-        'bonuses_calculated_text' => 'Bonus funds will be credited  to every member of the loyalty program when purchasing
+        'bonuses_amount' => 'points',
+        'bonuses_calculated' => 'How points are calculated',
+        'bonuses_calculated_text' => 'Points funds will be credited  to every member of the loyalty program when purchasing
          products in stores and on the Slife website. Thus, by buying products at Slife, you get cashback — that is, part of
-         the money spent is returned in the form of bonuses, which you can later use to pay for new purchases',
+         the money spent is returned in the form of points, which you can later use to pay for new purchases',
     ],
 
     'order_history' => [

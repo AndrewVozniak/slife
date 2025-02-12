@@ -9,7 +9,7 @@ return [
     'last_name' => 'Last Name',
     'email' => 'Your Email',
     'date_of_birth' => 'Date of Birth',
-    'my_bonuses' => 'My Bonuses',
+    'my_bonuses' => 'My Points',
     'save' => 'Save Changes',
     'january' => 'January',
     'february' => 'February',
