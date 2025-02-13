@@ -48,7 +48,7 @@ return [
 
 
     'information_of_payment' => 'Payment information',
-    'payment_when_receiving' => 'Payment on receipt',
+    'payment_when_receiving' => 'Payment upon receipt',
     'with_minimum_prepayment' => 'With minimum prepayment of 150 UAH',
     'info_msg_2' => 'The manager will send you the prepayment details via Telegram or Viber',
     'info_msg' => 'Nova Poshta commission: 20 UAH + 2% of the amount',
